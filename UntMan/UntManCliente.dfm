@@ -3,7 +3,7 @@ object FrmManCliente: TFrmManCliente
   Top = 0
   BorderIcons = []
   Caption = 'Manuten'#231#227'o no Cadastro de Cliente'
-  ClientHeight = 573
+  ClientHeight = 578
   ClientWidth = 752
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,6 +13,7 @@ object FrmManCliente: TFrmManCliente
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -51,25 +52,32 @@ object FrmManCliente: TFrmManCliente
     EdgeBorders = [ebTop, ebBottom]
     HotImages = ImageList3
     Images = ImageList1
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 1
-    ExplicitTop = 97
-    object ToolButton1: TToolButton
+    object btn_inserir: TToolButton
       Left = 0
       Top = 0
-      Caption = 'ToolButton1'
+      Hint = 'Inserir registro'
+      Caption = 'btn_inserir'
       ImageIndex = 0
+      OnClick = btn_inserirClick
     end
-    object ToolButton2: TToolButton
+    object btn_alterar: TToolButton
       Left = 45
       Top = 0
-      Caption = 'ToolButton2'
+      Hint = 'alterar registro'
+      Caption = 'btn_alterar'
       ImageIndex = 1
+      OnClick = btn_alterarClick
     end
-    object ToolButton3: TToolButton
+    object btn_excluir: TToolButton
       Left = 90
       Top = 0
-      Caption = 'ToolButton3'
+      Hint = 'exclui registro'
+      Caption = 'btn_excluir'
       ImageIndex = 2
+      OnClick = btn_excluirClick
     end
     object ToolButton5: TToolButton
       Left = 135
@@ -85,12 +93,67 @@ object FrmManCliente: TFrmManCliente
       ImageIndex = 3
       Style = tbsSeparator
     end
-    object ToolButton6: TToolButton
+    object btn_sair: TToolButton
       Left = 188
       Top = 0
-      Caption = 'ToolButton6'
+      Hint = 'sair'
+      Caption = 'btn_sair'
       ImageIndex = 6
-      OnClick = ToolButton6Click
+      OnClick = btn_sairClick
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 97
+    Width = 752
+    Height = 40
+    Align = alTop
+    TabOrder = 2
+    object Label2: TLabel
+      Left = 24
+      Top = 9
+      Width = 81
+      Height = 13
+      Caption = 'Buscar Por Nome'
+    end
+    object Edit1: TEdit
+      Left = 111
+      Top = 6
+      Width = 121
+      Height = 21
+      TabOrder = 0
+      OnChange = Edit1Change
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 137
+    Width = 752
+    Height = 441
+    Align = alClient
+    Caption = 'Panel3'
+    TabOrder = 3
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 750
+      Height = 439
+      Align = alClient
+      DataSource = DM.DSCliente
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'nome'
+          Title.Caption = 'Nome'
+          Width = 733
+          Visible = True
+        end>
     end
   end
   object ImageList1: TImageList
@@ -99,7 +162,7 @@ object FrmManCliente: TFrmManCliente
     Left = 328
     Top = 384
     Bitmap = {
-      494C0101070020002C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700200034001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1042,7 +1105,7 @@ object FrmManCliente: TFrmManCliente
     Left = 520
     Top = 392
     Bitmap = {
-      494C01010700140020001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140028001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1985,7 +2048,7 @@ object FrmManCliente: TFrmManCliente
     Left = 424
     Top = 384
     Bitmap = {
-      494C0101070014002C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140034001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
