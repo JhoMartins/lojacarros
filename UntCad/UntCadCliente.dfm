@@ -65,6 +65,7 @@
       Hint = 'Salvar Registro'
       Caption = 'btn_salvar'
       ImageIndex = 4
+      OnClick = btn_salvarClick
     end
     object btn_cancelar: TToolButton
       Left = 45
@@ -72,6 +73,7 @@
       Hint = 'Cancelar Registro'
       Caption = 'btn_cancelar'
       ImageIndex = 5
+      OnClick = btn_cancelarClick
     end
     object ToolButton4: TToolButton
       Left = 90
@@ -87,6 +89,7 @@
       Hint = 'Sair'
       Caption = 'btn_sair'
       ImageIndex = 6
+      OnClick = btn_sairClick
     end
   end
   object StatusBar1: TStatusBar
@@ -106,10 +109,6 @@
     Height = 433
     Align = alClient
     TabOrder = 3
-    ExplicitLeft = 376
-    ExplicitTop = 408
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object CPF: TLabel
       Left = 28
       Top = 56

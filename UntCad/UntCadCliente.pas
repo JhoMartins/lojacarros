@@ -40,6 +40,9 @@ type
     DBEdit11: TDBEdit;
     StatusBar1: TStatusBar;
     PnlFicha: TPanel;
+    procedure btn_salvarClick(Sender: TObject);
+    procedure btn_cancelarClick(Sender: TObject);
+    procedure btn_sairClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,5 +55,34 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmCadCliente.btn_cancelarClick(Sender: TObject);
+begin
+  DM.ADODSCliente.Post;
+
+  Application.MessageBox('A inclusão ou alteração foi abortada.', 'Atenção', MB_OK+MB_ICONERROR);
+
+  btn_salvar.Enabled:= False;
+  btn_cancelar.Enabled:= False;
+  btn_Sair.Enabled:= True;
+  PnlFicha.Enabled:= False;
+end;
+
+procedure TFrmCadCliente.btn_sairClick(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TFrmCadCliente.btn_salvarClick(Sender: TObject);
+begin
+  DM.ADODSCliente.Post;
+
+  Application.MessageBox('O Registro foi incluído ou alterado com sucesso.', 'Informação', MB_OK+MB_ICONINFORMATION);
+
+  btn_salvar.Enabled:= False;
+  btn_cancelar.Enabled:= False;
+  btn_Sair.Enabled:= True;
+  PnlFicha.Enabled:= False;
+end;
 
 end.
