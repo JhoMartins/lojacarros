@@ -43,6 +43,7 @@ type
     procedure btn_salvarClick(Sender: TObject);
     procedure btn_cancelarClick(Sender: TObject);
     procedure btn_sairClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,7 +59,7 @@ implementation
 
 procedure TFrmCadCliente.btn_cancelarClick(Sender: TObject);
 begin
-  DM.ADODSCliente.Post;
+  DM.ADODSCliente.Cancel;
 
   Application.MessageBox('A inclusão ou alteração foi abortada.', 'Atenção', MB_OK+MB_ICONERROR);
 
@@ -83,6 +84,13 @@ begin
   btn_cancelar.Enabled:= False;
   btn_Sair.Enabled:= True;
   PnlFicha.Enabled:= False;
+end;
+
+procedure TFrmCadCliente.FormActivate(Sender: TObject);
+begin
+  DM.ADODSCliente.FieldByName('cpf').EditMask:= '999.999.999-99';
+  DM.ADODSCliente.FieldByName('celular').EditMask:= '(99)99999-9999';
+  DM.ADODSCliente.FieldByName('tel_empresa').EditMask:= '(99)9999-9999';
 end;
 
 end.
