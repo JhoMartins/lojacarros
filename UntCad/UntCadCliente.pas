@@ -39,6 +39,7 @@ type
     Telefone: TLabel;
     DBEdit11: TDBEdit;
     StatusBar1: TStatusBar;
+    PnlFicha: TPanel;
   private
     { Private declarations }
   public

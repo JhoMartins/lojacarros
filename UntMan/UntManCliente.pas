@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ToolWin,
-  System.ImageList, Vcl.ImgList, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB, Vcl.Grids,db,
+  System.ImageList, Vcl.ImgList, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Grids,db,
   Vcl.DBGrids;
 
 type
@@ -46,16 +46,16 @@ implementation
 
 {$R *.dfm}
 
-uses UntDM;
+uses UntDM, UntCadCliente;
 
 procedure TFrmManCliente.btn_alterarClick(Sender: TObject);
 begin
   DM.ADODSCliente.Edit;
-  //FrmCadCliente.btn_salvar.enabled:= true;
-  //FrmCadCliente.btn_cancelar.enabled:= true;
-  //FrmCadCliente.btn_sair.enabled:= false;
-  //FrmCadCliente.pnlficha.enabled:= true;
-  //FrmCadCliente.ShowModal;
+  FrmCadCliente.btn_salvar.enabled:= true;
+  FrmCadCliente.btn_cancelar.enabled:= true;
+  FrmCadCliente.btn_sair.enabled:= false;
+  FrmCadCliente.pnlficha.enabled:= true;
+  FrmCadCliente.ShowModal;
 end;
 
 procedure TFrmManCliente.btn_excluirClick(Sender: TObject);
@@ -79,11 +79,11 @@ procedure TFrmManCliente.btn_excluirClick(Sender: TObject);
 procedure TFrmManCliente.btn_inserirClick(Sender: TObject);
 begin
   DM.ADODSCliente.Insert;
-  //FrmCadCliente.btn_salvar.enabled:= true;
-  //FrmCadCliente.btn_cancelar.enabled:= true;
-  //FrmCadCliente.btn_sair.enabled:= false;
-  //FrmCadCliente.pnlficha.enabled:= true;
-  //FrmCadCliente.ShowModal;
+  FrmCadCliente.btn_salvar.enabled:= true;
+  FrmCadCliente.btn_cancelar.enabled:= true;
+  FrmCadCliente.btn_sair.enabled:= false;
+  FrmCadCliente.pnlficha.enabled:= true;
+  FrmCadCliente.ShowModal;
 end;
 
 procedure TFrmManCliente.btn_sairClick(Sender: TObject);
