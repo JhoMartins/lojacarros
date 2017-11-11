@@ -70,4 +70,57 @@
     Left = 224
     Top = 96
   end
+  object ADODSEmpresa: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 'select * from Empresa'
+    Parameters = <>
+    Left = 128
+    Top = 152
+    object ADODSEmpresaid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADODSEmpresarazao_social: TStringField
+      FieldName = 'razao_social'
+      Size = 50
+    end
+    object ADODSEmpresanome_fantasia: TStringField
+      FieldName = 'nome_fantasia'
+      Size = 50
+    end
+    object ADODSEmpresacnpj: TStringField
+      FieldName = 'cnpj'
+      Size = 50
+    end
+    object ADODSEmpresaendereco: TStringField
+      FieldName = 'endereco'
+      Size = 50
+    end
+    object ADODSEmpresabairro: TStringField
+      FieldName = 'bairro'
+      Size = 50
+    end
+    object ADODSEmpresacidade: TStringField
+      FieldName = 'cidade'
+      Size = 50
+    end
+    object ADODSEmpresaestado: TStringField
+      FieldName = 'estado'
+      Size = 2
+    end
+    object ADODSEmpresacep: TStringField
+      FieldName = 'cep'
+      Size = 15
+    end
+    object ADODSEmpresatelefone: TStringField
+      FieldName = 'telefone'
+      Size = 15
+    end
+  end
+  object DSEmpresa: TDataSource
+    DataSet = ADODSEmpresa
+    Left = 224
+    Top = 152
+  end
 end
