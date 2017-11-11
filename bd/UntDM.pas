@@ -10,6 +10,17 @@ type
     ADOConnection1: TADOConnection;
     ADODSCliente: TADODataSet;
     DSCliente: TDataSource;
+    ADODSClienteid: TAutoIncField;
+    ADODSClientenome: TStringField;
+    ADODSClientecpf: TStringField;
+    ADODSClientedata_nasc: TWideStringField;
+    ADODSClienteEndereço: TStringField;
+    ADODSClientebairro: TStringField;
+    ADODSClientecelular: TStringField;
+    ADODSClienteprofissao: TStringField;
+    ADODSClientesalario: TBCDField;
+    ADODSClienteempresa: TStringField;
+    ADODSClientetel_empresa: TStringField;
   private
     { Private declarations }
   public
