@@ -33,6 +33,8 @@ type
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Timer1Timer(Sender: TObject);
+    procedure man_empresaExecute(Sender: TObject);
+    procedure man_funcionarioExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -91,6 +93,20 @@ begin
   else
     canclose:= false;
 
+end;
+
+procedure TForm1.man_empresaExecute(Sender: TObject);
+var Frm: TFrmManEmpresa;
+begin
+  Frm:= FrmManEmpresa.Create(DM.ADODSEmpresa, FrmCadEmpresa);
+  Frm.showmodal;
+end;
+
+procedure TForm1.man_funcionarioExecute(Sender: TObject);
+var Frm: TFrmManFuncionario;
+begin
+  Frm:= FrmManFuncionario.Create(DM.ADODSFuncionario, FrmCadFuncionario);
+  Frm.ShowModal;
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);

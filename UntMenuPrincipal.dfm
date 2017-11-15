@@ -214,12 +214,14 @@ object Form1: TForm1
       Caption = 'Empresa'
       Hint = 'Manuten'#231#227'o Empresa'
       ImageIndex = 7
+      OnExecute = man_empresaExecute
     end
     object man_funcionario: TAction
       Category = 'Manuten'#231#227'o'
       Caption = 'Funcionario'
       Hint = 'Manuten'#231#227'o Funcionario'
       ImageIndex = 8
+      OnExecute = man_funcionarioExecute
     end
     object Action1: TAction
       Caption = 'Despesas'
