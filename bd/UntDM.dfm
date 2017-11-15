@@ -3,11 +3,9 @@
   Height = 348
   Width = 490
   object ADOConnection1: TADOConnection
-    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=LojaCarros;Data Source=DESKTOP-TL1GQGV\' +
-      'SQLEXPRESS'
+      'fo=False;Initial Catalog=LojaCarros;Data Source=DEIVID-PC'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 176
