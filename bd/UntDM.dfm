@@ -1,4 +1,4 @@
-﻿object DM: TDM
+object DM: TDM
   OldCreateOrder = False
   Height = 348
   Width = 490
@@ -30,37 +30,57 @@
       FieldName = 'cpf'
       Size = 15
     end
-    object ADODSClientedata_nasc: TWideStringField
-      FieldName = 'data_nasc'
+    object ADODSClientedata_nascimento: TWideStringField
+      FieldName = 'data_nascimento'
       Size = 10
     end
-    object ADODSClienteEndereço: TStringField
-      FieldName = 'Endere'#231'o'
+    object ADODSClienteendereco: TStringField
+      FieldName = 'endereco'
       Size = 50
     end
     object ADODSClientebairro: TStringField
       FieldName = 'bairro'
       Size = 50
     end
-    object ADODSClientecelular: TStringField
-      FieldName = 'celular'
-      Size = 14
+    object ADODSClientecidade: TStringField
+      FieldName = 'cidade'
+      Size = 50
+    end
+    object ADODSClienteestado: TStringField
+      FieldName = 'estado'
+      Size = 2
+    end
+    object ADODSClientecep: TStringField
+      FieldName = 'cep'
+      Size = 15
     end
     object ADODSClienteprofissao: TStringField
       FieldName = 'profissao'
-      Size = 30
+      Size = 50
     end
-    object ADODSClientesalario: TBCDField
-      FieldName = 'salario'
-      Precision = 18
-      Size = 0
+    object ADODSClienterenda_mensal: TBCDField
+      FieldName = 'renda_mensal'
+      Precision = 5
+      Size = 2
     end
-    object ADODSClienteempresa: TStringField
-      FieldName = 'empresa'
-      Size = 30
+    object ADODSClienteempresa_id: TIntegerField
+      FieldName = 'empresa_id'
     end
-    object ADODSClientetel_empresa: TStringField
-      FieldName = 'tel_empresa'
+    object ADODSClientecelular: TStringField
+      FieldName = 'celular'
+      Size = 15
+    end
+    object ADODSClientenumero_conta: TStringField
+      FieldName = 'numero_conta'
+      Size = 10
+    end
+    object ADODSClienteagencia: TStringField
+      FieldName = 'agencia'
+      Size = 10
+    end
+    object ADODSClientebanco: TStringField
+      FieldName = 'banco'
+      Size = 50
     end
   end
   object DSCliente: TDataSource
