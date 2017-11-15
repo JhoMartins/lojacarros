@@ -4,36 +4,16 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UntManCliente,
-  Vcl.ActnCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnMenus, System.Actions,
-  Vcl.ActnList, Vcl.PlatformDefaultStyleActnCtrls, System.ImageList, Vcl.ImgList,
-  Vcl.ComCtrls, Vcl.ExtCtrls, UntCadCliente, UntManFuncionario, UntCadFuncionario, UntDM;;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UntCadCliente, UntManFuncionario, UntCadFuncionario, UntDM;
 
 type
-  TFrmMenuPrincipal = class(TForm)
-    ImageList1: TImageList;
-    cad_cliente: TAction;
-    cad_carro: TAction;
-    cad_empresa: TAction;
-    ActionMainMenuBar1: TActionMainMenuBar;
-    ActionToolBar1: TActionToolBar;
-    ActionManager1: TActionManager;
-    ActionList1: TActionList;
-    StatusBar1: TStatusBar;
-    Timer1: TTimer;
-    Action1: TAction;
-    man_cliente: TAction;
-    man_carro: TAction;
-    man_empresa: TAction;
-    man_funcionario: TAction;
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
     procedure Button1Click(Sender: TObject);
-    procedure sairExecute(Sender: TObject);
-    procedure FormActivate(Sender: TObject);
-    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
-    procedure Timer1Timer(Sender: TObject);
-    procedure cad_clienteExecute(Sender: TObject);
-    procedure man_clienteExecute(Sender: TObject);
-    
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,60 +21,31 @@ type
   end;
 
 var
-  FrmMenuPrincipal: TFrmMenuPrincipal;
+  Form1: TForm1;
 
 implementation
 
 {$R *.dfm}
 
-uses UntCadCliente, UntDM, UntManEmpresa, UntManCliente, UntCadEmpresa ;
+uses UntManEmpresa, UntManCliente, UntCadEmpresa;
 
-procedure TFrmMenuPrincipal.Button1Click(Sender: TObject);
-
+procedure TForm1.Button1Click(Sender: TObject);
 begin
   FrmManCliente.ShowModal;
 end;
 
-procedure TFrmMenuPrincipal.cad_clienteExecute(Sender: TObject);
+procedure TForm1.Button2Click(Sender: TObject);
+var Frm: TFrmManEmpresa;
 begin
-FrmCadCliente.ShowModal;
+  Frm := FrmManEmpresa.Create(DM.ADODSEmpresa, FrmCadEmpresa);
+  Frm.ShowModal;
 end;
 
-procedure TFrmMenuPrincipal.FormActivate(Sender: TObject);
+procedure TForm1.Button3Click(Sender: TObject);
+var Frm: TFrmManFuncionario;
 begin
-windowstate :=  wsMaximized;
-
-statusbar1.panels[1].text:= formatdatetime(' dddd ", " dd " de " mmmm " de " yyyy', now);
-end;
-
-procedure TFrmMenuPrincipal.FormCloseQuery(Sender: TObject;
-  var CanClose: Boolean);
-  var confSaida: integer;
-begin
-   confSaida:= application.MessageBox('Tem certeza que deseja sair do sistema?',
-   'Aten��o', MB_YESNO+MB_DEFBUTTON2+MB_ICONQUESTION);
-
-   if confSaida = IDYES then
-    application.Terminate
-   else
-    canclose:=false;
-
-end;
-
-procedure TFrmMenuPrincipal.man_clienteExecute(Sender: TObject);
-begin
-FrmManCliente.ShowModal;
-end;
-
-procedure TFrmMenuPrincipal.sairExecute(Sender: TObject);
-begin
-close;
-end;
-
-procedure TFrmMenuPrincipal.Timer1Timer(Sender: TObject);
-begin
-statusbar1.panels[0].Text:= timetostr(time);
-
+  Frm:= FrmManFuncionario.Create(DM.ADODSFuncionario, FrmCadFuncionario);
+  Frm.ShowModal;
 end;
 
 end.
