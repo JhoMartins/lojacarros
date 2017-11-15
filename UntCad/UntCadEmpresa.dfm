@@ -1,10 +1,188 @@
 inherited FrmCadEmpresa: TFrmCadEmpresa
-  Caption = 'FrmCadEmpresa'
+  Caption = 'Manuten'#231#227'o no Caastro de Empresa'
+  ClientWidth = 855
+  ExplicitWidth = 861
   PixelsPerInch = 96
   TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 855
+    ExplicitWidth = 855
+    inherited Label1: TLabel
+      Left = 228
+      Width = 390
+      Caption = 'Manuten'#231#227'o no Cadastro de Empresa'
+      ExplicitLeft = 228
+      ExplicitWidth = 390
+    end
+  end
+  inherited ToolBar1: TToolBar
+    Width = 855
+    ExplicitWidth = 855
+  end
+  inherited PnlFicha: TPanel
+    Width = 855
+    ExplicitWidth = 855
+    object Label2: TLabel [0]
+      Left = 23
+      Top = 19
+      Width = 60
+      Height = 13
+      Caption = 'Raz'#227'o Social'
+    end
+    object Label3: TLabel [1]
+      Left = 12
+      Top = 61
+      Width = 71
+      Height = 13
+      Caption = 'Nome Fantasia'
+    end
+    object Label4: TLabel [2]
+      Left = 593
+      Top = 61
+      Width = 25
+      Height = 13
+      Caption = 'CNPJ'
+    end
+    object Label5: TLabel [3]
+      Left = 38
+      Top = 101
+      Width = 45
+      Height = 13
+      Caption = 'Endere'#231'o'
+    end
+    object Label6: TLabel [4]
+      Left = 55
+      Top = 136
+      Width = 28
+      Height = 13
+      Caption = 'Bairro'
+    end
+    object Label7: TLabel [5]
+      Left = 432
+      Top = 136
+      Width = 33
+      Height = 13
+      Caption = 'Cidade'
+    end
+    object Label8: TLabel [6]
+      Left = 50
+      Top = 168
+      Width = 33
+      Height = 13
+      Caption = 'Estado'
+    end
+    object Label9: TLabel [7]
+      Left = 184
+      Top = 168
+      Width = 19
+      Height = 13
+      Caption = 'CEP'
+    end
+    object Label10: TLabel [8]
+      Left = 96
+      Top = 368
+      Width = 42
+      Height = 13
+      Caption = 'Telefone'
+    end
+    object Label11: TLabel [9]
+      Left = 423
+      Top = 168
+      Width = 42
+      Height = 13
+      Caption = 'Telefone'
+    end
+    inherited StatusBar1: TStatusBar
+      Width = 853
+      ExplicitWidth = 853
+    end
+    object DBEdit1: TDBEdit
+      Left = 100
+      Top = 19
+      Width = 725
+      Height = 21
+      DataField = 'razao_social'
+      DataSource = DM.DSEmpresa
+      TabOrder = 1
+    end
+    object DBEdit2: TDBEdit
+      Left = 100
+      Top = 61
+      Width = 469
+      Height = 21
+      DataField = 'nome_fantasia'
+      DataSource = DM.DSEmpresa
+      TabOrder = 2
+    end
+    object DBEdit3: TDBEdit
+      Left = 640
+      Top = 61
+      Width = 185
+      Height = 21
+      DataField = 'cnpj'
+      DataSource = DM.DSEmpresa
+      TabOrder = 3
+    end
+    object DBEdit4: TDBEdit
+      Left = 100
+      Top = 101
+      Width = 725
+      Height = 21
+      DataField = 'endereco'
+      DataSource = DM.DSEmpresa
+      TabOrder = 4
+    end
+    object DBEdit5: TDBEdit
+      Left = 100
+      Top = 136
+      Width = 301
+      Height = 21
+      DataField = 'bairro'
+      DataSource = DM.DSEmpresa
+      TabOrder = 5
+    end
+    object DBEdit6: TDBEdit
+      Left = 488
+      Top = 136
+      Width = 337
+      Height = 21
+      DataField = 'cidade'
+      DataSource = DM.DSEmpresa
+      TabOrder = 6
+    end
+    object DBComboBox1: TDBComboBox
+      Left = 100
+      Top = 168
+      Width = 61
+      Height = 21
+      DataField = 'estado'
+      DataSource = DM.DSEmpresa
+      Items.Strings = (
+        'SP')
+      TabOrder = 7
+    end
+    object DBEdit7: TDBEdit
+      Left = 224
+      Top = 168
+      Width = 177
+      Height = 21
+      DataField = 'cep'
+      DataSource = DM.DSEmpresa
+      TabOrder = 8
+    end
+    object DBEdit8: TDBEdit
+      Left = 488
+      Top = 163
+      Width = 337
+      Height = 21
+      DataField = 'telefone'
+      DataSource = DM.DSEmpresa
+      TabOrder = 9
+    end
+  end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C01010300200064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -478,7 +656,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C01010300140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -952,7 +1130,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
