@@ -10,17 +10,6 @@ type
     ADOConnection1: TADOConnection;
     ADODSCliente: TADODataSet;
     DSCliente: TDataSource;
-    ADODSClienteid: TAutoIncField;
-    ADODSClientenome: TStringField;
-    ADODSClientecpf: TStringField;
-    ADODSClientedata_nasc: TWideStringField;
-    ADODSClienteEndereço: TStringField;
-    ADODSClientebairro: TStringField;
-    ADODSClientecelular: TStringField;
-    ADODSClienteprofissao: TStringField;
-    ADODSClientesalario: TBCDField;
-    ADODSClienteempresa: TStringField;
-    ADODSClientetel_empresa: TStringField;
     ADODSEmpresa: TADODataSet;
     ADODSEmpresaid: TAutoIncField;
     ADODSEmpresarazao_social: TStringField;
@@ -50,6 +39,22 @@ type
     ADODSFuncionariofilhos: TIntegerField;
     ADODSFuncionariosalario_base: TBCDField;
     ADODSFuncionariodata_admissao: TWideStringField;
+    ADODSClienteid: TAutoIncField;
+    ADODSClientenome: TStringField;
+    ADODSClientecpf: TStringField;
+    ADODSClientedata_nascimento: TWideStringField;
+    ADODSClienteendereco: TStringField;
+    ADODSClientebairro: TStringField;
+    ADODSClientecidade: TStringField;
+    ADODSClienteestado: TStringField;
+    ADODSClientecep: TStringField;
+    ADODSClienteprofissao: TStringField;
+    ADODSClienterenda_mensal: TBCDField;
+    ADODSClienteempresa_id: TIntegerField;
+    ADODSClientecelular: TStringField;
+    ADODSClientenumero_conta: TStringField;
+    ADODSClienteagencia: TStringField;
+    ADODSClientebanco: TStringField;
   private
     { Private declarations }
   public
