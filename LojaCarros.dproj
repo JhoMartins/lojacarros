@@ -103,18 +103,10 @@
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="UntMan\UntManCliente.pas">
-            <Form>FrmManCliente</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="bd\UntDM.pas">
             <Form>DM</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
-        <DCCReference Include="UntCad\UntCadCliente.pas">
-            <Form>FrmCadCliente</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UntMan\UntManBase.pas">
             <Form>FrmManBase</Form>
