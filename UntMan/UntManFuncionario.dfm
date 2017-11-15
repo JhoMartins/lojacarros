@@ -1,150 +1,35 @@
-object FrmManBase: TFrmManBase
-  Left = 0
-  Top = 0
-  BorderIcons = []
-  BorderStyle = bsSingle
-  ClientHeight = 593
-  ClientWidth = 862
-  Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'Tahoma'
-  Font.Style = []
-  OldCreateOrder = False
-  Position = poScreenCenter
-  OnActivate = FormActivate
+inherited FrmManFuncionario: TFrmManFuncionario
+  Caption = 'Manuten'#231#227'o no Cadastro de Funcion'#225'rio'
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 862
-    Height = 49
-    Align = alTop
-    Color = clBlack
-    ParentBackground = False
-    TabOrder = 0
-    object Label1: TLabel
-      Left = 230
-      Top = 8
-      Width = 299
-      Height = 25
-      Caption = 'Manuten'#231#227'o no Cadastro de '
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clYellow
-      Font.Height = -21
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentFont = False
+  inherited Panel1: TPanel
+    inherited Label1: TLabel
+      Left = 206
+      Width = 421
+      Caption = 'Manuten'#231#227'o no Cadastro de Funcion'#225'rio'
+      ExplicitLeft = 206
+      ExplicitWidth = 421
     end
   end
-  object ToolBar1: TToolBar
-    Left = 0
-    Top = 49
-    Width = 862
-    Height = 48
-    BorderWidth = 1
-    ButtonHeight = 45
-    ButtonWidth = 45
-    Caption = 'ToolBar1'
-    DisabledImages = ImageList2
-    EdgeBorders = [ebTop, ebBottom]
-    HotImages = ImageList3
-    Images = ImageList1
-    ParentShowHint = False
-    ShowHint = True
-    TabOrder = 1
-    object btn_inserir: TToolButton
-      Left = 0
-      Top = 0
-      Hint = 'Inserir registro'
-      Caption = 'btn_inserir'
-      ImageIndex = 0
-      OnClick = btn_inserirClick
-    end
-    object btn_alterar: TToolButton
-      Left = 45
-      Top = 0
-      Hint = 'alterar registro'
-      Caption = 'btn_alterar'
-      ImageIndex = 1
-      OnClick = btn_alterarClick
-    end
-    object btn_excluir: TToolButton
-      Left = 90
-      Top = 0
-      Hint = 'exclui registro'
-      Caption = 'btn_excluir'
-      ImageIndex = 2
-      OnClick = btn_excluirClick
-    end
-    object ToolButton5: TToolButton
-      Left = 135
-      Top = 0
-      Caption = 'ToolButton5'
-      ImageIndex = 3
-    end
-    object ToolButton4: TToolButton
-      Left = 180
-      Top = 0
-      Width = 8
-      Caption = 'ToolButton4'
-      ImageIndex = 3
-      Style = tbsSeparator
-    end
-    object btn_sair: TToolButton
-      Left = 188
-      Top = 0
-      Hint = 'sair'
-      Caption = 'btn_sair'
-      ImageIndex = 6
-      OnClick = btn_sairClick
-    end
+  inherited DBGrid1: TDBGrid
+    DataSource = DM.DSFuncionario
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nome'
+        Title.Caption = 'Nome'
+        Visible = True
+      end>
   end
-  object Panel2: TPanel
-    Left = 0
-    Top = 97
-    Width = 862
-    Height = 40
-    Align = alTop
-    TabOrder = 2
-    object Label2: TLabel
-      Left = 11
-      Top = 6
-      Width = 28
-      Height = 13
-      Caption = 'Busca'
-    end
-    object Edit1: TEdit
-      Left = 45
-      Top = 6
-      Width = 796
-      Height = 21
-      TabOrder = 0
-    end
-  end
-  object DBGrid1: TDBGrid
-    Left = 0
-    Top = 137
-    Width = 862
-    Height = 456
-    Align = alClient
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
-    TabOrder = 3
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-  end
-  object ImageList1: TImageList
-    Height = 30
-    Width = 30
-    Left = 328
-    Top = 384
+  inherited ImageList1: TImageList
     Bitmap = {
-      494C01010700200058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070020005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1081,13 +966,9 @@ object FrmManBase: TFrmManBase
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000
       000000000000}
   end
-  object ImageList3: TImageList
-    Height = 30
-    Width = 30
-    Left = 424
-    Top = 384
+  inherited ImageList3: TImageList
     Bitmap = {
-      494C01010700140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -2024,13 +1905,9 @@ object FrmManBase: TFrmManBase
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000000000000000000
       000000000000}
   end
-  object ImageList2: TImageList
-    Height = 30
-    Width = 30
-    Left = 520
-    Top = 392
+  inherited ImageList2: TImageList
     Bitmap = {
-      494C0101070014004C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140050001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

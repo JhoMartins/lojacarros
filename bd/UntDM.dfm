@@ -125,10 +125,71 @@
   end
   object ADODSFuncionario: TADODataSet
     Connection = ADOConnection1
+    CursorType = ctStatic
     CommandText = 'select * from Funcionario'
     Parameters = <>
     Left = 128
     Top = 208
+    object ADODSFuncionarioid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADODSFuncionarionome: TStringField
+      FieldName = 'nome'
+      Size = 50
+    end
+    object ADODSFuncionariocpf: TStringField
+      FieldName = 'cpf'
+      Size = 13
+    end
+    object ADODSFuncionariodata_nascimento: TWideStringField
+      FieldName = 'data_nascimento'
+      Size = 10
+    end
+    object ADODSFuncionarioendereco: TStringField
+      FieldName = 'endereco'
+      Size = 50
+    end
+    object ADODSFuncionariobairro: TStringField
+      FieldName = 'bairro'
+      Size = 50
+    end
+    object ADODSFuncionariocidade: TStringField
+      FieldName = 'cidade'
+      Size = 50
+    end
+    object ADODSFuncionariocep: TStringField
+      FieldName = 'cep'
+      Size = 13
+    end
+    object ADODSFuncionarioestado: TStringField
+      FieldName = 'estado'
+      Size = 50
+    end
+    object ADODSFuncionariocelular: TStringField
+      FieldName = 'celular'
+      Size = 13
+    end
+    object ADODSFuncionariotelefone: TStringField
+      FieldName = 'telefone'
+      Size = 13
+    end
+    object ADODSFuncionarioestado_civil: TStringField
+      FieldName = 'estado_civil'
+      Size = 10
+    end
+    object ADODSFuncionariofilhos: TIntegerField
+      FieldName = 'filhos'
+    end
+    object ADODSFuncionariosalario_base: TBCDField
+      FieldName = 'salario_base'
+      Precision = 5
+      Size = 2
+    end
+    object ADODSFuncionariodata_admissao: TWideStringField
+      FieldName = 'data_admissao'
+      Size = 10
+    end
   end
   object DSFuncionario: TDataSource
     DataSet = ADODSFuncionario
