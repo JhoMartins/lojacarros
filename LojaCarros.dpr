@@ -9,7 +9,9 @@ uses
   UntCadBase in 'UntCad\UntCadBase.pas' {FrmCadBase},
   UntCadEmpresa in 'UntCad\UntCadEmpresa.pas' {FrmCadEmpresa},
   UntManFuncionario in 'UntMan\UntManFuncionario.pas' {FrmManFuncionario},
-  UntCadFuncionario in 'UntCad\UntCadFuncionario.pas' {FrmCadFuncionario};
+  UntCadFuncionario in 'UntCad\UntCadFuncionario.pas' {FrmCadFuncionario},
+  UntManCliente in 'UntMan\UntManCliente.pas' {FrmManCliente},
+  UntCadCliente in 'UntCad\UntCadCliente.pas' {FrmCadCliente};
 
 {$R *.res}
 
@@ -24,5 +26,7 @@ begin
   Application.CreateForm(TFrmCadEmpresa, FrmCadEmpresa);
   Application.CreateForm(TFrmManFuncionario, FrmManFuncionario);
   Application.CreateForm(TFrmCadFuncionario, FrmCadFuncionario);
+  Application.CreateForm(TFrmManCliente, FrmManCliente);
+  Application.CreateForm(TFrmCadCliente, FrmCadCliente);
   Application.Run;
 end.
