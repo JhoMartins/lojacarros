@@ -11,24 +11,28 @@ uses
 
 type
   TFrmMenuPrincipal = class(TForm)
-    Button1: TButton;
     ImageList1: TImageList;
     cad_cliente: TAction;
     cad_carro: TAction;
     cad_empresa: TAction;
     ActionMainMenuBar1: TActionMainMenuBar;
-
-    sair: TAction;
     ActionToolBar1: TActionToolBar;
     ActionManager1: TActionManager;
     ActionList1: TActionList;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
+    Action1: TAction;
+    man_cliente: TAction;
+    man_carro: TAction;
+    man_empresa: TAction;
+    man_funcionario: TAction;
     procedure Button1Click(Sender: TObject);
     procedure sairExecute(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure Timer1Timer(Sender: TObject);
+    procedure cad_clienteExecute(Sender: TObject);
+    procedure man_clienteExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,6 +51,11 @@ uses UntCadCliente, UntDM;
 procedure TFrmMenuPrincipal.Button1Click(Sender: TObject);
 begin
   FrmManCliente.ShowModal;
+end;
+
+procedure TFrmMenuPrincipal.cad_clienteExecute(Sender: TObject);
+begin
+FrmCadCliente.ShowModal;
 end;
 
 procedure TFrmMenuPrincipal.FormActivate(Sender: TObject);
@@ -68,6 +77,11 @@ begin
    else
     canclose:=false;
 
+end;
+
+procedure TFrmMenuPrincipal.man_clienteExecute(Sender: TObject);
+begin
+FrmManCliente.ShowModal;
 end;
 
 procedure TFrmMenuPrincipal.sairExecute(Sender: TObject);
