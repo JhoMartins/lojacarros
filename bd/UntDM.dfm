@@ -123,4 +123,16 @@
     Left = 224
     Top = 152
   end
+  object ADODSFuncionario: TADODataSet
+    Connection = ADOConnection1
+    CommandText = 'select * from Funcionario'
+    Parameters = <>
+    Left = 128
+    Top = 208
+  end
+  object DSFuncionario: TDataSource
+    DataSet = ADODSFuncionario
+    Left = 224
+    Top = 208
+  end
 end

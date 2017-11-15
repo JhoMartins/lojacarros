@@ -33,6 +33,8 @@ type
     ADODSEmpresacep: TStringField;
     ADODSEmpresatelefone: TStringField;
     DSEmpresa: TDataSource;
+    ADODSFuncionario: TADODataSet;
+    DSFuncionario: TDataSource;
   private
     { Private declarations }
   public
