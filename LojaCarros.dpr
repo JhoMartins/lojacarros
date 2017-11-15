@@ -8,7 +8,8 @@ uses
   UntCadCliente in 'UntCad\UntCadCliente.pas' {FrmCadCliente},
   UntManBase in 'UntMan\UntManBase.pas' {FrmManBase},
   UntManEmpresa in 'UntMan\UntManEmpresa.pas' {FrmManEmpresa},
-  UntCadBase in 'UntCad\UntCadBase.pas' {FrmCadBase};
+  UntCadBase in 'UntCad\UntCadBase.pas' {FrmCadBase},
+  UntCadEmpresa in 'UntCad\UntCadEmpresa.pas' {FrmCadEmpresa};
 
 {$R *.res}
 
@@ -22,5 +23,6 @@ begin
   Application.CreateForm(TFrmManBase, FrmManBase);
   Application.CreateForm(TFrmManEmpresa, FrmManEmpresa);
   Application.CreateForm(TFrmCadBase, FrmCadBase);
+  Application.CreateForm(TFrmCadEmpresa, FrmCadEmpresa);
   Application.Run;
 end.

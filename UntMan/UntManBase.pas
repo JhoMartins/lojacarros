@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
   Vcl.StdCtrls, System.ImageList, Vcl.ImgList, Vcl.ComCtrls, Vcl.ToolWin,  Data.Win.ADODB,
-  UntCadCliente, Vcl.ExtCtrls, UntDM;
+  UntCadCliente, Vcl.ExtCtrls, UntDM, UntCadBase;
 
 type
   TFrmManBase = class(TForm)
@@ -27,14 +27,14 @@ type
     Edit1: TEdit;
     DBGrid1: TDBGrid;
     procedure btn_sairClick(Sender: TObject);
-    constructor Create(DataSet: TADODataSet; Form: TFrmCadCliente); virtual;
+    constructor Create(DataSet: TADODataSet; Form: TFrmCadBase); virtual;
     procedure btn_inserirClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btn_alterarClick(Sender: TObject);
     procedure btn_excluirClick(Sender: TObject);
 
   private
-   FForm: TFrmCadCliente;
+   FForm: TFrmCadBase;
    FDataSet: TADODataSet;
   public
    SQL: String;
@@ -51,6 +51,7 @@ implementation
 procedure TFrmManBase.btn_alterarClick(Sender: TObject);
 begin
   FDataSet.Edit;
+  FForm.Create(FDataSet);
   FForm.btn_salvar.enabled:= true;
   FForm.btn_cancelar.enabled:= true;
   FForm.btn_sair.enabled:= false;
@@ -77,6 +78,7 @@ end;
 procedure TFrmManBase.btn_inserirClick(Sender: TObject);
 begin
   FDataSet.Insert;
+  FForm.Create(FDataSet);
   FForm.btn_salvar.Enabled:= true;
   FForm.btn_cancelar.enabled:= true;
   FForm.btn_sair.enabled:= false;
@@ -89,7 +91,7 @@ begin
   Close;
 end;
 
-constructor TFrmManBase.Create(DataSet: TADODataSet; Form: TFrmCadCliente);
+constructor TFrmManBase.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   FDataSet := DataSet;
   FForm:= Form;

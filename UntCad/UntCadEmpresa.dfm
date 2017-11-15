@@ -1,122 +1,10 @@
-object FrmCadBase: TFrmCadBase
-  Left = 0
-  Top = 0
-  BorderIcons = []
-  BorderStyle = bsSingle
-  Caption = 'FrmCadBase'
-  ClientHeight = 664
-  ClientWidth = 949
-  Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'Tahoma'
-  Font.Style = []
-  OldCreateOrder = False
-  Position = poScreenCenter
+inherited FrmCadEmpresa: TFrmCadEmpresa
+  Caption = 'FrmCadEmpresa'
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 949
-    Height = 49
-    Align = alTop
-    Color = clBlack
-    ParentBackground = False
-    TabOrder = 0
-    ExplicitWidth = 823
-    object Label1: TLabel
-      Left = 246
-      Top = 8
-      Width = 293
-      Height = 25
-      Caption = 'Manuten'#231#227'o no Cadastro de'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clYellow
-      Font.Height = -21
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-  end
-  object ToolBar1: TToolBar
-    Left = 0
-    Top = 49
-    Width = 949
-    Height = 48
-    BorderWidth = 1
-    ButtonHeight = 45
-    ButtonWidth = 45
-    Caption = 'ToolBar1'
-    DisabledImages = ImageList2
-    EdgeBorders = [ebTop, ebBottom]
-    HotImages = ImageList3
-    Images = ImageList1
-    ParentShowHint = False
-    ShowHint = True
-    TabOrder = 1
-    ExplicitWidth = 823
-    object btn_salvar: TToolButton
-      Left = 0
-      Top = 0
-      Hint = 'Salvar Registro'
-      Caption = 'btn_salvar'
-      ImageIndex = 0
-      OnClick = btn_salvarClick
-    end
-    object btn_cancelar: TToolButton
-      Left = 45
-      Top = 0
-      Hint = 'Cancelar Registro'
-      Caption = 'btn_cancelar'
-      ImageIndex = 1
-      OnClick = btn_cancelarClick
-    end
-    object ToolButton4: TToolButton
-      Left = 90
-      Top = 0
-      Width = 8
-      Caption = 'ToolButton4'
-      ImageIndex = 3
-      Style = tbsSeparator
-    end
-    object btn_sair: TToolButton
-      Left = 98
-      Top = 0
-      Hint = 'Sair'
-      Caption = 'btn_sair'
-      ImageIndex = 2
-      OnClick = btn_sairClick
-    end
-  end
-  object PnlFicha: TPanel
-    Left = 0
-    Top = 97
-    Width = 949
-    Height = 567
-    Align = alClient
-    TabOrder = 2
-    ExplicitWidth = 823
-    ExplicitHeight = 433
-    object StatusBar1: TStatusBar
-      Left = 1
-      Top = 547
-      Width = 947
-      Height = 19
-      Panels = <
-        item
-          Width = 50
-        end>
-    end
-  end
-  object ImageList1: TImageList
-    Height = 30
-    Width = 30
-    Left = 328
-    Top = 384
+  inherited ImageList1: TImageList
     Bitmap = {
-      494C01010300200060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -588,13 +476,9 @@ object FrmCadBase: TFrmCadBase
       FFFFFFFFFFFFFFFFFFFFFFC00000000000000000000000000000000000000000
       000000000000}
   end
-  object ImageList2: TImageList
-    Height = 30
-    Width = 30
-    Left = 520
-    Top = 392
+  inherited ImageList2: TImageList
     Bitmap = {
-      494C01010300140054001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1066,13 +950,9 @@ object FrmCadBase: TFrmCadBase
       FFFFFFFFFFFFFFFFFFFFFFC00000000000000000000000000000000000000000
       000000000000}
   end
-  object ImageList3: TImageList
-    Height = 30
-    Width = 30
-    Left = 424
-    Top = 384
+  inherited ImageList3: TImageList
     Bitmap = {
-      494C01010300140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

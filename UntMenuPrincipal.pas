@@ -25,7 +25,7 @@ implementation
 
 {$R *.dfm}
 
-uses UntManEmpresa, UntManCliente;
+uses UntManEmpresa, UntManCliente, UntCadEmpresa;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
@@ -35,7 +35,7 @@ end;
 procedure TForm1.Button2Click(Sender: TObject);
 var Frm: TFrmManEmpresa;
 begin
-  Frm := FrmManEmpresa.Create(DM.ADODSEmpresa, FrmCadCliente);
+  Frm := FrmManEmpresa.Create(DM.ADODSEmpresa, FrmCadEmpresa);
   Frm.ShowModal;
 end;
 
