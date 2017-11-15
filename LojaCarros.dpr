@@ -6,7 +6,8 @@ uses
   UntManCliente in 'UntMan\UntManCliente.pas' {FrmManCliente},
   UntDM in 'bd\UntDM.pas' {DM: TDataModule},
   UntCadCliente in 'UntCad\UntCadCliente.pas' {FrmCadCliente},
-  UntManBase in 'UntMan\UntManBase.pas' {FrmManBase};
+  UntManBase in 'UntMan\UntManBase.pas' {FrmManBase},
+  UntManEmpresa in 'UntMan\UntManEmpresa.pas' {FrmManEmpresa};
 
 {$R *.res}
 
@@ -18,5 +19,6 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrmCadCliente, FrmCadCliente);
   Application.CreateForm(TFrmManBase, FrmManBase);
+  Application.CreateForm(TFrmManEmpresa, FrmManEmpresa);
   Application.Run;
 end.

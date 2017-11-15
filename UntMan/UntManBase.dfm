@@ -3,7 +3,6 @@ object FrmManBase: TFrmManBase
   Top = 0
   BorderIcons = []
   BorderStyle = bsSingle
-  Caption = 'Manuten'#231#227'o no Cadastro de'
   ClientHeight = 593
   ClientWidth = 862
   Color = clBtnFace
@@ -14,6 +13,7 @@ object FrmManBase: TFrmManBase
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -48,9 +48,9 @@ object FrmManBase: TFrmManBase
     ButtonHeight = 45
     ButtonWidth = 45
     Caption = 'ToolBar1'
-    DisabledImages = ImageList3
+    DisabledImages = ImageList2
     EdgeBorders = [ebTop, ebBottom]
-    HotImages = ImageList2
+    HotImages = ImageList3
     Images = ImageList1
     ParentShowHint = False
     ShowHint = True
@@ -61,6 +61,7 @@ object FrmManBase: TFrmManBase
       Hint = 'Inserir registro'
       Caption = 'btn_inserir'
       ImageIndex = 0
+      OnClick = btn_inserirClick
     end
     object btn_alterar: TToolButton
       Left = 45
@@ -68,6 +69,7 @@ object FrmManBase: TFrmManBase
       Hint = 'alterar registro'
       Caption = 'btn_alterar'
       ImageIndex = 1
+      OnClick = btn_alterarClick
     end
     object btn_excluir: TToolButton
       Left = 90
@@ -75,6 +77,7 @@ object FrmManBase: TFrmManBase
       Hint = 'exclui registro'
       Caption = 'btn_excluir'
       ImageIndex = 2
+      OnClick = btn_excluirClick
     end
     object ToolButton5: TToolButton
       Left = 135
@@ -140,7 +143,7 @@ object FrmManBase: TFrmManBase
     Left = 328
     Top = 384
     Bitmap = {
-      494C01010700200048001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070020004C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1083,7 +1086,7 @@ object FrmManBase: TFrmManBase
     Left = 424
     Top = 384
     Bitmap = {
-      494C01010700140048001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070014004C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -2026,7 +2029,7 @@ object FrmManBase: TFrmManBase
     Left = 520
     Top = 392
     Bitmap = {
-      494C0101070014003C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140040001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
