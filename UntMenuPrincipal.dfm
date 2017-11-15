@@ -3028,4 +3028,22 @@ object FrmMenuPrincipal: TFrmMenuPrincipal
     Left = 448
     Top = 224
   end
+  object Button2: TButton
+    Left = 344
+    Top = 264
+    Width = 75
+    Height = 25
+    Caption = 'Button2'
+    TabOrder = 1
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 392
+    Top = 376
+    Width = 75
+    Height = 25
+    Caption = 'Button3'
+    TabOrder = 2
+    OnClick = Button3Click
+  end
 end

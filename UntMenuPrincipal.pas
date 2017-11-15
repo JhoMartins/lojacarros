@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UntManCliente,
   Vcl.ActnCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnMenus, System.Actions,
   Vcl.ActnList, Vcl.PlatformDefaultStyleActnCtrls, System.ImageList, Vcl.ImgList,
-  Vcl.ComCtrls, Vcl.ExtCtrls;
+  Vcl.ComCtrls, Vcl.ExtCtrls, UntCadCliente, UntManFuncionario, UntCadFuncionario, UntDM;;
 
 type
   TFrmMenuPrincipal = class(TForm)
@@ -33,6 +33,7 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure cad_clienteExecute(Sender: TObject);
     procedure man_clienteExecute(Sender: TObject);
+    
   private
     { Private declarations }
   public
@@ -46,9 +47,10 @@ implementation
 
 {$R *.dfm}
 
-uses UntCadCliente, UntDM;
+uses UntCadCliente, UntDM, UntManEmpresa, UntManCliente, UntCadEmpresa ;
 
 procedure TFrmMenuPrincipal.Button1Click(Sender: TObject);
+
 begin
   FrmManCliente.ShowModal;
 end;
@@ -70,7 +72,7 @@ procedure TFrmMenuPrincipal.FormCloseQuery(Sender: TObject;
   var confSaida: integer;
 begin
    confSaida:= application.MessageBox('Tem certeza que deseja sair do sistema?',
-   'Atenção', MB_YESNO+MB_DEFBUTTON2+MB_ICONQUESTION);
+   'Atenï¿½ï¿½o', MB_YESNO+MB_DEFBUTTON2+MB_ICONQUESTION);
 
    if confSaida = IDYES then
     application.Terminate
@@ -92,6 +94,7 @@ end;
 procedure TFrmMenuPrincipal.Timer1Timer(Sender: TObject);
 begin
 statusbar1.panels[0].Text:= timetostr(time);
+
 end;
 
 end.
