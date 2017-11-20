@@ -16,12 +16,271 @@ inherited FrmCadCliente: TFrmCadCliente
     ExplicitWidth = 949
   end
   inherited PnlFicha: TPanel
+    ExplicitTop = 103
     ExplicitWidth = 949
     ExplicitHeight = 567
+    object Label2: TLabel [0]
+      Left = 65
+      Top = 16
+      Width = 27
+      Height = 13
+      Caption = 'Nome'
+    end
+    object Label3: TLabel [1]
+      Left = 73
+      Top = 53
+      Width = 19
+      Height = 13
+      Caption = 'CPF'
+    end
+    object Label4: TLabel [2]
+      Left = 286
+      Top = 53
+      Width = 81
+      Height = 13
+      Caption = 'Data Nascimento'
+    end
+    object Label5: TLabel [3]
+      Left = 47
+      Top = 93
+      Width = 45
+      Height = 13
+      Caption = 'Endere'#231'o'
+    end
+    object Label6: TLabel [4]
+      Left = 639
+      Top = 93
+      Width = 28
+      Height = 13
+      Caption = 'Bairro'
+    end
+    object Label7: TLabel [5]
+      Left = 59
+      Top = 136
+      Width = 33
+      Height = 13
+      Caption = 'Cidade'
+    end
+    object Label8: TLabel [6]
+      Left = 556
+      Top = 136
+      Width = 33
+      Height = 13
+      Caption = 'Estado'
+    end
+    object Label9: TLabel [7]
+      Left = 688
+      Top = 136
+      Width = 19
+      Height = 13
+      Caption = 'CEP'
+    end
+    object Label10: TLabel [8]
+      Left = 48
+      Top = 210
+      Width = 44
+      Height = 13
+      Caption = 'Profiss'#227'o'
+    end
+    object Label11: TLabel [9]
+      Left = 286
+      Top = 173
+      Width = 67
+      Height = 13
+      Caption = 'Renda Mensal'
+    end
+    object Label12: TLabel [10]
+      Left = 390
+      Top = 210
+      Width = 41
+      Height = 13
+      Caption = 'Empresa'
+    end
+    object Label13: TLabel [11]
+      Left = 59
+      Top = 173
+      Width = 33
+      Height = 13
+      Caption = 'Celular'
+    end
+    object DBEdit1: TDBEdit
+      Left = 98
+      Top = 16
+      Width = 831
+      Height = 21
+      DataField = 'nome'
+      DataSource = DM.DSCliente
+      TabOrder = 1
+    end
+    object DBEdit2: TDBEdit
+      Left = 98
+      Top = 53
+      Width = 161
+      Height = 21
+      DataField = 'cpf'
+      DataSource = DM.DSCliente
+      TabOrder = 2
+    end
+    object DBEdit3: TDBEdit
+      Left = 390
+      Top = 53
+      Width = 147
+      Height = 21
+      DataField = 'data_nascimento'
+      DataSource = DM.DSCliente
+      TabOrder = 3
+    end
+    object DBEdit4: TDBEdit
+      Left = 98
+      Top = 93
+      Width = 519
+      Height = 21
+      DataField = 'endereco'
+      DataSource = DM.DSCliente
+      TabOrder = 4
+    end
+    object DBEdit5: TDBEdit
+      Left = 688
+      Top = 93
+      Width = 241
+      Height = 21
+      DataField = 'bairro'
+      DataSource = DM.DSCliente
+      TabOrder = 5
+    end
+    object DBEdit6: TDBEdit
+      Left = 98
+      Top = 136
+      Width = 439
+      Height = 21
+      DataField = 'cidade'
+      DataSource = DM.DSCliente
+      TabOrder = 6
+    end
+    object DBComboBox1: TDBComboBox
+      Left = 608
+      Top = 136
+      Width = 59
+      Height = 21
+      DataField = 'estado'
+      DataSource = DM.DSCliente
+      TabOrder = 7
+    end
+    object DBEdit7: TDBEdit
+      Left = 728
+      Top = 136
+      Width = 201
+      Height = 21
+      DataField = 'cep'
+      DataSource = DM.DSCliente
+      TabOrder = 8
+    end
+    object DBEdit8: TDBEdit
+      Left = 98
+      Top = 173
+      Width = 161
+      Height = 21
+      DataField = 'celular'
+      DataSource = DM.DSCliente
+      TabOrder = 9
+    end
+    object DBEdit9: TDBEdit
+      Left = 390
+      Top = 173
+      Width = 147
+      Height = 21
+      DataField = 'renda_mensal'
+      DataSource = DM.DSCliente
+      TabOrder = 10
+    end
+    object DBEdit10: TDBEdit
+      Left = 98
+      Top = 210
+      Width = 269
+      Height = 21
+      DataField = 'profissao'
+      DataSource = DM.DSCliente
+      TabOrder = 11
+    end
+    object DBEdit11: TDBEdit
+      Left = 456
+      Top = 210
+      Width = 121
+      Height = 21
+      DataField = 'empresa_id'
+      DataSource = DM.DSCliente
+      TabOrder = 12
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 608
+      Top = 210
+      Width = 321
+      Height = 21
+      DataField = 'empresa_id'
+      DataSource = DM.DSCliente
+      TabOrder = 13
+    end
+    object GroupBox1: TGroupBox
+      Left = 16
+      Top = 256
+      Width = 914
+      Height = 161
+      Caption = 'Conta Banc'#225'ria'
+      TabOrder = 14
+      object Label14: TLabel
+        Left = 32
+        Top = 20
+        Width = 37
+        Height = 13
+        Caption = 'N'#250'mero'
+      end
+      object Label15: TLabel
+        Left = 31
+        Top = 57
+        Width = 38
+        Height = 13
+        Caption = 'Ag'#234'ncia'
+      end
+      object Label16: TLabel
+        Left = 40
+        Top = 97
+        Width = 29
+        Height = 13
+        Caption = 'Banco'
+      end
+    end
+    object DBEdit12: TDBEdit
+      Left = 91
+      Top = 276
+      Width = 121
+      Height = 21
+      DataField = 'numero_conta'
+      DataSource = DM.DSCliente
+      TabOrder = 15
+    end
+    object DBEdit13: TDBEdit
+      Left = 91
+      Top = 318
+      Width = 121
+      Height = 21
+      DataField = 'agencia'
+      DataSource = DM.DSCliente
+      TabOrder = 16
+    end
+    object DBEdit14: TDBEdit
+      Left = 91
+      Top = 358
+      Width = 121
+      Height = 21
+      DataField = 'banco'
+      DataSource = DM.DSCliente
+      TabOrder = 17
+    end
   end
   inherited ImageList1: TImageList
+    Top = 480
     Bitmap = {
-      494C01010300200068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030020006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -494,8 +753,10 @@ inherited FrmCadCliente: TFrmCadCliente
       000000000000}
   end
   inherited ImageList2: TImageList
+    Left = 544
+    Top = 472
     Bitmap = {
-      494C0101030014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -968,8 +1229,10 @@ inherited FrmCadCliente: TFrmCadCliente
       000000000000}
   end
   inherited ImageList3: TImageList
+    Left = 440
+    Top = 520
     Bitmap = {
-      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
