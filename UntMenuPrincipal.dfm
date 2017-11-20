@@ -23,6 +23,7 @@ object Form1: TForm1
     Top = 0
     Width = 718
     Height = 25
+    UseSystemFont = False
     ActionManager = ActionManager1
     Caption = 'ActionMainMenuBar1'
     Color = clMenuBar
@@ -31,12 +32,11 @@ object Form1: TForm1
     ColorMap.BtnSelectedFont = clBlack
     ColorMap.UnusedColor = clWhite
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clBlack
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
     Spacing = 0
-    ExplicitWidth = 768
   end
   object ActionToolBar1: TActionToolBar
     Left = 0
@@ -57,7 +57,6 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     Spacing = 0
-    ExplicitWidth = 768
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -77,9 +76,6 @@ object Form1: TForm1
       item
         Width = 50
       end>
-    ExplicitLeft = 480
-    ExplicitTop = 272
-    ExplicitWidth = 0
   end
   object ActionManager1: TActionManager
     ActionBars = <
@@ -202,6 +198,7 @@ object Form1: TForm1
       Caption = 'Cliente'
       Hint = 'Manuten'#231#227'o Cliente'
       ImageIndex = 5
+      OnExecute = man_clienteExecute
     end
     object man_carro: TAction
       Category = 'Manuten'#231#227'o'
@@ -235,7 +232,7 @@ object Form1: TForm1
     Left = 216
     Top = 320
     Bitmap = {
-      494C010109003000200018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010109003000240018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000060000000480000000100200000000000006C
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

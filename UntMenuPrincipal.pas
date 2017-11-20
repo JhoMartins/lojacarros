@@ -35,6 +35,7 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure man_empresaExecute(Sender: TObject);
     procedure man_funcionarioExecute(Sender: TObject);
+    procedure man_clienteExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -93,6 +94,13 @@ begin
   else
     canclose:= false;
 
+end;
+
+procedure TForm1.man_clienteExecute(Sender: TObject);
+var Frm : TFrmManCliente;
+begin
+  Frm:= FrmManCliente.Create(dm.ADODSCliente, FrmCadCliente);
+  Frm.ShowModal;
 end;
 
 procedure TForm1.man_empresaExecute(Sender: TObject);
