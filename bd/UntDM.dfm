@@ -5,7 +5,8 @@ object DM: TDM
   object ADOConnection1: TADOConnection
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=LojaCarros;Data Source=DEIVID-PC'
+      'fo=False;Initial Catalog=LojaCarros;Data Source=DESKTOP-TL1GQGV\' +
+      'SQLEXPRESS'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 176
