@@ -1,8 +1,9 @@
 object DM: TDM
   OldCreateOrder = False
-  Height = 348
+  Height = 447
   Width = 490
   object ADOConnection1: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
       'fo=False;Initial Catalog=LojaCarros;Data Source=DESKTOP-TL1GQGV\' +
@@ -214,5 +215,44 @@ object DM: TDM
     DataSet = ADODSFuncionario
     Left = 224
     Top = 208
+  end
+  object ADODSCarro: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 'select * from Carro'
+    Parameters = <>
+    Left = 128
+    Top = 264
+    object ADODSCarroid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADODSCarromodelo: TStringField
+      FieldName = 'modelo'
+      Size = 50
+    end
+    object ADODSCarromarca: TStringField
+      FieldName = 'marca'
+      Size = 50
+    end
+    object ADODSCarroano: TIntegerField
+      FieldName = 'ano'
+    end
+    object ADODSCarrodata_compra: TWideStringField
+      FieldName = 'data_compra'
+      Size = 10
+    end
+    object ADODSCarrovalor_compra: TWideStringField
+      FieldName = 'valor_compra'
+      Size = 10
+    end
+    object ADODSCarroexproprietario_id: TIntegerField
+      FieldName = 'exproprietario_id'
+    end
+  end
+  object DSCarro: TDataSource
+    DataSet = ADODSCarro
+    Left = 224
+    Top = 264
   end
 end

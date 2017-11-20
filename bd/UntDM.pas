@@ -55,6 +55,15 @@ type
     ADODSClientenumero_conta: TStringField;
     ADODSClienteagencia: TStringField;
     ADODSClientebanco: TStringField;
+    ADODSCarro: TADODataSet;
+    DSCarro: TDataSource;
+    ADODSCarroid: TAutoIncField;
+    ADODSCarromodelo: TStringField;
+    ADODSCarromarca: TStringField;
+    ADODSCarroano: TIntegerField;
+    ADODSCarrodata_compra: TWideStringField;
+    ADODSCarrovalor_compra: TWideStringField;
+    ADODSCarroexproprietario_id: TIntegerField;
   private
     { Private declarations }
   public
