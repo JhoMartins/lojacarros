@@ -11,7 +11,9 @@ uses
   UntManFuncionario in 'UntMan\UntManFuncionario.pas' {FrmManFuncionario},
   UntCadFuncionario in 'UntCad\UntCadFuncionario.pas' {FrmCadFuncionario},
   UntManCliente in 'UntMan\UntManCliente.pas' {FrmManCliente},
-  UntCadCliente in 'UntCad\UntCadCliente.pas' {FrmCadCliente};
+  UntCadCliente in 'UntCad\UntCadCliente.pas' {FrmCadCliente},
+  UntManCarro in 'UntMan\UntManCarro.pas' {FrmManCarro},
+  UntCadCarro in 'UntCad\UntCadCarro.pas' {FrmCadCarro};
 
 {$R *.res}
 
@@ -28,5 +30,7 @@ begin
   Application.CreateForm(TFrmCadFuncionario, FrmCadFuncionario);
   Application.CreateForm(TFrmManCliente, FrmManCliente);
   Application.CreateForm(TFrmCadCliente, FrmCadCliente);
+  Application.CreateForm(TFrmManCarro, FrmManCarro);
+  Application.CreateForm(TFrmCadCarro, FrmCadCarro);
   Application.Run;
 end.

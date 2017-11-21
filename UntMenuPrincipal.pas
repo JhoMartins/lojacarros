@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UntCadCliente, UntManFuncionario, UntCadFuncionario, UntDM,
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, System.Actions,
   Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.PlatformDefaultStyleActnCtrls,
-  Vcl.ComCtrls, Vcl.ExtCtrls;
+  Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro;
 
 type
   TForm1 = class(TForm)
@@ -36,6 +36,7 @@ type
     procedure man_empresaExecute(Sender: TObject);
     procedure man_funcionarioExecute(Sender: TObject);
     procedure man_clienteExecute(Sender: TObject);
+    procedure man_carroExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -94,6 +95,13 @@ begin
   else
     canclose:= false;
 
+end;
+
+procedure TForm1.man_carroExecute(Sender: TObject);
+var Frm: TFrmManCarro;
+begin
+  Frm:= FrmManCarro.Create(DM.ADODSCarro, FrmCadCarro);
+  Frm.ShowModal;
 end;
 
 procedure TForm1.man_clienteExecute(Sender: TObject);
