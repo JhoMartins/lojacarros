@@ -237,9 +237,6 @@ object DM: TDM
       FieldName = 'marca'
       Size = 50
     end
-    object ADODSCarroano: TIntegerField
-      FieldName = 'ano'
-    end
     object ADODSCarrodata_compra: TWideStringField
       FieldName = 'data_compra'
       Size = 10
@@ -250,6 +247,16 @@ object DM: TDM
     end
     object ADODSCarroexproprietario_id: TIntegerField
       FieldName = 'exproprietario_id'
+      OnValidate = ADODSCarroexproprietario_idValidate
+    end
+    object ADODSCarrocor: TStringField
+      FieldName = 'cor'
+      Size = 50
+    end
+    object ADODSCarrovalor_venda: TWideStringField
+      FieldName = 'valor_venda'
+      FixedChar = True
+      Size = 10
     end
   end
   object DSCarro: TDataSource

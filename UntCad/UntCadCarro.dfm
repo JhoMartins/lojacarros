@@ -1,95 +1,105 @@
 inherited FrmCadCarro: TFrmCadCarro
   Caption = 'Manuten'#231#227'o no Cadastro de Carro'
-  ClientHeight = 314
-  ClientWidth = 737
-  ExplicitWidth = 743
-  ExplicitHeight = 343
+  ClientHeight = 320
+  ClientWidth = 629
+  OnActivate = FormActivate
+  ExplicitWidth = 635
+  ExplicitHeight = 349
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 737
-    ExplicitWidth = 949
+    Width = 629
+    ExplicitWidth = 737
     inherited Label1: TLabel
-      Left = 158
+      Left = 142
       Width = 357
       Caption = 'Manuten'#231#227'o no Cadastro de Carro'
-      ExplicitLeft = 158
+      ExplicitLeft = 142
       ExplicitWidth = 357
     end
   end
   inherited ToolBar1: TToolBar
-    Width = 737
-    ExplicitWidth = 949
+    Width = 629
+    ExplicitWidth = 737
   end
   inherited PnlFicha: TPanel
-    Width = 737
-    Height = 217
+    Width = 629
+    Height = 223
     ExplicitTop = 103
-    ExplicitWidth = 649
+    ExplicitWidth = 629
     ExplicitHeight = 217
     object Label2: TLabel [0]
-      Left = 50
-      Top = 21
+      Left = 16
+      Top = 6
       Width = 29
       Height = 13
       Caption = 'Marca'
     end
     object Label3: TLabel [1]
-      Left = 336
-      Top = 21
+      Left = 224
+      Top = 6
       Width = 34
       Height = 13
       Caption = 'Modelo'
     end
-    object Label4: TLabel [2]
-      Left = 600
-      Top = 21
-      Width = 19
-      Height = 13
-      Caption = 'Ano'
-    end
-    object Label5: TLabel [3]
+    object Label5: TLabel [2]
       Left = 16
       Top = 56
       Width = 63
       Height = 13
       Caption = 'Data Compra'
     end
-    object Label6: TLabel [4]
+    object Label6: TLabel [3]
       Left = 32
       Top = 232
       Width = 31
       Height = 13
       Caption = 'Label6'
     end
-    object Label7: TLabel [5]
-      Left = 308
-      Top = 56
+    object Label7: TLabel [4]
+      Left = 224
+      Top = 52
       Width = 62
       Height = 13
       Caption = 'Valor compra'
     end
-    object Label8: TLabel [6]
-      Left = 8
+    object Label8: TLabel [5]
+      Left = 16
       Top = 99
-      Width = 71
+      Width = 88
       Height = 13
-      Caption = 'Ex Proprietario'
+      Caption = 'Ex Proprietario_ID'
     end
-    object Label9: TLabel [7]
-      Left = 602
-      Top = 56
+    object Label9: TLabel [6]
+      Left = 450
+      Top = 6
       Width = 17
       Height = 13
       Caption = 'Cor'
     end
+    object Label4: TLabel [7]
+      Left = 450
+      Top = 52
+      Width = 57
+      Height = 13
+      Caption = 'Valor Venda'
+    end
+    object Label10: TLabel [8]
+      Left = 224
+      Top = 99
+      Width = 27
+      Height = 13
+      Caption = 'Nome'
+    end
     inherited StatusBar1: TStatusBar
-      Top = 197
-      Width = 735
+      Top = 203
+      Width = 627
+      ExplicitTop = 197
+      ExplicitWidth = 735
     end
     object DBEdit1: TDBEdit
-      Left = 92
-      Top = 21
+      Left = 16
+      Top = 25
       Width = 189
       Height = 21
       DataField = 'marca'
@@ -97,26 +107,17 @@ inherited FrmCadCarro: TFrmCadCarro
       TabOrder = 1
     end
     object DBEdit2: TDBEdit
-      Left = 384
-      Top = 21
+      Left = 224
+      Top = 25
       Width = 201
       Height = 21
       DataField = 'modelo'
       DataSource = DM.DSCarro
       TabOrder = 2
     end
-    object DBEdit3: TDBEdit
-      Left = 632
-      Top = 21
-      Width = 81
-      Height = 21
-      DataField = 'ano'
-      DataSource = DM.DSCarro
-      TabOrder = 3
-    end
     object DBEdit4: TDBEdit
-      Left = 92
-      Top = 56
+      Left = 16
+      Top = 72
       Width = 189
       Height = 21
       DataField = 'data_compra'
@@ -124,39 +125,57 @@ inherited FrmCadCarro: TFrmCadCarro
       TabOrder = 4
     end
     object DBEdit6: TDBEdit
-      Left = 92
-      Top = 99
-      Width = 101
+      Left = 16
+      Top = 118
+      Width = 189
       Height = 21
-      TabOrder = 5
-    end
-    object DBLookupComboBox1: TDBLookupComboBox
-      Left = 216
-      Top = 99
-      Width = 497
-      Height = 21
-      TabOrder = 6
-    end
-    object DBEdit7: TDBEdit
-      Left = 632
-      Top = 56
-      Width = 81
-      Height = 21
+      DataField = 'exproprietario_id'
+      DataSource = DM.DSCarro
       TabOrder = 7
     end
-  end
-  object DBEdit5: TDBEdit [3]
-    Left = 384
-    Top = 153
-    Width = 201
-    Height = 21
-    DataField = 'valor_compra'
-    DataSource = DM.DSCarro
-    TabOrder = 3
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 224
+      Top = 118
+      Width = 385
+      Height = 21
+      DataField = 'exproprietario_id'
+      DataSource = DM.DSCarro
+      KeyField = 'id'
+      ListField = 'nome'
+      ListSource = DSCliente
+      TabOrder = 8
+    end
+    object DBEdit7: TDBEdit
+      Left = 450
+      Top = 25
+      Width = 159
+      Height = 21
+      DataField = 'cor'
+      DataSource = DM.DSCarro
+      TabOrder = 3
+    end
+    object DBEdit3: TDBEdit
+      Left = 450
+      Top = 72
+      Width = 159
+      Height = 21
+      DataField = 'valor_venda'
+      DataSource = DM.DSCarro
+      TabOrder = 6
+    end
+    object DBEdit5: TDBEdit
+      Left = 224
+      Top = 72
+      Width = 201
+      Height = 21
+      DataField = 'valor_compra'
+      DataSource = DM.DSCarro
+      TabOrder = 5
+    end
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C01010300200068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030020006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -630,7 +649,7 @@ inherited FrmCadCarro: TFrmCadCarro
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C0101030014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1104,7 +1123,7 @@ inherited FrmCadCarro: TFrmCadCarro
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1575,5 +1594,19 @@ inherited FrmCadCarro: TFrmCadCarro
       FFFFFFFFFFFFFFFFFFFFFFC000000000FFFFFFFFFFFFFFFFFFFFFFC000000000
       FFFFFFFFFFFFFFFFFFFFFFC00000000000000000000000000000000000000000
       000000000000}
+  end
+  object ADOQueryCliente: TADOQuery
+    Connection = DM.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT id, nome FROM Cliente ORDER BY nome')
+    Left = 32
+    Top = 241
+  end
+  object DSCliente: TDataSource
+    DataSet = ADOQueryCliente
+    Left = 224
+    Top = 249
   end
 end

@@ -3,7 +3,7 @@ unit UntDM;
 interface
 
 uses
-  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB;
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB, Vcl.Dialogs;
 
 type
   TDM = class(TDataModule)
@@ -57,13 +57,6 @@ type
     ADODSClientebanco: TStringField;
     ADODSCarro: TADODataSet;
     DSCarro: TDataSource;
-    ADODSCarroid: TAutoIncField;
-    ADODSCarromodelo: TStringField;
-    ADODSCarromarca: TStringField;
-    ADODSCarroano: TIntegerField;
-    ADODSCarrodata_compra: TWideStringField;
-    ADODSCarrovalor_compra: TWideStringField;
-    ADODSCarroexproprietario_id: TIntegerField;
     ADODSVenda: TADODataSet;
     DSVenda: TDataSource;
     ADODSVendaid: TIntegerField;
@@ -74,6 +67,15 @@ type
     ADODSVendapagamento: TStringField;
     ADODSVendadesconto: TBCDField;
     ADODSVendavalor_inicial: TBCDField;
+    ADODSCarroid: TAutoIncField;
+    ADODSCarromodelo: TStringField;
+    ADODSCarromarca: TStringField;
+    ADODSCarrodata_compra: TWideStringField;
+    ADODSCarrovalor_compra: TWideStringField;
+    ADODSCarroexproprietario_id: TIntegerField;
+    ADODSCarrocor: TStringField;
+    ADODSCarrovalor_venda: TWideStringField;
+    procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }
   public
@@ -87,6 +89,18 @@ implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
+uses UntCadCarro;
+
 {$R *.dfm}
+
+procedure TDM.ADODSCarroexproprietario_idValidate(Sender: TField);
+begin
+  if not FrmCadCarro.ADOQueryCliente.Locate('ID', ADODSCarroexproprietario_id.AsString, []) then
+  begin
+    MessageDlg('Cliente não encontrado', mtError, [mbOK], 0);
+    Abort;
+  end;
+
+end;
 
 end.
