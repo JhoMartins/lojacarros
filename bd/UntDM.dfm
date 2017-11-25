@@ -247,6 +247,7 @@ object DM: TDM
     end
     object ADODSCarroexproprietario_id: TIntegerField
       FieldName = 'exproprietario_id'
+      OnValidate = ADODSCarroexproprietario_idValidate
     end
     object ADODSCarrocor: TStringField
       FieldName = 'cor'

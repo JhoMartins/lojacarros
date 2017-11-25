@@ -75,6 +75,7 @@ type
     ADODSCarroexproprietario_id: TIntegerField;
     ADODSCarrocor: TStringField;
     ADODSCarrovalor_venda: TWideStringField;
+    procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }
   public
@@ -91,5 +92,15 @@ implementation
 uses UntCadCarro;
 
 {$R *.dfm}
+
+procedure TDM.ADODSCarroexproprietario_idValidate(Sender: TField);
+begin
+  if not FrmCadCarro.ADOQueryCliente.Locate('ID', ADODSCarroexproprietario_id.AsString, []) then
+  begin
+    MessageDlg('Cliente não encontrado', mtError, [mbOK], 0);
+    Abort;
+  end;
+
+end;
 
 end.
