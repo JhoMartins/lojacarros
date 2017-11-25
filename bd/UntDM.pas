@@ -64,6 +64,16 @@ type
     ADODSCarrodata_compra: TWideStringField;
     ADODSCarrovalor_compra: TWideStringField;
     ADODSCarroexproprietario_id: TIntegerField;
+    ADODSVenda: TADODataSet;
+    DSVenda: TDataSource;
+    ADODSVendaid: TIntegerField;
+    ADODSVendacarro_id: TIntegerField;
+    ADODSVendavalor_final: TBCDField;
+    ADODSVendadata: TWideStringField;
+    ADODSVendacliente_id: TIntegerField;
+    ADODSVendapagamento: TStringField;
+    ADODSVendadesconto: TBCDField;
+    ADODSVendavalor_inicial: TBCDField;
   private
     { Private declarations }
   public
