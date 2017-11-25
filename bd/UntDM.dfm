@@ -270,9 +270,9 @@ object DM: TDM
     object ADODSVendacarro_id: TIntegerField
       FieldName = 'carro_id'
     end
-    object ADODSVendavalor: TBCDField
-      FieldName = 'valor'
-      Precision = 5
+    object ADODSVendavalor_final: TBCDField
+      FieldName = 'valor_final'
+      Precision = 18
       Size = 2
     end
     object ADODSVendadata: TWideStringField
@@ -289,6 +289,11 @@ object DM: TDM
     object ADODSVendadesconto: TBCDField
       FieldName = 'desconto'
       Precision = 3
+      Size = 2
+    end
+    object ADODSVendavalor_inicial: TBCDField
+      FieldName = 'valor_inicial'
+      Precision = 18
       Size = 2
     end
   end
