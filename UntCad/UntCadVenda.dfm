@@ -69,6 +69,20 @@ inherited FrmCadVenda: TFrmCadVenda
       Height = 13
       Caption = 'Desconto'
     end
+    object Label7: TLabel [6]
+      Left = 592
+      Top = 24
+      Width = 24
+      Height = 13
+      Caption = 'Valor'
+    end
+    object Label8: TLabel [7]
+      Left = 16
+      Top = 187
+      Width = 24
+      Height = 13
+      Caption = 'Total'
+    end
     inherited StatusBar1: TStatusBar
       Top = 326
       Width = 725
@@ -81,6 +95,8 @@ inherited FrmCadVenda: TFrmCadVenda
       Top = 43
       Width = 129
       Height = 21
+      DataField = 'carro_id'
+      DataSource = DM.DSVenda
       TabOrder = 1
     end
     object DBLookupComboBox2: TDBLookupComboBox
@@ -88,6 +104,11 @@ inherited FrmCadVenda: TFrmCadVenda
       Top = 43
       Width = 417
       Height = 21
+      DataField = 'carro_id'
+      DataSource = DM.DSVenda
+      KeyField = 'id'
+      ListField = 'modelo'
+      ListSource = DSCarro
       TabOrder = 2
     end
     object DBLookupComboBox1: TDBLookupComboBox
@@ -95,6 +116,11 @@ inherited FrmCadVenda: TFrmCadVenda
       Top = 99
       Width = 417
       Height = 21
+      DataField = 'cliente_id'
+      DataSource = DM.DSVenda
+      KeyField = 'id'
+      ListField = 'nome'
+      ListSource = DSCliente
       TabOrder = 3
     end
     object DBComboBox1: TDBComboBox
@@ -102,6 +128,14 @@ inherited FrmCadVenda: TFrmCadVenda
       Top = 152
       Width = 417
       Height = 21
+      DataField = 'pagamento'
+      DataSource = DM.DSVenda
+      Items.Strings = (
+        'Financiamento'
+        'Dinheiro'
+        'Boleto'
+        'D'#233'bito'
+        'Cr'#233'dito')
       TabOrder = 4
     end
     object DBEdit1: TDBEdit
@@ -109,7 +143,17 @@ inherited FrmCadVenda: TFrmCadVenda
       Top = 152
       Width = 129
       Height = 21
+      DataField = 'desconto'
+      DataSource = DM.DSVenda
       TabOrder = 5
+    end
+    object DBEdit4: TDBEdit
+      Left = 592
+      Top = 43
+      Width = 121
+      Height = 21
+      ReadOnly = True
+      TabOrder = 6
     end
   end
   object DBEdit3: TDBEdit [3]
@@ -117,7 +161,17 @@ inherited FrmCadVenda: TFrmCadVenda
     Top = 196
     Width = 129
     Height = 21
+    DataField = 'cliente_id'
+    DataSource = DM.DSVenda
     TabOrder = 3
+  end
+  object DBEdit5: TDBEdit [4]
+    Left = 16
+    Top = 303
+    Width = 129
+    Height = 21
+    ReadOnly = True
+    TabOrder = 4
   end
   inherited ImageList1: TImageList
     Left = 320
@@ -1546,5 +1600,33 @@ inherited FrmCadVenda: TFrmCadVenda
       FFFFFFFFFFFFFFFFFFFFFFC000000000FFFFFFFFFFFFFFFFFFFFFFC000000000
       FFFFFFFFFFFFFFFFFFFFFFC00000000000000000000000000000000000000000
       000000000000}
+  end
+  object ADOQueryCarro: TADOQuery
+    Connection = DM.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT id, modelo, valor FROM Carro ORDER BY modelo')
+    Left = 96
+    Top = 97
+  end
+  object DSCarro: TDataSource
+    DataSet = ADOQueryCarro
+    Left = 264
+    Top = 97
+  end
+  object ADOQueryCliente: TADOQuery
+    Connection = DM.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT id, nome FROM Cliente ORDER BY nome')
+    Left = 96
+    Top = 161
+  end
+  object DSCliente: TDataSource
+    DataSet = ADOQueryCliente
+    Left = 264
+    Top = 160
   end
 end

@@ -298,6 +298,7 @@ object DM: TDM
     end
   end
   object DSVenda: TDataSource
+    DataSet = ADODSVenda
     Left = 224
     Top = 328
   end

@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UntCadBase, Vcl.StdCtrls, Vcl.DBCtrls,
   Vcl.Mask, System.ImageList, Vcl.ImgList, Vcl.ComCtrls, Vcl.ToolWin,
-  Vcl.ExtCtrls;
+  Vcl.ExtCtrls, UntDM, Data.DB, Data.Win.ADODB;
 
 type
   TFrmCadVenda = class(TFrmCadBase)
@@ -22,6 +22,14 @@ type
     DBComboBox1: TDBComboBox;
     Label6: TLabel;
     DBEdit1: TDBEdit;
+    ADOQueryCarro: TADOQuery;
+    DSCarro: TDataSource;
+    ADOQueryCliente: TADOQuery;
+    DSCliente: TDataSource;
+    Label7: TLabel;
+    DBEdit4: TDBEdit;
+    Label8: TLabel;
+    DBEdit5: TDBEdit;
   private
     { Private declarations }
   public

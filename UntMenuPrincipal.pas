@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UntCadCliente, UntManFuncionario, UntCadFuncionario, UntDM,
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, System.Actions,
   Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.PlatformDefaultStyleActnCtrls,
-  Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro;
+  Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro, UntCadVenda, UntManVenda;
 
 type
   TForm1 = class(TForm)
@@ -26,6 +26,7 @@ type
     Action1: TAction;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
+    Button1: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -53,8 +54,10 @@ implementation
 uses UntManEmpresa, UntManCliente, UntCadEmpresa;
 
 procedure TForm1.Button1Click(Sender: TObject);
+var Frm: TFrmManVenda;
 begin
-  FrmManCliente.ShowModal;
+  Frm := FrmManVenda.Create(DM.ADODSVenda, FrmCadVenda);
+  Frm.ShowModal;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
