@@ -84,6 +84,8 @@ type
     ADODSServicostatus: TStringField;
     ADODSServicocarro_id: TIntegerField;
     ADODSServicoempresa_id: TIntegerField;
+    ADODSServicofinalizado_em: TWideStringField;
+    ADODSServicovalor: TBCDField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }

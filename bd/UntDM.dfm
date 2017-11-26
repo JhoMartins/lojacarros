@@ -12,7 +12,7 @@ object DM: TDM
       'ta=False;Tag with column collation when possible=False'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
-    Left = 176
+    Left = 184
     Top = 48
   end
   object ADODSCliente: TADODataSet
@@ -342,6 +342,15 @@ object DM: TDM
     end
     object ADODSServicoempresa_id: TIntegerField
       FieldName = 'empresa_id'
+    end
+    object ADODSServicofinalizado_em: TWideStringField
+      FieldName = 'finalizado_em'
+      Size = 10
+    end
+    object ADODSServicovalor: TBCDField
+      FieldName = 'valor'
+      Precision = 18
+      Size = 2
     end
   end
   object DSServico: TDataSource
