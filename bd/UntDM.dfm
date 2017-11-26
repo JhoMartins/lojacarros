@@ -309,43 +309,43 @@ object DM: TDM
     Left = 224
     Top = 328
   end
-  object ADODSServicos: TADODataSet
+  object ADODSServico: TADODataSet
     Connection = ADOConnection1
     CursorType = ctStatic
-    CommandText = 'select * from Servicos'
+    CommandText = 'select * from Servico'
     Parameters = <>
     Left = 120
     Top = 376
-    object ADODSServicosid: TAutoIncField
+    object ADODSServicoid: TAutoIncField
       FieldName = 'id'
       ReadOnly = True
     end
-    object ADODSServicosdescricao: TStringField
+    object ADODSServicodescricao: TStringField
       FieldName = 'descricao'
       Size = 50
     end
-    object ADODSServicosdata_inicio: TWideStringField
+    object ADODSServicodata_inicio: TWideStringField
       FieldName = 'data_inicio'
       Size = 10
     end
-    object ADODSServicosdata_fim: TWideStringField
+    object ADODSServicodata_fim: TWideStringField
       FieldName = 'data_fim'
       FixedChar = True
       Size = 10
     end
-    object ADODSServicosstatus: TStringField
+    object ADODSServicostatus: TStringField
       FieldName = 'status'
       Size = 50
     end
-    object ADODSServicoscarro_id: TIntegerField
+    object ADODSServicocarro_id: TIntegerField
       FieldName = 'carro_id'
     end
-    object ADODSServicosempresa_id: TIntegerField
+    object ADODSServicoempresa_id: TIntegerField
       FieldName = 'empresa_id'
     end
   end
-  object DSServicos: TDataSource
-    DataSet = ADODSServicos
+  object DSServico: TDataSource
+    DataSet = ADODSServico
     Left = 224
     Top = 376
   end
