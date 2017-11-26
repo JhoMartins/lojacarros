@@ -1,6 +1,6 @@
 object DM: TDM
   OldCreateOrder = False
-  Height = 447
+  Height = 500
   Width = 490
   object ADOConnection1: TADOConnection
     Connected = True
@@ -308,5 +308,45 @@ object DM: TDM
     DataSet = ADODSVenda
     Left = 224
     Top = 328
+  end
+  object ADODSServicos: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 'select * from Servicos'
+    Parameters = <>
+    Left = 120
+    Top = 376
+    object ADODSServicosid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADODSServicosdescricao: TStringField
+      FieldName = 'descricao'
+      Size = 50
+    end
+    object ADODSServicosdata_inicio: TWideStringField
+      FieldName = 'data_inicio'
+      Size = 10
+    end
+    object ADODSServicosdata_fim: TWideStringField
+      FieldName = 'data_fim'
+      FixedChar = True
+      Size = 10
+    end
+    object ADODSServicosstatus: TStringField
+      FieldName = 'status'
+      Size = 50
+    end
+    object ADODSServicoscarro_id: TIntegerField
+      FieldName = 'carro_id'
+    end
+    object ADODSServicosempresa_id: TIntegerField
+      FieldName = 'empresa_id'
+    end
+  end
+  object DSServicos: TDataSource
+    DataSet = ADODSServicos
+    Left = 224
+    Top = 376
   end
 end
