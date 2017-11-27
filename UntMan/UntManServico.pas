@@ -9,7 +9,7 @@ uses
   Vcl.ExtCtrls;
 
 type
-  TFrmManDespesa = class(TFrmManBase)
+  TFrmManServico = class(TFrmManBase)
   constructor Create(DataSet: TADODataSet; Form: TFrmCadBase); override;
   private
     { Private declarations }
@@ -18,7 +18,7 @@ type
   end;
 
 var
-  FrmManDespesa: TFrmManDespesa;
+  FrmManServico: TFrmManServico;
 
 implementation
 
@@ -26,7 +26,7 @@ implementation
 
 { TFrmManDespesa }
 
-constructor TFrmManDespesa.Create(DataSet: TADODataSet; Form: TFrmCadBase);
+constructor TFrmManServico.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   inherited;
   SQL:= 'SELECT * FROM Servico ORDER BY data_inicio desc'

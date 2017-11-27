@@ -157,11 +157,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UntMan\UntManServico.pas">
-            <Form>FrmManDespesa</Form>
+            <Form>FrmManServico</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UntCad\UntCadServico.pas">
-            <Form>FrmCadBase1</Form>
+            <Form>FrmCadServico</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

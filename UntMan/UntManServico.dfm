@@ -1,14 +1,14 @@
-inherited FrmManDespesa: TFrmManDespesa
-  Caption = 'Manuen'#231#227'o no cadastro de despesa'
+inherited FrmManServico: TFrmManServico
+  Caption = 'Manuen'#231#227'o no cadastro de Servi'#231'o'
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     inherited Label1: TLabel
       Left = 214
-      Width = 387
-      Caption = 'Manuten'#231#227'o no Cadastro de Despesa'
+      Width = 375
+      Caption = 'Manuten'#231#227'o no Cadastro de Servi'#231'o'
       ExplicitLeft = 214
-      ExplicitWidth = 387
+      ExplicitWidth = 375
     end
   end
   inherited ImageList1: TImageList
