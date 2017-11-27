@@ -1,6 +1,6 @@
 object DM: TDM
   OldCreateOrder = False
-  Height = 447
+  Height = 500
   Width = 490
   object ADOConnection1: TADOConnection
     Connected = True
@@ -12,7 +12,7 @@ object DM: TDM
       'ta=False;Tag with column collation when possible=False'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
-    Left = 176
+    Left = 184
     Top = 48
   end
   object ADODSCliente: TADODataSet
@@ -308,5 +308,54 @@ object DM: TDM
     DataSet = ADODSVenda
     Left = 224
     Top = 328
+  end
+  object ADODSServico: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 'select * from Servico'
+    Parameters = <>
+    Left = 120
+    Top = 376
+    object ADODSServicoid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADODSServicodescricao: TStringField
+      FieldName = 'descricao'
+      Size = 50
+    end
+    object ADODSServicodata_inicio: TWideStringField
+      FieldName = 'data_inicio'
+      Size = 10
+    end
+    object ADODSServicodata_fim: TWideStringField
+      FieldName = 'data_fim'
+      FixedChar = True
+      Size = 10
+    end
+    object ADODSServicostatus: TStringField
+      FieldName = 'status'
+      Size = 50
+    end
+    object ADODSServicocarro_id: TIntegerField
+      FieldName = 'carro_id'
+    end
+    object ADODSServicoempresa_id: TIntegerField
+      FieldName = 'empresa_id'
+    end
+    object ADODSServicofinalizado_em: TWideStringField
+      FieldName = 'finalizado_em'
+      Size = 10
+    end
+    object ADODSServicovalor: TBCDField
+      FieldName = 'valor'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object DSServico: TDataSource
+    DataSet = ADODSServico
+    Left = 224
+    Top = 376
   end
 end

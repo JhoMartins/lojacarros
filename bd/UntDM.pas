@@ -75,6 +75,17 @@ type
     ADODSCarroexproprietario_id: TIntegerField;
     ADODSCarrocor: TStringField;
     ADODSCarrovalor_venda: TWideStringField;
+    ADODSServico: TADODataSet;
+    DSServico: TDataSource;
+    ADODSServicoid: TAutoIncField;
+    ADODSServicodescricao: TStringField;
+    ADODSServicodata_inicio: TWideStringField;
+    ADODSServicodata_fim: TWideStringField;
+    ADODSServicostatus: TStringField;
+    ADODSServicocarro_id: TIntegerField;
+    ADODSServicoempresa_id: TIntegerField;
+    ADODSServicofinalizado_em: TWideStringField;
+    ADODSServicovalor: TBCDField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }

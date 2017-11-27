@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UntCadCliente, UntManFuncionario, UntCadFuncionario, UntDM,
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, System.Actions,
   Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.PlatformDefaultStyleActnCtrls,
-  Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro, UntCadVenda, UntManVenda;
+  Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro, UntCadVenda, UntManVenda, UntManServico;
 
 type
   TForm1 = class(TForm)
@@ -23,7 +23,7 @@ type
     man_empresa: TAction;
     man_funcionario: TAction;
     ActionToolBar1: TActionToolBar;
-    Action1: TAction;
+    btn_servico: TAction;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
     Button1: TButton;
@@ -38,6 +38,7 @@ type
     procedure man_funcionarioExecute(Sender: TObject);
     procedure man_clienteExecute(Sender: TObject);
     procedure man_carroExecute(Sender: TObject);
+    procedure btn_servicoExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,7 +52,14 @@ implementation
 
 {$R *.dfm}
 
-uses UntManEmpresa, UntManCliente, UntCadEmpresa;
+uses UntManEmpresa, UntManCliente, UntCadEmpresa, UntCadServico;
+
+procedure TForm1.btn_servicoExecute(Sender: TObject);
+var Frm: TFrmManServico;
+begin
+  Frm := FrmManServico.Create(DM.ADODSServico, FrmCadServico);
+  Frm.ShowModal;
+end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 var Frm: TFrmManVenda;
