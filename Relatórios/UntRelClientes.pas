@@ -1,23 +1,20 @@
-unit UntRelCarros;
+unit UntRelClientes;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
-  frxClass, frxDBSet, Data.DB, Data.Win.ADODB;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, frxClass, frxDBSet, Data.DB,
+  Data.Win.ADODB, Vcl.ExtCtrls, Vcl.StdCtrls;
 
 type
-  TFrmRelCarro = class(TForm)
+  TForm2 = class(TForm)
     Panel1: TPanel;
     Panel2: TPanel;
-    LabeledEdit4: TLabeledEdit;
-    LabeledEdit5: TLabeledEdit;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
-    ADOQueryCarro: TADOQuery;
+    ADOQueryCliente: TADOQuery;
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
+    LabeledEdit1: TLabeledEdit;
   private
     { Private declarations }
   public
@@ -25,7 +22,7 @@ type
   end;
 
 var
-  FrmRelCarro: TFrmRelCarro;
+  Form2: TForm2;
 
 implementation
 
