@@ -39,22 +39,6 @@ type
     ADODSFuncionariofilhos: TIntegerField;
     ADODSFuncionariosalario_base: TBCDField;
     ADODSFuncionariodata_admissao: TWideStringField;
-    ADODSClienteid: TAutoIncField;
-    ADODSClientenome: TStringField;
-    ADODSClientecpf: TStringField;
-    ADODSClientedata_nascimento: TWideStringField;
-    ADODSClienteendereco: TStringField;
-    ADODSClientebairro: TStringField;
-    ADODSClientecidade: TStringField;
-    ADODSClienteestado: TStringField;
-    ADODSClientecep: TStringField;
-    ADODSClienteprofissao: TStringField;
-    ADODSClienterenda_mensal: TBCDField;
-    ADODSClienteempresa_id: TIntegerField;
-    ADODSClientecelular: TStringField;
-    ADODSClientenumero_conta: TStringField;
-    ADODSClienteagencia: TStringField;
-    ADODSClientebanco: TStringField;
     ADODSCarro: TADODataSet;
     DSCarro: TDataSource;
     ADODSVenda: TADODataSet;
@@ -86,6 +70,18 @@ type
     ADODSServicoempresa_id: TIntegerField;
     ADODSServicofinalizado_em: TWideStringField;
     ADODSServicovalor: TBCDField;
+    ADODSClienteid: TAutoIncField;
+    ADODSClientenome: TStringField;
+    ADODSClientecpf: TStringField;
+    ADODSClientedata_nascimento: TWideStringField;
+    ADODSClienteendereco: TStringField;
+    ADODSClientebairro: TStringField;
+    ADODSClientecidade: TStringField;
+    ADODSClienteestado: TStringField;
+    ADODSClientecep: TStringField;
+    ADODSClienteprofissao: TStringField;
+    ADODSClienterenda_mensal: TBCDField;
+    ADODSClientecelular: TStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }

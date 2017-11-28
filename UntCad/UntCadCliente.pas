@@ -20,7 +20,6 @@ type
     Label9: TLabel;
     Label10: TLabel;
     Label11: TLabel;
-    Label12: TLabel;
     Label13: TLabel;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
@@ -33,15 +32,6 @@ type
     DBEdit8: TDBEdit;
     DBEdit9: TDBEdit;
     DBEdit10: TDBEdit;
-    DBEdit11: TDBEdit;
-    DBLookupComboBox1: TDBLookupComboBox;
-    GroupBox1: TGroupBox;
-    Label14: TLabel;
-    Label15: TLabel;
-    Label16: TLabel;
-    DBEdit12: TDBEdit;
-    DBEdit13: TDBEdit;
-    DBEdit14: TDBEdit;
   private
     { Private declarations }
   public
