@@ -3,12 +3,13 @@ object DM: TDM
   Height = 500
   Width = 490
   object ADOConnection1: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=lojacarros;Data Source=DEIVID-PC;Use Pr' +
-      'ocedure for Prepare=1;Auto Translate=True;Packet Size=4096;Works' +
-      'tation ID=DESKTOP-TL1GQGV;Use Encryption for Data=False;Tag with' +
-      ' column collation when possible=False'
+      'fo=False;Initial Catalog=lojacarros;Data Source=DESKTOP-TL1GQGV\' +
+      'SQLEXPRESS;Use Procedure for Prepare=1;Auto Translate=True;Packe' +
+      't Size=4096;Workstation ID=DESKTOP-TL1GQGV;Use Encryption for Da' +
+      'ta=False;Tag with column collation when possible=False'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 184
@@ -17,7 +18,7 @@ object DM: TDM
   object ADODSCliente: TADODataSet
     Connection = ADOConnection1
     CursorType = ctStatic
-    CommandText = 'select * from cliente'
+    CommandText = 'select * from Cliente'
     Parameters = <>
     Left = 136
     Top = 96
@@ -66,24 +67,9 @@ object DM: TDM
       Precision = 5
       Size = 2
     end
-    object ADODSClienteempresa_id: TIntegerField
-      FieldName = 'empresa_id'
-    end
     object ADODSClientecelular: TStringField
       FieldName = 'celular'
       Size = 15
-    end
-    object ADODSClientenumero_conta: TStringField
-      FieldName = 'numero_conta'
-      Size = 10
-    end
-    object ADODSClienteagencia: TStringField
-      FieldName = 'agencia'
-      Size = 10
-    end
-    object ADODSClientebanco: TStringField
-      FieldName = 'banco'
-      Size = 50
     end
   end
   object DSCliente: TDataSource
