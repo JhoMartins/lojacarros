@@ -18,7 +18,8 @@ uses
   UntCadVenda in 'UntCad\UntCadVenda.pas' {FrmCadVenda},
   UntManServico in 'UntMan\UntManServico.pas' {FrmManServico},
   UntCadServico in 'UntCad\UntCadServico.pas' {FrmCadServico},
-  UntRelCarros in 'Relatórios\UntRelCarros.pas' {FrmRelCarro};
+  UntRelCarros in 'Relatórios\UntRelCarros.pas' {FrmRelCarro},
+  UntRelClientes in 'Relatórios\UntRelClientes.pas' {Form2};
 
 {$R *.res}
 
@@ -42,5 +43,6 @@ begin
   Application.CreateForm(TFrmManServico, FrmManServico);
   Application.CreateForm(TFrmCadServico, FrmCadServico);
   Application.CreateForm(TFrmRelCarro, FrmRelCarro);
+  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
