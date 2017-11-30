@@ -169,7 +169,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Relatórios\UntRelClientes.pas">
-            <Form>Form2</Form>
+            <Form>FrmRelClientes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

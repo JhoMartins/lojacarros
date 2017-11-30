@@ -68,7 +68,6 @@ object FrmRelClientes: TFrmRelClientes
     end
   end
   object ADOQueryCliente: TADOQuery
-    Active = True
     Connection = DM.ADOConnection1
     CursorType = ctStatic
     DataSource = DM.DSCliente
