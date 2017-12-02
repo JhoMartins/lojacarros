@@ -23,6 +23,7 @@ object Form1: TForm1
     Top = 0
     Width = 718
     Height = 25
+    UseSystemFont = False
     ActionManager = ActionManager1
     Caption = 'ActionMainMenuBar1'
     Color = clMenuBar
@@ -31,7 +32,7 @@ object Form1: TForm1
     ColorMap.BtnSelectedFont = clBlack
     ColorMap.UnusedColor = clWhite
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clBlack
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
@@ -84,6 +85,15 @@ object Form1: TForm1
     Caption = 'Button1'
     TabOrder = 3
     OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 184
+    Top = 248
+    Width = 75
+    Height = 25
+    Caption = 'Button2'
+    TabOrder = 4
+    OnClick = Button2Click
   end
   object ActionManager1: TActionManager
     ActionBars = <
@@ -256,7 +266,6 @@ object Form1: TForm1
     object Empresas: TAction
       Category = 'Rel'#225't'#243'rios'
       Caption = 'Empresas'
-      OnExecute = EmpresasExecute
     end
   end
   object ImageList1: TImageList
@@ -265,7 +274,7 @@ object Form1: TForm1
     Left = 216
     Top = 320
     Bitmap = {
-      494C0101090030003C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010109003000400018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000060000000480000000100200000000000006C
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

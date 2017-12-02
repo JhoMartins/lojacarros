@@ -82,6 +82,12 @@ type
     ADODSClienteprofissao: TStringField;
     ADODSClienterenda_mensal: TBCDField;
     ADODSClientecelular: TStringField;
+    ADODSPeca: TADODataSet;
+    DSPeca: TDataSource;
+    ADODSPecaid: TAutoIncField;
+    ADODSPecanome: TStringField;
+    ADODSPecadescricao: TStringField;
+    ADODSPecavalor_unit: TBCDField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }
