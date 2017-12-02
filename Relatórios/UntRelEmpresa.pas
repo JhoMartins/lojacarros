@@ -4,22 +4,22 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.StdCtrls,
-  Vcl.Buttons, Vcl.ExtCtrls, frxClass, frxDBSet;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, frxClass, frxDBSet, Data.DB,
+  Data.Win.ADODB, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
 
 type
   TFrmRelEmpresa = class(TForm)
     Panel1: TPanel;
-    Panel2: TPanel;
-    edtNomede: TLabeledEdit;
-    EdtNomeate: TLabeledEdit;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
     ADOQueryEmpresa: TADOQuery;
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
-    edtCidade: TLabeledEdit;
+    edtnomede: TLabeledEdit;
+    edtnomeate: TLabeledEdit;
     RadioGroup1: TRadioGroup;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    edtcodigode: TLabeledEdit;
+    edtcodigoate: TLabeledEdit;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
   private
@@ -41,37 +41,55 @@ procedure TFrmRelEmpresa.BitBtn1Click(Sender: TObject);
 var StrLiga: String;
 begin
   StrLiga:= 'where ';
+
   ADOQueryEmpresa.Close;
-  with ADOQueryEmpresa.Sql do
-    begin
+  with ADOQueryEmpresa.SQL do
+  begin
     Clear;
-    add('select * from Empresa ');
-    if edtNomede.Text <> '' then
-      begin
-        add(strliga+'nome_fantasia >= ''' + edtNomede.Text + '''');
-        strliga:= ' and ';
-      end;
-    if edtNomeate.Text <>'' then
-      begin
-        add(strliga+'nome_fantasia <= ''' + edtNomede.Text + 'zzz''');
-        strliga:= ' and ';
-      end;
-    if edtCidade.Text <> '' then
-      begin
-       add(strliga+'cidade = ''' + edtCidade.Text + '''');
-       strliga:= ' and ';
-      end;
+    Add('select * from Empresa ');
 
-      case
-        Radiogroup1.itemindex of
-        0: add(' order by nome_fantasia');
-        1: add(' order by cidade');
-      end;
+    if EdtCodigoDe.Text <> '' then
+    try
+      StrToInt(EdtCodigoDe.Text);
+      Add(StrLiga + 'ID >= '+ EdtCodigoDe.Text);
+      StrLiga:= 'and ';
+    except
+      on EConvertError do;
     end;
-  ADOQueryEmpresa.Open;
-  frxreport1.ShowReport();
-end;
 
+    if EdtCodigoAte.Text <> '' then
+    try
+      StrToInt(EdtCodigoAte.Text);
+      Add(StrLiga + 'ID <= '+ EdtCodigoAte.Text);
+    except
+      on EConvertError do;
+    end;
+
+     if EdtNomede.Text <> '' then
+    try
+      Add(StrLiga + 'nome_fantasia >= '''+ EdtNomeDe.Text + '''');
+      strliga:= ' and ';
+    except
+      on EConvertError do;
+    end;
+
+     if EdtNomeate.Text <> '' then
+    try
+      Add(StrLiga + 'nome_fantasia <= '''+ EdtNomeate.Text + 'zzz''');
+      Strliga:= ' and ';
+    except
+      on EConvertError do;
+    end;
+
+    case RadioGroup1.ItemIndex of
+    0: add(' order by ID ');
+    1: add(' order by nome_fantasia ');
+    end;
+
+    end;
+    ADOQueryEmpresa.Open;
+    frxReport1.ShowReport();
+ end;
 
 
 
