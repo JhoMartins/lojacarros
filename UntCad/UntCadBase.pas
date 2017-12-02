@@ -27,6 +27,7 @@ type
     procedure btn_salvarClick(Sender: TObject);
     procedure btn_cancelarClick(Sender: TObject);
     procedure validarCampo(DBEdit: TDBEdit; Caption: String);
+    procedure validarCombo(DBCombo: TDBComboBox; Caption: String);
   private
     FDataSet: TADODataSet;
   public
@@ -80,8 +81,18 @@ procedure TFrmCadBase.validarCampo(DBEdit: TDBEdit; Caption: String);
 begin
   if DBEdit.Text = '' then
   begin
-    ShowMessage('O campo [' + Caption + '] não pode ficar em branco');
+    ShowMessage('O campo [' + Caption + '] não pode ficar em branco!');
     DBEdit.SetFocus;
+    Abort;
+  end;
+end;
+
+procedure TFrmCadBase.validarCombo(DBCombo: TDBComboBox; Caption: String);
+begin
+  if DBCombo.Text = '' then
+  begin
+    ShowMessage('O campo [' + Caption + '] deve ser selecionado!');
+    DBCombo.SetFocus;
     Abort;
   end;
 end;

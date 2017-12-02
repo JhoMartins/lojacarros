@@ -1,5 +1,5 @@
 ﻿inherited FrmCadPeca: TFrmCadPeca
-  Caption = 'Cadastro de Carro'
+  Caption = 'Cadastro de Pe'#231'a'
   ClientHeight = 288
   ClientWidth = 400
   ExplicitWidth = 406
