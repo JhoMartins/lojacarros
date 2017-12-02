@@ -8,7 +8,7 @@ uses
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, System.Actions,
   Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.PlatformDefaultStyleActnCtrls,
   Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro, UntCadVenda, UntManVenda, UntManServico,
-  UntManPeca;
+  UntManPeca, UntCadPeca;
 
 type
   TForm1 = class(TForm)
@@ -91,7 +91,7 @@ var Frm: TFrmManPeca;
 begin
   Frm:= FrmManPeca.Create(DM.ADODSPeca, FrmCadPeca);
   Frm.ShowModal;
-end
+end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 var Frm: TFrmManFuncionario;
