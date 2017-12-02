@@ -126,6 +126,7 @@ inherited FrmCadCliente: TFrmCadCliente
       DataField = 'cpf'
       DataSource = DM.DSCliente
       TabOrder = 2
+      OnEnter = DBEdit2Enter
     end
     object DBEdit3: TDBEdit
       Left = 200
@@ -135,6 +136,7 @@ inherited FrmCadCliente: TFrmCadCliente
       DataField = 'data_nascimento'
       DataSource = DM.DSCliente
       TabOrder = 3
+      OnEnter = DBEdit3Enter
     end
     object DBEdit4: TDBEdit
       Left = 20
@@ -208,6 +210,7 @@ inherited FrmCadCliente: TFrmCadCliente
       DataField = 'cep'
       DataSource = DM.DSCliente
       TabOrder = 8
+      OnEnter = DBEdit7Enter
     end
     object DBEdit8: TDBEdit
       Left = 376
@@ -217,6 +220,7 @@ inherited FrmCadCliente: TFrmCadCliente
       DataField = 'celular'
       DataSource = DM.DSCliente
       TabOrder = 4
+      OnEnter = DBEdit8Enter
     end
     object DBEdit9: TDBEdit
       Left = 376
