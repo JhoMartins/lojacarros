@@ -21,7 +21,8 @@ uses
   UntRelCarros in 'Relatórios\UntRelCarros.pas' {FrmRelCarro},
   UntRelClientes in 'Relatórios\UntRelClientes.pas' {FrmRelClientes},
   UntManPeca in 'UntMan\UntManPeca.pas' {FrmManPeca},
-  UntCadPeca in 'UntCad\UntCadPeca.pas' {FrmCadPeca};
+  UntCadPeca in 'UntCad\UntCadPeca.pas' {FrmCadPeca},
+  UntRelEmpresa in 'Relatórios\UntRelEmpresa.pas' {FrmRelEmpresa};
 
 {$R *.res}
 
@@ -48,5 +49,6 @@ begin
   Application.CreateForm(TFrmRelClientes, FrmRelClientes);
   Application.CreateForm(TFrmManPeca, FrmManPeca);
   Application.CreateForm(TFrmCadPeca, FrmCadPeca);
+  Application.CreateForm(TFrmRelEmpresa, FrmRelEmpresa);
   Application.Run;
 end.

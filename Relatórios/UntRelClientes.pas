@@ -49,7 +49,7 @@ begin
     if EdtCodigoDe.Text <> '' then
     try
       StrToInt(EdtCodigoDe.Text);
-      Add(StrLiga + 'ID >= '+ EdtCodigoDe.Text);
+      Add(StrLiga + 'ID >= '+ EdtCodigoDe .Text);
       StrLiga:= 'and ';
     except
       on EConvertError do;

@@ -142,7 +142,7 @@ object FrmRelCarro: TFrmRelCarro
         end
         object frxDBDataset1modelo: TfrxMemoView
           Left = 109.606370000000000000
-          Top = 22.677180000000000000
+          Top = 22.677179999999990000
           Width = 151.181200000000000000
           Height = 18.897650000000000000
           DataField = 'modelo'
@@ -259,7 +259,7 @@ object FrmRelCarro: TFrmRelCarro
         end
         object Memo7: TfrxMemoView
           Left = 393.071120000000000000
-          Top = 3.779530000000000000
+          Top = 3.779529999999994000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
           Memo.UTF8W = (
@@ -267,7 +267,7 @@ object FrmRelCarro: TFrmRelCarro
         end
         object Memo8: TfrxMemoView
           Left = 502.677490000000000000
-          Top = 3.779530000000000000
+          Top = 3.779529999999994000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
           Memo.UTF8W = (
@@ -275,7 +275,7 @@ object FrmRelCarro: TFrmRelCarro
         end
         object Memo9: TfrxMemoView
           Left = 612.283860000000000000
-          Top = 3.779530000000000000
+          Top = 3.779529999999994000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
           Memo.UTF8W = (

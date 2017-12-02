@@ -9,7 +9,7 @@ inherited FrmCadCarro: TFrmCadCarro
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 629
-    ExplicitWidth = 737
+    ExplicitWidth = 629
     inherited Label1: TLabel
       Left = 142
       Width = 357
@@ -20,14 +20,13 @@ inherited FrmCadCarro: TFrmCadCarro
   end
   inherited ToolBar1: TToolBar
     Width = 629
-    ExplicitWidth = 737
+    ExplicitWidth = 629
   end
   inherited PnlFicha: TPanel
     Width = 629
     Height = 223
-    ExplicitTop = 103
     ExplicitWidth = 629
-    ExplicitHeight = 217
+    ExplicitHeight = 223
     object Label2: TLabel [0]
       Left = 16
       Top = 6
@@ -77,14 +76,7 @@ inherited FrmCadCarro: TFrmCadCarro
       Height = 13
       Caption = 'Cor'
     end
-    object Label4: TLabel [7]
-      Left = 450
-      Top = 52
-      Width = 57
-      Height = 13
-      Caption = 'Valor Venda'
-    end
-    object Label10: TLabel [8]
+    object Label10: TLabel [7]
       Left = 224
       Top = 99
       Width = 27
@@ -94,8 +86,8 @@ inherited FrmCadCarro: TFrmCadCarro
     inherited StatusBar1: TStatusBar
       Top = 203
       Width = 627
-      ExplicitTop = 197
-      ExplicitWidth = 735
+      ExplicitTop = 203
+      ExplicitWidth = 627
     end
     object DBEdit1: TDBEdit
       Left = 16
@@ -131,7 +123,7 @@ inherited FrmCadCarro: TFrmCadCarro
       Height = 21
       DataField = 'exproprietario_id'
       DataSource = DM.DSCarro
-      TabOrder = 7
+      TabOrder = 6
     end
     object DBLookupComboBox1: TDBLookupComboBox
       Left = 224
@@ -143,7 +135,7 @@ inherited FrmCadCarro: TFrmCadCarro
       KeyField = 'id'
       ListField = 'nome'
       ListSource = DSCliente
-      TabOrder = 8
+      TabOrder = 7
     end
     object DBEdit7: TDBEdit
       Left = 450
@@ -153,15 +145,6 @@ inherited FrmCadCarro: TFrmCadCarro
       DataField = 'cor'
       DataSource = DM.DSCarro
       TabOrder = 3
-    end
-    object DBEdit3: TDBEdit
-      Left = 450
-      Top = 72
-      Width = 159
-      Height = 21
-      DataField = 'valor_venda'
-      DataSource = DM.DSCarro
-      TabOrder = 6
     end
     object DBEdit5: TDBEdit
       Left = 224
@@ -175,7 +158,7 @@ inherited FrmCadCarro: TFrmCadCarro
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C0101030020006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -649,7 +632,7 @@ inherited FrmCadCarro: TFrmCadCarro
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C01010300140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1123,7 +1106,7 @@ inherited FrmCadCarro: TFrmCadCarro
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C0101030014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
