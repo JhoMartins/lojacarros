@@ -1,5 +1,5 @@
 inherited FrmCadCliente: TFrmCadCliente
-  Caption = 'Manuten'#231#227'o no Cadastro de Cliente'
+  Caption = 'Cadastro de Cliente'
   ClientHeight = 439
   ClientWidth = 562
   ExplicitWidth = 568
@@ -8,24 +8,24 @@ inherited FrmCadCliente: TFrmCadCliente
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 562
-    ExplicitWidth = 949
+    ExplicitWidth = 562
     inherited Label1: TLabel
-      Left = 110
+      Left = 100
       Width = 371
       Caption = 'Manuten'#231#227'o no Cadastro de Cliente'
-      ExplicitLeft = 110
+      ExplicitLeft = 100
       ExplicitWidth = 371
     end
   end
   inherited ToolBar1: TToolBar
     Width = 562
-    ExplicitWidth = 949
+    ExplicitWidth = 562
   end
   inherited PnlFicha: TPanel
     Width = 562
     Height = 342
-    ExplicitWidth = 949
-    ExplicitHeight = 567
+    ExplicitWidth = 562
+    ExplicitHeight = 342
     object Label2: TLabel [0]
       Left = 20
       Top = 6
@@ -106,6 +106,8 @@ inherited FrmCadCliente: TFrmCadCliente
     inherited StatusBar1: TStatusBar
       Top = 322
       Width = 560
+      ExplicitTop = 322
+      ExplicitWidth = 560
     end
     object DBEdit1: TDBEdit
       Left = 20
@@ -124,6 +126,7 @@ inherited FrmCadCliente: TFrmCadCliente
       DataField = 'cpf'
       DataSource = DM.DSCliente
       TabOrder = 2
+      OnEnter = DBEdit2Enter
     end
     object DBEdit3: TDBEdit
       Left = 200
@@ -133,6 +136,7 @@ inherited FrmCadCliente: TFrmCadCliente
       DataField = 'data_nascimento'
       DataSource = DM.DSCliente
       TabOrder = 3
+      OnEnter = DBEdit3Enter
     end
     object DBEdit4: TDBEdit
       Left = 20
@@ -206,6 +210,7 @@ inherited FrmCadCliente: TFrmCadCliente
       DataField = 'cep'
       DataSource = DM.DSCliente
       TabOrder = 8
+      OnEnter = DBEdit7Enter
     end
     object DBEdit8: TDBEdit
       Left = 376
@@ -215,6 +220,7 @@ inherited FrmCadCliente: TFrmCadCliente
       DataField = 'celular'
       DataSource = DM.DSCliente
       TabOrder = 4
+      OnEnter = DBEdit8Enter
     end
     object DBEdit9: TDBEdit
       Left = 376
@@ -238,7 +244,7 @@ inherited FrmCadCliente: TFrmCadCliente
   inherited ImageList1: TImageList
     Left = 184
     Bitmap = {
-      494C01010300200070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -714,7 +720,7 @@ inherited FrmCadCliente: TFrmCadCliente
     Left = 328
     Top = 384
     Bitmap = {
-      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1189,7 +1195,7 @@ inherited FrmCadCliente: TFrmCadCliente
   inherited ImageList3: TImageList
     Left = 240
     Bitmap = {
-      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
