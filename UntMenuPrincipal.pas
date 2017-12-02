@@ -31,6 +31,7 @@ type
     Empresas: TAction;
     Venda: TAction;
     Peças: TAction;
+    Action2: TAction;
     procedure Button1Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -48,6 +49,7 @@ type
     procedure EmpresasExecute(Sender: TObject);
     procedure VendaExecute(Sender: TObject);
     procedure PeçasExecute(Sender: TObject);
+    procedure Action2Execute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,11 +64,16 @@ implementation
 {$R *.dfm}
 
 uses UntManEmpresa, UntManCliente, UntCadEmpresa, UntCadServico, UntRelClientes,
-  UntRelEmpresa, UntManBase, UntCadBase;
+  UntRelEmpresa, UntManBase, UntCadBase, UntRelPecas;
 
 procedure TForm1.Action1Execute(Sender: TObject);
 begin
 FrmRelClientes.showmodal;
+end;
+
+procedure TForm1.Action2Execute(Sender: TObject);
+begin
+FrmRelPecas.showmodal;
 end;
 
 procedure TForm1.btn_servicoExecute(Sender: TObject);
