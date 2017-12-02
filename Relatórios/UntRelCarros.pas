@@ -9,7 +9,6 @@ uses
 
 type
   TFrmRelCarro = class(TForm)
-    Panel1: TPanel;
     Panel2: TPanel;
     LabeledEdit4: TLabeledEdit;
     LabeledEdit5: TLabeledEdit;
