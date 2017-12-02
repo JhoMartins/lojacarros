@@ -160,7 +160,33 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
       DataField = 'estado'
       DataSource = DM.DSEmpresa
       Items.Strings = (
-        'SP')
+        'AC'#9' '
+        'AL'#9' '
+        'AP'#9' '
+        'AM'#9' '
+        'BA'#9' '
+        'CE'#9' '
+        'DF'#9' '
+        'ES'#9' '
+        'GO'#9' '
+        'MA'#9' '
+        'MT'#9' '
+        'MS'#9' '
+        'MG'#9' '
+        'PA'#9' '
+        'PB'#9' '
+        'PR'#9' '
+        'PE'#9' '
+        'PI'#9' '
+        'RJ'#9' '
+        'RN'#9' '
+        'RS'#9' '
+        'RO'#9' '
+        'RR'#9' '
+        'SC'#9' '
+        'SP'#9' '
+        'SE'#9' '
+        'TO')
       TabOrder = 8
     end
     object DBEdit7: TDBEdit
