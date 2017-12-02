@@ -27,10 +27,10 @@ type
     btn_servico: TAction;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
-    Button1: TButton;
     Action1: TAction;
     Empresas: TAction;
-    Button2: TButton;
+    Venda: TAction;
+    Peças: TAction;
     procedure Button1Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -46,6 +46,8 @@ type
     procedure Action1Execute(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure EmpresasExecute(Sender: TObject);
+    procedure VendaExecute(Sender: TObject);
+    procedure PeçasExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,7 +62,7 @@ implementation
 {$R *.dfm}
 
 uses UntManEmpresa, UntManCliente, UntCadEmpresa, UntCadServico, UntRelClientes,
-  UntRelEmpresa;
+  UntRelEmpresa, UntManBase, UntCadBase;
 
 procedure TForm1.Action1Execute(Sender: TObject);
 begin
@@ -161,9 +163,22 @@ begin
   Frm.ShowModal;
 end;
 
+procedure TForm1.PeçasExecute(Sender: TObject);
+var Frm: TFrmManPeca;
+begin
+  Frm:= FrmManPeca.Create(DM.ADODSPeca, FrmCadPeca);
+  Frm.ShowModal;
+end;
+
 procedure TForm1.Timer1Timer(Sender: TObject);
 begin
 statusbar1.Panels[0].Text:=timetostr(time);
 end;
 
+procedure TForm1.VendaExecute(Sender: TObject);
+var Frm: TFrmManVenda;
+begin
+  Frm := FrmManVenda.Create(DM.ADODSVenda, FrmCadVenda);
+  Frm.ShowModal;
+end;
 end.
