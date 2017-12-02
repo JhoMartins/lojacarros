@@ -36,14 +36,6 @@ type
     ADODSVendapagamento: TStringField;
     ADODSVendadesconto: TBCDField;
     ADODSVendavalor_inicial: TBCDField;
-    ADODSCarroid: TAutoIncField;
-    ADODSCarromodelo: TStringField;
-    ADODSCarromarca: TStringField;
-    ADODSCarrodata_compra: TWideStringField;
-    ADODSCarrovalor_compra: TWideStringField;
-    ADODSCarroexproprietario_id: TIntegerField;
-    ADODSCarrocor: TStringField;
-    ADODSCarrovalor_venda: TWideStringField;
     ADODSServico: TADODataSet;
     DSServico: TDataSource;
     ADODSServicoid: TAutoIncField;
@@ -85,6 +77,14 @@ type
     ADODSFuncionariocelular: TStringField;
     ADODSFuncionariosalario: TBCDField;
     ADODSFuncionariodata_admissao: TWideStringField;
+    ADODSCarroid: TAutoIncField;
+    ADODSCarromodelo: TStringField;
+    ADODSCarromarca: TStringField;
+    ADODSCarrodata_compra: TWideStringField;
+    ADODSCarrovalor_compra: TWideStringField;
+    ADODSCarroexproprietario_id: TIntegerField;
+    ADODSCarrocor: TStringField;
+    ADODSCarrostatus: TStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }

@@ -6,10 +6,10 @@ object DM: TDM
     Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=LojaCarros;Data Source=DEIVID-PC;Use Pr' +
-      'ocedure for Prepare=1;Auto Translate=True;Packet Size=4096;Works' +
-      'tation ID=DESKTOP-TL1GQGV;Use Encryption for Data=False;Tag with' +
-      ' column collation when possible=False'
+      'fo=False;Initial Catalog=LojaCarros;Data Source=DESKTOP-TL1GQGV\' +
+      'SQLEXPRESS;Use Procedure for Prepare=1;Auto Translate=True;Packe' +
+      't Size=4096;Workstation ID=DESKTOP-TL1GQGV;Use Encryption for Da' +
+      'ta=False;Tag with column collation when possible=False'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 184
@@ -221,16 +221,13 @@ object DM: TDM
     end
     object ADODSCarroexproprietario_id: TIntegerField
       FieldName = 'exproprietario_id'
-      OnValidate = ADODSCarroexproprietario_idValidate
     end
     object ADODSCarrocor: TStringField
       FieldName = 'cor'
       Size = 50
     end
-    object ADODSCarrovalor_venda: TWideStringField
-      FieldName = 'valor_venda'
-      FixedChar = True
-      Size = 10
+    object ADODSCarrostatus: TStringField
+      FieldName = 'status'
     end
   end
   object DSCarro: TDataSource
