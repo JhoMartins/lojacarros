@@ -37,7 +37,6 @@
     Font.Name = 'Segoe UI'
     Font.Style = []
     Spacing = 0
-    ExplicitWidth = 718
   end
   object ActionToolBar1: TActionToolBar
     Left = 0
@@ -58,7 +57,6 @@
     Font.Style = []
     ParentFont = False
     Spacing = 0
-    ExplicitWidth = 718
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -78,7 +76,6 @@
       item
         Width = 50
       end>
-    ExplicitWidth = 718
   end
   object ActionManager1: TActionManager
     ActionBars = <
@@ -144,6 +141,7 @@
               end
               item
                 Action = Peças
+                Caption = '&Pe'#231'as'
                 ImageIndex = 10
               end>
             Caption = '&Manuten'#231#227'o'
@@ -157,6 +155,10 @@
               item
                 Action = Empresas
                 Caption = '&Empresas'
+              end
+              item
+                Action = Action2
+                Caption = '&Pe'#231'as'
               end>
             Caption = '&Rel'#225't'#243'rios'
           end>
@@ -289,6 +291,11 @@
       ImageIndex = 10
       OnExecute = PeçasExecute
     end
+    object Action2: TAction
+      Category = 'Rel'#225't'#243'rios'
+      Caption = 'Pe'#231'as'
+      OnExecute = Action2Execute
+    end
   end
   object ImageList1: TImageList
     Height = 24
@@ -296,7 +303,7 @@
     Left = 32
     Top = 168
     Bitmap = {
-      494C01010B003000600018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010B003000640018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000060000000480000000100200000000000006C
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
