@@ -24,21 +24,6 @@ type
     DSEmpresa: TDataSource;
     ADODSFuncionario: TADODataSet;
     DSFuncionario: TDataSource;
-    ADODSFuncionarioid: TAutoIncField;
-    ADODSFuncionarionome: TStringField;
-    ADODSFuncionariocpf: TStringField;
-    ADODSFuncionariodata_nascimento: TWideStringField;
-    ADODSFuncionarioendereco: TStringField;
-    ADODSFuncionariobairro: TStringField;
-    ADODSFuncionariocidade: TStringField;
-    ADODSFuncionariocep: TStringField;
-    ADODSFuncionarioestado: TStringField;
-    ADODSFuncionariocelular: TStringField;
-    ADODSFuncionariotelefone: TStringField;
-    ADODSFuncionarioestado_civil: TStringField;
-    ADODSFuncionariofilhos: TIntegerField;
-    ADODSFuncionariosalario_base: TBCDField;
-    ADODSFuncionariodata_admissao: TWideStringField;
     ADODSCarro: TADODataSet;
     DSCarro: TDataSource;
     ADODSVenda: TADODataSet;
@@ -88,6 +73,18 @@ type
     ADODSPecanome: TStringField;
     ADODSPecadescricao: TStringField;
     ADODSPecavalor_unit: TBCDField;
+    ADODSFuncionarioid: TAutoIncField;
+    ADODSFuncionarionome: TStringField;
+    ADODSFuncionariocpf: TStringField;
+    ADODSFuncionariodata_nascimento: TWideStringField;
+    ADODSFuncionarioendereco: TStringField;
+    ADODSFuncionariobairro: TStringField;
+    ADODSFuncionariocidade: TStringField;
+    ADODSFuncionariocep: TStringField;
+    ADODSFuncionarioestado: TStringField;
+    ADODSFuncionariocelular: TStringField;
+    ADODSFuncionariosalario: TBCDField;
+    ADODSFuncionariodata_admissao: TWideStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }
