@@ -175,7 +175,7 @@ object DM: TDM
     end
     object ADODSFuncionariocelular: TStringField
       FieldName = 'celular'
-      Size = 13
+      Size = 15
     end
     object ADODSFuncionariosalario: TBCDField
       FieldName = 'salario'

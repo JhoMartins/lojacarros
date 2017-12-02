@@ -1,17 +1,31 @@
 inherited FrmManFuncionario: TFrmManFuncionario
   Caption = 'Manuten'#231#227'o no Cadastro de Funcion'#225'rio'
+  ClientWidth = 1006
+  ExplicitWidth = 1012
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
+    Width = 1006
     inherited Label1: TLabel
-      Left = 206
+      Left = 270
       Width = 421
       Caption = 'Manuten'#231#227'o no Cadastro de Funcion'#225'rio'
-      ExplicitLeft = 206
+      ExplicitLeft = 270
       ExplicitWidth = 421
     end
   end
+  inherited ToolBar1: TToolBar
+    Width = 1006
+  end
+  inherited Panel2: TPanel
+    Width = 1006
+    inherited Edit1: TEdit
+      Width = 932
+      ExplicitWidth = 932
+    end
+  end
   inherited DBGrid1: TDBGrid
+    Width = 1006
     DataSource = DM.DSFuncionario
     Columns = <
       item
@@ -24,12 +38,52 @@ inherited FrmManFuncionario: TFrmManFuncionario
         Expanded = False
         FieldName = 'nome'
         Title.Caption = 'Nome'
+        Width = 194
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cpf'
+        Title.Caption = 'CPF'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'data_admissao'
+        Title.Caption = 'Data Nasc.'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'endereco'
+        Title.Caption = 'Endere'#231'o'
+        Width = 211
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cidade'
+        Title.Caption = 'Cidade'
+        Width = 184
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'salario'
+        Title.Caption = 'Sal'#225'rio'
+        Width = 71
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'celular'
+        Title.Caption = 'Celular'
         Visible = True
       end>
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C0101070020005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700200060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -968,7 +1022,7 @@ inherited FrmManFuncionario: TFrmManFuncionario
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C0101070014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1907,7 +1961,7 @@ inherited FrmManFuncionario: TFrmManFuncionario
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C01010700140050001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140054001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
