@@ -122,6 +122,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       DataField = 'cpf'
       DataSource = DM.DSFuncionario
       TabOrder = 1
+      OnEnter = DBEdit2Enter
     end
     object DBEdit3: TDBEdit
       Left = 206
@@ -131,6 +132,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       DataField = 'data_nascimento'
       DataSource = DM.DSFuncionario
       TabOrder = 2
+      OnEnter = DBEdit3Enter
     end
     object DBEdit4: TDBEdit
       Left = 20
@@ -204,6 +206,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       DataField = 'cep'
       DataSource = DM.DSFuncionario
       TabOrder = 7
+      OnEnter = DBEdit7Enter
     end
     object DBEdit8: TDBEdit
       Left = 392
@@ -213,6 +216,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       DataField = 'celular'
       DataSource = DM.DSFuncionario
       TabOrder = 3
+      OnEnter = DBEdit8Enter
     end
     object DBEdit11: TDBEdit
       Left = 19
@@ -222,6 +226,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       DataField = 'data_admissao'
       DataSource = DM.DSFuncionario
       TabOrder = 9
+      OnEnter = DBEdit11Enter
     end
     object DBEdit12: TDBEdit
       Left = 159

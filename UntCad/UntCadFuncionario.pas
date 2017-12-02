@@ -33,6 +33,11 @@ type
     DBEdit11: TDBEdit;
     DBEdit12: TDBEdit;
     procedure btn_salvarClick(Sender: TObject);
+    procedure DBEdit2Enter(Sender: TObject);
+    procedure DBEdit3Enter(Sender: TObject);
+    procedure DBEdit8Enter(Sender: TObject);
+    procedure DBEdit7Enter(Sender: TObject);
+    procedure DBEdit11Enter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,6 +65,31 @@ begin
   validarCampo(DBEdit11, Label15.Caption);
   validarCampo(DBEdit12, Label14.Caption);
   inherited;
+end;
+
+procedure TFrmCadFuncionario.DBEdit11Enter(Sender: TObject);
+begin
+  DM.ADODSFuncionario.FieldByName('data_admissao').EditMask:= '99/99/9999;1;_'
+end;
+
+procedure TFrmCadFuncionario.DBEdit2Enter(Sender: TObject);
+begin
+  DM.ADODSFuncionario.FieldByName('cpf').EditMask:= '999.999.999-99;1;_'
+end;
+
+procedure TFrmCadFuncionario.DBEdit3Enter(Sender: TObject);
+begin
+  DM.ADODSFuncionario.FieldByName('data_nascimento').EditMask:= '99/99/9999;1;_'
+end;
+
+procedure TFrmCadFuncionario.DBEdit7Enter(Sender: TObject);
+begin
+  DM.ADODSFuncionario.FieldByName('cep').EditMask:= '99999-999;1;_'
+end;
+
+procedure TFrmCadFuncionario.DBEdit8Enter(Sender: TObject);
+begin
+  DM.ADODSFuncionario.FieldByName('celular').EditMask:= '(99) 99999-9999;1;_'
 end;
 
 end.
