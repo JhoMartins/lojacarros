@@ -13,58 +13,86 @@ object FrmRelClientes: TFrmRelClientes
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 533
-    Height = 41
-    Align = alTop
-    Caption = 'Relat'#243'rio Clientes'
-    TabOrder = 0
-  end
   object Panel2: TPanel
     Left = 0
-    Top = 41
+    Top = 1
     Width = 533
-    Height = 256
-    TabOrder = 1
-    object edtcodigode: TLabeledEdit
-      Left = 56
-      Top = 56
-      Width = 121
-      Height = 21
-      EditLabel.Width = 52
-      EditLabel.Height = 13
-      EditLabel.Caption = 'Codigo de:'
-      TabOrder = 0
-    end
+    Height = 304
+    TabOrder = 0
     object edtcodigoate: TLabeledEdit
-      Left = 312
+      Left = 192
       Top = 56
-      Width = 121
+      Width = 65
       Height = 21
       EditLabel.Width = 52
       EditLabel.Height = 13
       EditLabel.Caption = 'Codigo at'#233
-      TabOrder = 1
+      LabelPosition = lpLeft
+      TabOrder = 0
     end
     object BitBtn1: TBitBtn
-      Left = 88
-      Top = 168
+      Left = 56
+      Top = 224
       Width = 75
       Height = 25
       Caption = 'Imprimir'
-      TabOrder = 2
+      TabOrder = 1
       OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
-      Left = 288
-      Top = 168
+      Left = 152
+      Top = 224
       Width = 75
       Height = 25
       Caption = 'Sair'
-      TabOrder = 3
+      TabOrder = 2
       OnClick = BitBtn2Click
+    end
+    object edtcodigode: TLabeledEdit
+      Left = 64
+      Top = 56
+      Width = 57
+      Height = 21
+      EditLabel.Width = 52
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Codigo de:'
+      LabelPosition = lpLeft
+      TabOrder = 3
+    end
+    object edtnomede: TLabeledEdit
+      Left = 56
+      Top = 112
+      Width = 121
+      Height = 21
+      EditLabel.Width = 46
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Nome de:'
+      LabelPosition = lpLeft
+      TabOrder = 4
+    end
+    object edtnomeate: TLabeledEdit
+      Left = 264
+      Top = 112
+      Width = 121
+      Height = 21
+      EditLabel.Width = 50
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Nome at'#233':'
+      LabelPosition = lpLeft
+      TabOrder = 5
+    end
+    object RadioGroup1: TRadioGroup
+      Left = 8
+      Top = 152
+      Width = 377
+      Height = 50
+      Caption = 'Ordena'#231#227'o'
+      Columns = 3
+      Items.Strings = (
+        'Codigo'
+        'Nome'
+        'Sal'#225'rio')
+      TabOrder = 6
     end
   end
   object ADOQueryCliente: TADOQuery

@@ -9,15 +9,17 @@ uses
 
 type
   TFrmRelClientes = class(TForm)
-    Panel1: TPanel;
     Panel2: TPanel;
     ADOQueryCliente: TADOQuery;
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
-    edtcodigode: TLabeledEdit;
     edtcodigoate: TLabeledEdit;
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
+    edtcodigode: TLabeledEdit;
+    edtnomede: TLabeledEdit;
+    edtnomeate: TLabeledEdit;
+    RadioGroup1: TRadioGroup;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
   private
@@ -61,6 +63,27 @@ begin
       Add(StrLiga + 'ID <= '+ EdtCodigoAte.Text);
     except
       on EConvertError do;
+    end;
+    if EdtNomede.Text <> '' then
+    try
+      Add(StrLiga + 'nome >= '''+ EdtNomeDe.Text + '''');
+      strliga:= ' and ';
+    except
+      on EConvertError do;
+    end;
+
+     if EdtNomeate.Text <> '' then
+    try
+      Add(StrLiga + 'nome <= '''+ EdtNomeate.Text + 'zzz''');
+      Strliga:= ' and ';
+    except
+      on EConvertError do;
+    end;
+
+    case RadioGroup1.ItemIndex of
+    0: add(' order by ID ');
+    1: add(' order by nome ');
+    2: add(' order by renda_mensal desc ')
     end;
   end;
   ADOQueryCliente.Open;
