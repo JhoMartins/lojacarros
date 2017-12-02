@@ -1,19 +1,66 @@
 inherited FrmManCarro: TFrmManCarro
   Caption = 'Manuten'#231#227'o no Cadastro de Carro'
-  ExplicitWidth = 868
-  ExplicitHeight = 622
+  ClientWidth = 657
+  ExplicitWidth = 663
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
+    Width = 657
     inherited Label1: TLabel
+      Left = 156
       Width = 357
       Caption = 'Manuten'#231#227'o no Cadastro de Carro'
+      ExplicitLeft = 156
       ExplicitWidth = 357
     end
   end
+  inherited ToolBar1: TToolBar
+    Width = 657
+  end
+  inherited Panel2: TPanel
+    Width = 657
+    inherited Edit1: TEdit
+      Width = 468
+      ExplicitWidth = 468
+    end
+  end
+  inherited DBGrid1: TDBGrid
+    Width = 657
+    DataSource = DM.DSCarro
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'marca'
+        Title.Caption = 'Marca'
+        Width = 227
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'modelo'
+        Title.Caption = 'Modelo'
+        Width = 244
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'status'
+        Title.Caption = 'Status'
+        Width = 99
+        Visible = True
+      end>
+  end
   inherited ImageList1: TImageList
+    Left = 152
+    Top = 376
     Bitmap = {
-      494C01010700200060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700200064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -951,8 +998,10 @@ inherited FrmManCarro: TFrmManCarro
       000000000000}
   end
   inherited ImageList3: TImageList
+    Left = 256
+    Top = 392
     Bitmap = {
-      494C01010700140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1890,8 +1939,10 @@ inherited FrmManCarro: TFrmManCarro
       000000000000}
   end
   inherited ImageList2: TImageList
+    Left = 336
+    Top = 384
     Bitmap = {
-      494C01010700140054001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
