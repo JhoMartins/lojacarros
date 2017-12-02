@@ -32,6 +32,7 @@ type
     DBEdit8: TDBEdit;
     DBEdit11: TDBEdit;
     DBEdit12: TDBEdit;
+    procedure btn_salvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,5 +45,21 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmCadFuncionario.btn_salvarClick(Sender: TObject);
+begin
+  validarCampo(DBEdit1, Label2.Caption);
+  validarCampo(DBEdit2, Label3.Caption);
+  validarCampo(DBEdit3, Label4.Caption);
+  validarCampo(DBEdit8, Label10.Caption);
+  validarCampo(DBEdit4, Label5.Caption);
+  validarCampo(DBEdit5, Label6.Caption);
+  validarCampo(DBEdit6, Label7.Caption);
+  validarCampo(DBEdit7, Label8.Caption);
+  validarCombo(DBComboBox1, Label9.Caption);
+  validarCampo(DBEdit11, Label15.Caption);
+  validarCampo(DBEdit12, Label14.Caption);
+  inherited;
+end;
 
 end.

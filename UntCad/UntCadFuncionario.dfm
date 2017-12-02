@@ -1,26 +1,26 @@
 inherited FrmCadFuncionario: TFrmCadFuncionario
   Caption = 'Cadastro de Funcionario'
   ClientHeight = 460
-  ClientWidth = 458
-  ExplicitWidth = 464
+  ClientWidth = 562
+  ExplicitWidth = 568
   ExplicitHeight = 489
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 458
+    Width = 562
     inherited Label1: TLabel
-      Left = 20
+      Left = 68
       Width = 421
       Caption = 'Manuten'#231#227'o no Cadastro de Funcionario'
-      ExplicitLeft = 20
+      ExplicitLeft = 68
       ExplicitWidth = 421
     end
   end
   inherited ToolBar1: TToolBar
-    Width = 458
+    Width = 562
   end
   inherited PnlFicha: TPanel
-    Width = 458
+    Width = 562
     Height = 363
     ExplicitLeft = -8
     ExplicitTop = 113
@@ -39,7 +39,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       Caption = 'CPF'
     end
     object Label4: TLabel [2]
-      Left = 158
+      Left = 206
       Top = 52
       Width = 81
       Height = 13
@@ -81,7 +81,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       Caption = 'Estado'
     end
     object Label10: TLabel [8]
-      Left = 296
+      Left = 392
       Top = 52
       Width = 33
       Height = 13
@@ -103,39 +103,39 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
     end
     inherited StatusBar1: TStatusBar
       Top = 343
-      Width = 456
+      Width = 560
     end
     object DBEdit1: TDBEdit
       Left = 20
       Top = 25
-      Width = 409
+      Width = 533
       Height = 21
       DataField = 'nome'
       DataSource = DM.DSFuncionario
-      TabOrder = 1
+      TabOrder = 0
     end
     object DBEdit2: TDBEdit
       Left = 20
       Top = 66
-      Width = 121
+      Width = 165
       Height = 21
       DataField = 'cpf'
       DataSource = DM.DSFuncionario
-      TabOrder = 2
+      TabOrder = 1
     end
     object DBEdit3: TDBEdit
-      Left = 158
+      Left = 206
       Top = 66
-      Width = 121
+      Width = 163
       Height = 21
       DataField = 'data_nascimento'
       DataSource = DM.DSFuncionario
-      TabOrder = 3
+      TabOrder = 2
     end
     object DBEdit4: TDBEdit
       Left = 20
       Top = 112
-      Width = 409
+      Width = 533
       Height = 21
       DataField = 'endereco'
       DataSource = DM.DSFuncionario
@@ -144,7 +144,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
     object DBEdit5: TDBEdit
       Left = 20
       Top = 158
-      Width = 409
+      Width = 533
       Height = 21
       DataField = 'bairro'
       DataSource = DM.DSFuncionario
@@ -153,7 +153,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
     object DBEdit6: TDBEdit
       Left = 20
       Top = 204
-      Width = 409
+      Width = 533
       Height = 21
       DataField = 'cidade'
       DataSource = DM.DSFuncionario
@@ -194,7 +194,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
         'SP'#9' '
         'SE'#9' '
         'TO')
-      TabOrder = 7
+      TabOrder = 8
     end
     object DBEdit7: TDBEdit
       Left = 20
@@ -203,16 +203,16 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       Height = 21
       DataField = 'cep'
       DataSource = DM.DSFuncionario
-      TabOrder = 8
+      TabOrder = 7
     end
     object DBEdit8: TDBEdit
-      Left = 296
+      Left = 392
       Top = 66
-      Width = 133
+      Width = 161
       Height = 21
       DataField = 'celular'
       DataSource = DM.DSFuncionario
-      TabOrder = 9
+      TabOrder = 3
     end
     object DBEdit11: TDBEdit
       Left = 19
@@ -221,7 +221,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       Height = 21
       DataField = 'data_admissao'
       DataSource = DM.DSFuncionario
-      TabOrder = 10
+      TabOrder = 9
     end
     object DBEdit12: TDBEdit
       Left = 159
@@ -230,7 +230,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       Height = 21
       DataField = 'salario'
       DataSource = DM.DSFuncionario
-      TabOrder = 11
+      TabOrder = 10
     end
   end
   inherited ImageList1: TImageList
