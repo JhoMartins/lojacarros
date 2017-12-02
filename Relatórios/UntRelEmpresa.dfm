@@ -2,7 +2,7 @@ object FrmRelEmpresa: TFrmRelEmpresa
   Left = 0
   Top = 0
   Caption = 'Rel'#225'torio de Empresas'
-  ClientHeight = 293
+  ClientHeight = 412
   ClientWidth = 420
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,11 +17,10 @@ object FrmRelEmpresa: TFrmRelEmpresa
     Left = 0
     Top = 0
     Width = 420
-    Height = 293
+    Height = 412
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 633
-    ExplicitHeight = 297
+    ExplicitHeight = 293
     object edtnomede: TLabeledEdit
       Left = 80
       Top = 64
@@ -137,8 +136,8 @@ object FrmRelEmpresa: TFrmRelEmpresa
       'begin'
       ''
       'end.')
-    Left = 424
-    Top = 312
+    Left = 336
+    Top = 304
     Datasets = <
       item
         DataSet = frxDBDataset1
@@ -384,7 +383,7 @@ object FrmRelEmpresa: TFrmRelEmpresa
         end
         object Memo15: TfrxMemoView
           Left = 192.756030000000000000
-          Top = 49.133889999999990000
+          Top = 49.133890000000000000
           Width = 317.480520000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -398,7 +397,7 @@ object FrmRelEmpresa: TFrmRelEmpresa
         end
         object Memo16: TfrxMemoView
           Left = 192.756030000000000000
-          Top = 68.031540000000010000
+          Top = 68.031540000000000000
           Width = 287.244280000000000000
           Height = 18.897650000000000000
           Memo.UTF8W = (
@@ -406,7 +405,7 @@ object FrmRelEmpresa: TFrmRelEmpresa
         end
         object Memo17: TfrxMemoView
           Left = 196.535560000000000000
-          Top = 86.929190000000010000
+          Top = 86.929190000000000000
           Width = 238.110390000000000000
           Height = 18.897650000000000000
           Memo.UTF8W = (
