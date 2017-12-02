@@ -42,7 +42,6 @@ type
     procedure man_carroExecute(Sender: TObject);
     procedure btn_servicoExecute(Sender: TObject);
     procedure Action1Execute(Sender: TObject);
-    procedure EmpresasExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,8 +55,7 @@ implementation
 
 {$R *.dfm}
 
-uses UntManEmpresa, UntManCliente, UntCadEmpresa, UntCadServico, UntRelClientes,
-  UntRelEmpresa;
+uses UntManEmpresa, UntManCliente, UntCadEmpresa, UntCadServico, UntRelClientes;
 
 procedure TForm1.Action1Execute(Sender: TObject);
 begin
@@ -90,11 +88,6 @@ var Frm: TFrmManFuncionario;
 begin
   Frm:= FrmManFuncionario.Create(DM.ADODSFuncionario, FrmCadFuncionario);
   Frm.ShowModal;
-end;
-
-procedure TForm1.EmpresasExecute(Sender: TObject);
-begin
-FrmRelEmpresa.showmodal;
 end;
 
 procedure TForm1.FormActivate(Sender: TObject);

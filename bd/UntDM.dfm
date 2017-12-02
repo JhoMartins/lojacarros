@@ -6,10 +6,10 @@ object DM: TDM
     Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=LojaCarros;Data Source=DEIVID-PC;Use Pr' +
-      'ocedure for Prepare=1;Auto Translate=True;Packet Size=4096;Works' +
-      'tation ID=DESKTOP-TL1GQGV;Use Encryption for Data=False;Tag with' +
-      ' column collation when possible=False'
+      'fo=False;Initial Catalog=LojaCarros;Data Source=DESKTOP-TL1GQGV\' +
+      'SQLEXPRESS;Use Procedure for Prepare=1;Auto Translate=True;Packe' +
+      't Size=4096;Workstation ID=DESKTOP-TL1GQGV;Use Encryption for Da' +
+      'ta=False;Tag with column collation when possible=False'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 184
@@ -299,7 +299,7 @@ object DM: TDM
     CursorType = ctStatic
     CommandText = 'select * from Servico'
     Parameters = <>
-    Left = 120
+    Left = 128
     Top = 376
     object ADODSServicoid: TAutoIncField
       FieldName = 'id'
@@ -342,5 +342,35 @@ object DM: TDM
     DataSet = ADODSServico
     Left = 224
     Top = 376
+  end
+  object ADODSPeca: TADODataSet
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    CommandText = 'select * from Peca'
+    Parameters = <>
+    Left = 120
+    Top = 424
+    object ADODSPecaid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADODSPecanome: TStringField
+      FieldName = 'nome'
+      Size = 50
+    end
+    object ADODSPecadescricao: TStringField
+      FieldName = 'descricao'
+      Size = 50
+    end
+    object ADODSPecavalor_unit: TBCDField
+      FieldName = 'valor_unit'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object DSPeca: TDataSource
+    DataSet = ADODSPeca
+    Left = 224
+    Top = 424
   end
 end
