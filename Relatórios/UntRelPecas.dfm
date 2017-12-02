@@ -160,7 +160,7 @@ object FrmRelPecas: TFrmRelPecas
         RowCount = 0
         object Memo6: TfrxMemoView
           Left = 7.559060000000000000
-          Top = 3.779530000000000000
+          Top = 3.779529999999994000
           Width = 706.772110000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -180,7 +180,7 @@ object FrmRelPecas: TFrmRelPecas
         end
         object frxDBDataset1id: TfrxMemoView
           Left = 7.559060000000000000
-          Top = 3.779530000000000000
+          Top = 3.779529999999994000
           Width = 26.456710000000000000
           Height = 18.897650000000000000
           DataField = 'id'
@@ -191,7 +191,7 @@ object FrmRelPecas: TFrmRelPecas
         end
         object frxDBDataset1nome: TfrxMemoView
           Left = 37.795300000000000000
-          Top = 3.779530000000000000
+          Top = 3.779529999999994000
           Width = 143.622140000000000000
           Height = 18.897650000000000000
           DataField = 'nome'
@@ -202,7 +202,7 @@ object FrmRelPecas: TFrmRelPecas
         end
         object frxDBDataset1descricao: TfrxMemoView
           Left = 211.653680000000000000
-          Top = 3.779530000000000000
+          Top = 3.779529999999994000
           Width = 170.078850000000000000
           Height = 18.897650000000000000
           DataField = 'descricao'
@@ -213,7 +213,7 @@ object FrmRelPecas: TFrmRelPecas
         end
         object frxDBDataset1valor_unit: TfrxMemoView
           Left = 642.520100000000000000
-          Top = 3.779530000000000000
+          Top = 3.779529999999994000
           Width = 68.031540000000000000
           Height = 18.897650000000000000
           DataSet = frxDBDataset1
