@@ -29,6 +29,7 @@ type
     DSCliente: TDataSource;
     procedure FormActivate(Sender: TObject);
     procedure btn_salvarClick(Sender: TObject);
+    procedure DBEdit4Enter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,6 +45,7 @@ implementation
 
 procedure TFrmCadCarro.btn_salvarClick(Sender: TObject);
 begin
+  DM.ADODSCarrostatus.AsString:= 'Disponível';
   validarCampo(DBEdit1, Label2.Caption);
   validarCampo(DBEdit2, Label3.Caption);
   validarCampo(DBEdit7, Label9.Caption);
@@ -51,6 +53,11 @@ begin
   validarCampo(DBEdit5, Label7.Caption);
   validarCampo(DBEdit6, Label8.Caption);
   inherited;
+end;
+
+procedure TFrmCadCarro.DBEdit4Enter(Sender: TObject);
+begin
+  DM.ADODSCarro.FieldByName('data_compra').EditMask:= '99/99/9999;1;_';
 end;
 
 procedure TFrmCadCarro.FormActivate(Sender: TObject);

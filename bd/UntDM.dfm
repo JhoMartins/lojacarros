@@ -215,9 +215,10 @@ object DM: TDM
       FieldName = 'data_compra'
       Size = 10
     end
-    object ADODSCarrovalor_compra: TWideStringField
+    object ADODSCarrovalor_compra: TBCDField
       FieldName = 'valor_compra'
-      Size = 10
+      Precision = 18
+      Size = 2
     end
     object ADODSCarroexproprietario_id: TIntegerField
       FieldName = 'exproprietario_id'

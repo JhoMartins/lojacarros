@@ -115,6 +115,7 @@ inherited FrmCadCarro: TFrmCadCarro
       DataField = 'data_compra'
       DataSource = DM.DSCarro
       TabOrder = 4
+      OnEnter = DBEdit4Enter
     end
     object DBEdit6: TDBEdit
       Left = 16

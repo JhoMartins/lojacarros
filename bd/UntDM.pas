@@ -81,7 +81,7 @@ type
     ADODSCarromodelo: TStringField;
     ADODSCarromarca: TStringField;
     ADODSCarrodata_compra: TWideStringField;
-    ADODSCarrovalor_compra: TWideStringField;
+    ADODSCarrovalor_compra: TBCDField;
     ADODSCarroexproprietario_id: TIntegerField;
     ADODSCarrocor: TStringField;
     ADODSCarrostatus: TStringField;
