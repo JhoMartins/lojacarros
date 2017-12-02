@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, System.ImageList, Data.Win.ADODB,
-  Vcl.ImgList, Vcl.ToolWin, Vcl.StdCtrls, Vcl.ExtCtrls, UntDM;
+  Vcl.ImgList, Vcl.ToolWin, Vcl.StdCtrls, Vcl.ExtCtrls, UntDM, Vcl.Mask,
+  Vcl.DBCtrls;
 
 type
   TFrmCadBase = class(TForm)
@@ -25,6 +26,7 @@ type
     procedure btn_sairClick(Sender: TObject);
     procedure btn_salvarClick(Sender: TObject);
     procedure btn_cancelarClick(Sender: TObject);
+    procedure validarCampo(DBEdit: TDBEdit; Caption: String);
   private
     FDataSet: TADODataSet;
   public
@@ -72,6 +74,16 @@ end;
 constructor TFrmCadBase.Create(DataSet: TADODataSet);
 begin
   FDataSet:= DataSet;
+end;
+
+procedure TFrmCadBase.validarCampo(DBEdit: TDBEdit; Caption: String);
+begin
+  if DBEdit.Text = '' then
+  begin
+    ShowMessage('O campo [' + Caption + '] não pode ficar em branco');
+    DBEdit.SetFocus;
+    Abort;
+  end;
 end;
 
 end.
