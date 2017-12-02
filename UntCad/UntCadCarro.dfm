@@ -1,29 +1,29 @@
 inherited FrmCadCarro: TFrmCadCarro
-  Caption = 'Manuten'#231#227'o no Cadastro de Carro'
+  Caption = 'Cadastro de Carro'
   ClientHeight = 320
-  ClientWidth = 629
+  ClientWidth = 562
   OnActivate = FormActivate
-  ExplicitWidth = 635
+  ExplicitWidth = 568
   ExplicitHeight = 349
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 629
+    Width = 562
     ExplicitWidth = 629
     inherited Label1: TLabel
-      Left = 142
+      Left = 100
       Width = 357
       Caption = 'Manuten'#231#227'o no Cadastro de Carro'
-      ExplicitLeft = 142
+      ExplicitLeft = 100
       ExplicitWidth = 357
     end
   end
   inherited ToolBar1: TToolBar
-    Width = 629
+    Width = 562
     ExplicitWidth = 629
   end
   inherited PnlFicha: TPanel
-    Width = 629
+    Width = 562
     Height = 223
     ExplicitWidth = 629
     ExplicitHeight = 223
@@ -85,7 +85,7 @@ inherited FrmCadCarro: TFrmCadCarro
     end
     inherited StatusBar1: TStatusBar
       Top = 203
-      Width = 627
+      Width = 560
       ExplicitTop = 203
       ExplicitWidth = 627
     end
@@ -128,7 +128,7 @@ inherited FrmCadCarro: TFrmCadCarro
     object DBLookupComboBox1: TDBLookupComboBox
       Left = 224
       Top = 118
-      Width = 385
+      Width = 321
       Height = 21
       DataField = 'exproprietario_id'
       DataSource = DM.DSCarro
@@ -140,7 +140,7 @@ inherited FrmCadCarro: TFrmCadCarro
     object DBEdit7: TDBEdit
       Left = 450
       Top = 25
-      Width = 159
+      Width = 95
       Height = 21
       DataField = 'cor'
       DataSource = DM.DSCarro
@@ -158,7 +158,7 @@ inherited FrmCadCarro: TFrmCadCarro
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C01010300200070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -632,7 +632,7 @@ inherited FrmCadCarro: TFrmCadCarro
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1106,7 +1106,7 @@ inherited FrmCadCarro: TFrmCadCarro
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
