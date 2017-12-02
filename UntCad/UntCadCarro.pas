@@ -24,8 +24,6 @@ type
     DBLookupComboBox1: TDBLookupComboBox;
     Label9: TLabel;
     DBEdit7: TDBEdit;
-    Label4: TLabel;
-    DBEdit3: TDBEdit;
     Label10: TLabel;
     ADOQueryCliente: TADOQuery;
     DSCliente: TDataSource;
