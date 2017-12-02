@@ -7,7 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, UntCadCliente, UntManFuncionario, UntCadFuncionario, UntDM,
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, System.Actions,
   Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.PlatformDefaultStyleActnCtrls,
-  Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro, UntCadVenda, UntManVenda, UntManServico;
+  Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro, UntCadVenda, UntManVenda, UntManServico,
+  UntManPeca;
 
 type
   TForm1 = class(TForm)
@@ -29,8 +30,9 @@ type
     Button1: TButton;
     Action1: TAction;
     Empresas: TAction;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure Button20Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -42,6 +44,7 @@ type
     procedure man_carroExecute(Sender: TObject);
     procedure btn_servicoExecute(Sender: TObject);
     procedure Action1Execute(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -76,12 +79,19 @@ begin
   Frm.ShowModal;
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TForm1.Button20Click(Sender: TObject);
 var Frm: TFrmManEmpresa;
 begin
   Frm := FrmManEmpresa.Create(DM.ADODSEmpresa, FrmCadEmpresa);
   Frm.ShowModal;
 end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var Frm: TFrmManPeca;
+begin
+  Frm:= FrmManPeca.Create(DM.ADODSPeca, FrmCadPeca);
+  Frm.ShowModal;
+end
 
 procedure TForm1.Button3Click(Sender: TObject);
 var Frm: TFrmManFuncionario;
