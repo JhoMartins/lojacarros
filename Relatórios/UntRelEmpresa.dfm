@@ -384,7 +384,7 @@ object FrmRelEmpresa: TFrmRelEmpresa
         end
         object Memo15: TfrxMemoView
           Left = 192.756030000000000000
-          Top = 49.133889999999990000
+          Top = 49.133890000000000000
           Width = 317.480520000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -398,7 +398,7 @@ object FrmRelEmpresa: TFrmRelEmpresa
         end
         object Memo16: TfrxMemoView
           Left = 192.756030000000000000
-          Top = 68.031540000000010000
+          Top = 68.031540000000000000
           Width = 287.244280000000000000
           Height = 18.897650000000000000
           Memo.UTF8W = (

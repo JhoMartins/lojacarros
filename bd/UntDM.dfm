@@ -175,21 +175,10 @@ object DM: TDM
     end
     object ADODSFuncionariocelular: TStringField
       FieldName = 'celular'
-      Size = 13
+      Size = 15
     end
-    object ADODSFuncionariotelefone: TStringField
-      FieldName = 'telefone'
-      Size = 13
-    end
-    object ADODSFuncionarioestado_civil: TStringField
-      FieldName = 'estado_civil'
-      Size = 10
-    end
-    object ADODSFuncionariofilhos: TIntegerField
-      FieldName = 'filhos'
-    end
-    object ADODSFuncionariosalario_base: TBCDField
-      FieldName = 'salario_base'
+    object ADODSFuncionariosalario: TBCDField
+      FieldName = 'salario'
       Precision = 5
       Size = 2
     end
