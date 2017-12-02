@@ -16,6 +16,7 @@ type
     DBEdit2: TDBEdit;
     Label2: TLabel;
     DBEdit3: TDBEdit;
+    procedure btn_salvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,5 +29,13 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmCadPeca.btn_salvarClick(Sender: TObject);
+begin
+  validarCampo(DBEdit1, Nome.Caption);
+  validarCampo(DBEdit2, Descrição.Caption);
+  validarCampo(DBEdit3, Label2.Caption);
+  inherited;
+end;
 
 end.

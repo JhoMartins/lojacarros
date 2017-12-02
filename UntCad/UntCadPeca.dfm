@@ -1,5 +1,5 @@
 ﻿inherited FrmCadPeca: TFrmCadPeca
-  Caption = 'FrmCadPeca'
+  Caption = 'Cadastro de Carro'
   ClientHeight = 288
   ClientWidth = 400
   ExplicitWidth = 406
@@ -29,7 +29,7 @@
       Caption = 'Nome'
     end
     object Descrição: TLabel [1]
-      Left = 16
+      Left = 20
       Top = 62
       Width = 46
       Height = 13
