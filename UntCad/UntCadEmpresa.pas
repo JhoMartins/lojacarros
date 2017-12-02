@@ -29,6 +29,9 @@ type
     Label11: TLabel;
     DBEdit8: TDBEdit;
     procedure btn_salvarClick(Sender: TObject);
+    procedure DBEdit3Enter(Sender: TObject);
+    procedure DBEdit7Enter(Sender: TObject);
+    procedure DBEdit8Enter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,6 +57,22 @@ begin
   validarCombo(DBComboBox1, Label8.Caption);
   validarCampo(DBEdit8, Label11.Caption);
   inherited;
+end;
+
+procedure TFrmCadEmpresa.DBEdit3Enter(Sender: TObject);
+begin
+  DM.ADODSEmpresa.FieldByName('cnpj').EditMask:= '99.999.999/9999-99;1;_'
+end;
+
+
+procedure TFrmCadEmpresa.DBEdit7Enter(Sender: TObject);
+begin
+  DM.ADODSEmpresa.FieldByName('cep').EditMask:= '99999-999;1;_'
+end;
+
+procedure TFrmCadEmpresa.DBEdit8Enter(Sender: TObject);
+begin
+  DM.ADODSEmpresa.FieldByName('telefone').EditMask:= '(99) 9999-9999;1;_'
 end;
 
 end.

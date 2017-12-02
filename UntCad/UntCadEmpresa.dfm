@@ -123,6 +123,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
       DataField = 'cnpj'
       DataSource = DM.DSEmpresa
       TabOrder = 3
+      OnEnter = DBEdit3Enter
     end
     object DBEdit4: TDBEdit
       Left = 23
@@ -160,7 +161,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
       DataSource = DM.DSEmpresa
       Items.Strings = (
         'SP')
-      TabOrder = 7
+      TabOrder = 8
     end
     object DBEdit7: TDBEdit
       Left = 23
@@ -169,7 +170,8 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
       Height = 21
       DataField = 'cep'
       DataSource = DM.DSEmpresa
-      TabOrder = 8
+      TabOrder = 7
+      OnEnter = DBEdit7Enter
     end
     object DBEdit8: TDBEdit
       Left = 280
@@ -179,6 +181,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
       DataField = 'telefone'
       DataSource = DM.DSEmpresa
       TabOrder = 9
+      OnEnter = DBEdit8Enter
     end
   end
   inherited ImageList1: TImageList
