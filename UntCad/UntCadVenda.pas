@@ -20,16 +20,19 @@ type
     DBLookupComboBox1: TDBLookupComboBox;
     Label5: TLabel;
     DBComboBox1: TDBComboBox;
-    Label6: TLabel;
-    DBEdit1: TDBEdit;
     ADOQueryCarro: TADOQuery;
     DSCarro: TDataSource;
     ADOQueryCliente: TADOQuery;
     DSCliente: TDataSource;
     Label7: TLabel;
     DBEdit4: TDBEdit;
-    Label8: TLabel;
-    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit1: TDBEdit;
+    Nome: TLabel;
+    DBLookupComboBox3: TDBLookupComboBox;
+    ADOQueryFuncionario: TADOQuery;
+    DSFuncionario: TDataSource;
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,5 +45,17 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmCadVenda.FormActivate(Sender: TObject);
+begin
+  ADOQueryCarro.Close;
+  ADOQueryCarro.Open;
+
+  ADOQueryCliente.Close;
+  ADOQueryCliente.Open;
+
+  ADOQueryFuncionario.Close;
+  ADOQueryFuncionario.Open;
+end;
 
 end.

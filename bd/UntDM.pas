@@ -79,6 +79,7 @@ type
     ADODSCarrostatus: TStringField;
     ADODSVendaid: TAutoIncField;
     ADODSVendacarro_id: TIntegerField;
+    ADODSVendacliente_id: TIntegerField;
     ADODSVendafuncionario_id: TIntegerField;
     ADODSVendavalor: TBCDField;
     ADODSVendadata: TWideStringField;

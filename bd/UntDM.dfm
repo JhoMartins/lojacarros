@@ -250,6 +250,9 @@ object DM: TDM
     object ADODSVendacarro_id: TIntegerField
       FieldName = 'carro_id'
     end
+    object ADODSVendacliente_id: TIntegerField
+      FieldName = 'cliente_id'
+    end
     object ADODSVendafuncionario_id: TIntegerField
       FieldName = 'funcionario_id'
     end
