@@ -1,32 +1,33 @@
 inherited FrmCadVenda: TFrmCadVenda
-  Caption = 'FrmCadVenda'
-  ClientHeight = 443
-  ClientWidth = 727
-  ExplicitWidth = 733
-  ExplicitHeight = 472
+  Caption = 'Cadastro de Venda'
+  ClientHeight = 357
+  ClientWidth = 591
+  OnActivate = FormActivate
+  ExplicitWidth = 597
+  ExplicitHeight = 386
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 727
-    ExplicitWidth = 949
+    Width = 591
+    ExplicitWidth = 727
     inherited Label1: TLabel
-      Left = 160
+      Left = 112
       Width = 364
       Caption = 'Manuten'#231#227'o no Cadastro de Venda'
-      ExplicitLeft = 160
+      ExplicitLeft = 112
       ExplicitWidth = 364
     end
   end
   inherited ToolBar1: TToolBar
-    Width = 727
-    ExplicitWidth = 949
+    Width = 591
+    ExplicitWidth = 727
   end
   inherited PnlFicha: TPanel
-    Width = 727
-    Height = 346
+    Width = 591
+    Height = 260
     ExplicitTop = 103
-    ExplicitWidth = 727
-    ExplicitHeight = 346
+    ExplicitWidth = 591
+    ExplicitHeight = 369
     object Label2: TLabel [0]
       Left = 16
       Top = 24
@@ -57,38 +58,37 @@ inherited FrmCadVenda: TFrmCadVenda
     end
     object Label5: TLabel [4]
       Left = 160
-      Top = 133
+      Top = 173
       Width = 54
       Height = 13
       Caption = 'Pagamento'
     end
-    object Label6: TLabel [5]
+    object Label7: TLabel [5]
       Left = 16
-      Top = 133
-      Width = 45
-      Height = 13
-      Caption = 'Desconto'
-    end
-    object Label7: TLabel [6]
-      Left = 592
-      Top = 24
+      Top = 172
       Width = 24
       Height = 13
       Caption = 'Valor'
     end
-    object Label8: TLabel [7]
+    object Label6: TLabel [6]
       Left = 16
-      Top = 187
-      Width = 24
+      Top = 126
+      Width = 72
       Height = 13
-      Caption = 'Total'
+      Caption = 'Funcionario_ID'
+    end
+    object Nome: TLabel [7]
+      Left = 160
+      Top = 126
+      Width = 27
+      Height = 13
+      Caption = 'Nome'
     end
     inherited StatusBar1: TStatusBar
-      Top = 326
-      Width = 725
-      ExplicitLeft = 2
-      ExplicitTop = 212
-      ExplicitWidth = 590
+      Top = 240
+      Width = 589
+      ExplicitTop = 326
+      ExplicitWidth = 725
     end
     object DBEdit2: TDBEdit
       Left = 16
@@ -121,14 +121,14 @@ inherited FrmCadVenda: TFrmCadVenda
       KeyField = 'id'
       ListField = 'nome'
       ListSource = DSCliente
-      TabOrder = 3
+      TabOrder = 4
     end
     object DBComboBox1: TDBComboBox
       Left = 160
-      Top = 152
-      Width = 417
+      Top = 192
+      Width = 177
       Height = 21
-      DataField = 'pagamento'
+      DataField = 'forma_pagamento'
       DataSource = DM.DSVenda
       Items.Strings = (
         'Financiamento'
@@ -136,48 +136,53 @@ inherited FrmCadVenda: TFrmCadVenda
         'Boleto'
         'D'#233'bito'
         'Cr'#233'dito')
-      TabOrder = 4
+      TabOrder = 8
+    end
+    object DBEdit4: TDBEdit
+      Left = 16
+      Top = 192
+      Width = 121
+      Height = 21
+      DataField = 'valor'
+      DataSource = DM.DSVenda
+      TabOrder = 7
     end
     object DBEdit1: TDBEdit
       Left = 16
-      Top = 152
-      Width = 129
+      Top = 145
+      Width = 121
       Height = 21
-      DataField = 'desconto'
+      DataField = 'funcionario_id'
       DataSource = DM.DSVenda
       TabOrder = 5
     end
-    object DBEdit4: TDBEdit
-      Left = 592
-      Top = 43
-      Width = 121
+    object DBLookupComboBox3: TDBLookupComboBox
+      Left = 160
+      Top = 146
+      Width = 417
       Height = 21
-      ReadOnly = True
+      DataField = 'funcionario_id'
+      DataSource = DM.DSVenda
+      KeyField = 'id'
+      ListField = 'nome'
+      ListSource = DSFuncionario
       TabOrder = 6
     end
-  end
-  object DBEdit3: TDBEdit [3]
-    Left = 16
-    Top = 196
-    Width = 129
-    Height = 21
-    DataField = 'cliente_id'
-    DataSource = DM.DSVenda
-    TabOrder = 3
-  end
-  object DBEdit5: TDBEdit [4]
-    Left = 16
-    Top = 303
-    Width = 129
-    Height = 21
-    ReadOnly = True
-    TabOrder = 4
+    object DBEdit3: TDBEdit
+      Left = 16
+      Top = 99
+      Width = 129
+      Height = 21
+      DataField = 'cliente_id'
+      DataSource = DM.DSVenda
+      TabOrder = 3
+    end
   end
   inherited ImageList1: TImageList
-    Left = 320
-    Top = 320
+    Left = 384
+    Top = 272
     Bitmap = {
-      494C01010300200068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030020006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -650,10 +655,10 @@ inherited FrmCadVenda: TFrmCadVenda
       000000000000}
   end
   inherited ImageList2: TImageList
-    Left = 472
-    Top = 320
+    Left = 512
+    Top = 272
     Bitmap = {
-      494C0101030014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1126,10 +1131,10 @@ inherited FrmCadVenda: TFrmCadVenda
       000000000000}
   end
   inherited ImageList3: TImageList
-    Left = 400
-    Top = 320
+    Left = 464
+    Top = 272
     Bitmap = {
-      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1606,7 +1611,7 @@ inherited FrmCadVenda: TFrmCadVenda
     CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
-      'SELECT id, modelo, valor FROM Carro ORDER BY modelo')
+      'SELECT id, modelo FROM Carro ORDER BY modelo')
     Left = 96
     Top = 97
   end
@@ -1628,5 +1633,19 @@ inherited FrmCadVenda: TFrmCadVenda
     DataSet = ADOQueryCliente
     Left = 264
     Top = 160
+  end
+  object ADOQueryFuncionario: TADOQuery
+    Connection = DM.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT id, nome FROM Funcionario order by NOME')
+    Left = 96
+    Top = 225
+  end
+  object DSFuncionario: TDataSource
+    DataSet = ADOQueryFuncionario
+    Left = 208
+    Top = 225
   end
 end
