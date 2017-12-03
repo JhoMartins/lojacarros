@@ -3,6 +3,7 @@ object DM: TDM
   Height = 500
   Width = 490
   object ADOConnection1: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
       'fo=False;Initial Catalog=LojaCarros;Data Source=DESKTOP-TL1GQGV\' +
@@ -242,14 +243,18 @@ object DM: TDM
     Parameters = <>
     Left = 128
     Top = 328
-    object ADODSVendaid: TIntegerField
+    object ADODSVendaid: TAutoIncField
       FieldName = 'id'
+      ReadOnly = True
     end
     object ADODSVendacarro_id: TIntegerField
       FieldName = 'carro_id'
     end
-    object ADODSVendavalor_final: TBCDField
-      FieldName = 'valor_final'
+    object ADODSVendafuncionario_id: TIntegerField
+      FieldName = 'funcionario_id'
+    end
+    object ADODSVendavalor: TBCDField
+      FieldName = 'valor'
       Precision = 18
       Size = 2
     end
@@ -257,22 +262,9 @@ object DM: TDM
       FieldName = 'data'
       Size = 10
     end
-    object ADODSVendacliente_id: TIntegerField
-      FieldName = 'cliente_id'
-    end
-    object ADODSVendapagamento: TStringField
-      FieldName = 'pagamento'
+    object ADODSVendaforma_pagamento: TStringField
+      FieldName = 'forma_pagamento'
       Size = 50
-    end
-    object ADODSVendadesconto: TBCDField
-      FieldName = 'desconto'
-      Precision = 3
-      Size = 2
-    end
-    object ADODSVendavalor_inicial: TBCDField
-      FieldName = 'valor_inicial'
-      Precision = 18
-      Size = 2
     end
   end
   object DSVenda: TDataSource
