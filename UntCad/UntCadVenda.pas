@@ -33,6 +33,7 @@ type
     ADOQueryFuncionario: TADOQuery;
     DSFuncionario: TDataSource;
     procedure FormActivate(Sender: TObject);
+    procedure btn_salvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,6 +46,16 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmCadVenda.btn_salvarClick(Sender: TObject);
+begin
+  validarCampo(DBEdit2, Label2.Caption);
+  validarCampo(DBEdit3, Cliente_ID.Caption);
+  validarCampo(DBEdit1, Label6.Caption);
+  validarCampo(DBEdit4, Label7.Caption);
+  validarCombo(DBComboBox1, Label5.Caption);
+  inherited;
+end;
 
 procedure TFrmCadVenda.FormActivate(Sender: TObject);
 begin
