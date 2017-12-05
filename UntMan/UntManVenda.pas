@@ -40,7 +40,7 @@ end;
 constructor TFrmManVenda.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   inherited;
-   SQL:= 'SELECT * FROM Venda ORDER BY data DESC';
+   SQL:= 'select V.*, C.nome as Cliente, Car.modelo as Modelo, F.nome as Funcionario from Venda V inner join Cliente C on V.cliente_id = C.id inner join Carro Car on V.carro_id = Car.id inner join Funcionario F on V.funcionario_id = F.id';
 end;
 
 end.
