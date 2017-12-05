@@ -239,7 +239,11 @@ object DM: TDM
   object ADODSVenda: TADODataSet
     Connection = ADOConnection1
     CursorType = ctStatic
-    CommandText = 'select * from Venda'
+    CommandText = 
+      'select V.*, C.nome as Cliente, Car.modelo as Modelo, F.nome as F' +
+      'uncionario from Venda V inner join Cliente C on V.cliente_id = C' +
+      '.id inner join Carro Car on V.carro_id = Car.id inner join Funci' +
+      'onario F on V.funcionario_id = F.id'
     Parameters = <>
     Left = 128
     Top = 328
@@ -267,6 +271,18 @@ object DM: TDM
     end
     object ADODSVendaforma_pagamento: TStringField
       FieldName = 'forma_pagamento'
+      Size = 50
+    end
+    object ADODSVendaCliente: TStringField
+      FieldName = 'Cliente'
+      Size = 50
+    end
+    object ADODSVendaModelo: TStringField
+      FieldName = 'Modelo'
+      Size = 50
+    end
+    object ADODSVendaFuncionario: TStringField
+      FieldName = 'Funcionario'
       Size = 50
     end
   end

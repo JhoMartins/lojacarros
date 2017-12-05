@@ -84,6 +84,9 @@ type
     ADODSVendavalor: TBCDField;
     ADODSVendadata: TWideStringField;
     ADODSVendaforma_pagamento: TStringField;
+    ADODSVendaCliente: TStringField;
+    ADODSVendaModelo: TStringField;
+    ADODSVendaFuncionario: TStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }
