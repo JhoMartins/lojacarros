@@ -57,18 +57,6 @@ type
     ADODSPecanome: TStringField;
     ADODSPecadescricao: TStringField;
     ADODSPecavalor_unit: TBCDField;
-    ADODSFuncionarioid: TAutoIncField;
-    ADODSFuncionarionome: TStringField;
-    ADODSFuncionariocpf: TStringField;
-    ADODSFuncionariodata_nascimento: TWideStringField;
-    ADODSFuncionarioendereco: TStringField;
-    ADODSFuncionariobairro: TStringField;
-    ADODSFuncionariocidade: TStringField;
-    ADODSFuncionariocep: TStringField;
-    ADODSFuncionarioestado: TStringField;
-    ADODSFuncionariocelular: TStringField;
-    ADODSFuncionariosalario: TBCDField;
-    ADODSFuncionariodata_admissao: TWideStringField;
     ADODSCarroid: TAutoIncField;
     ADODSCarromodelo: TStringField;
     ADODSCarromarca: TStringField;
@@ -84,6 +72,18 @@ type
     ADODSVendavalor: TBCDField;
     ADODSVendadata: TWideStringField;
     ADODSVendaforma_pagamento: TStringField;
+    ADODSFuncionarioid: TAutoIncField;
+    ADODSFuncionarionome: TStringField;
+    ADODSFuncionariocpf: TStringField;
+    ADODSFuncionariodata_nascimento: TWideStringField;
+    ADODSFuncionarioendereco: TStringField;
+    ADODSFuncionariobairro: TStringField;
+    ADODSFuncionariocidade: TStringField;
+    ADODSFuncionariocep: TStringField;
+    ADODSFuncionarioestado: TStringField;
+    ADODSFuncionariocelular: TStringField;
+    ADODSFuncionariosalario: TBCDField;
+    ADODSFuncionariodata_admissao: TWideStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }

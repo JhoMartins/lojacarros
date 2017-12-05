@@ -6,10 +6,10 @@ object DM: TDM
     Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=LojaCarros;Data Source=DESKTOP-TL1GQGV\' +
-      'SQLEXPRESS;Use Procedure for Prepare=1;Auto Translate=True;Packe' +
-      't Size=4096;Workstation ID=DESKTOP-TL1GQGV;Use Encryption for Da' +
-      'ta=False;Tag with column collation when possible=False'
+      'fo=False;Initial Catalog=LojaCarros;Data Source=DEIVID-PC;Use Pr' +
+      'ocedure for Prepare=1;Auto Translate=True;Packet Size=4096;Works' +
+      'tation ID=DESKTOP-TL1GQGV;Use Encryption for Data=False;Tag with' +
+      ' column collation when possible=False'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 184
@@ -175,11 +175,11 @@ object DM: TDM
     end
     object ADODSFuncionariocelular: TStringField
       FieldName = 'celular'
-      Size = 15
+      Size = 13
     end
     object ADODSFuncionariosalario: TBCDField
       FieldName = 'salario'
-      Precision = 5
+      Precision = 18
       Size = 2
     end
     object ADODSFuncionariodata_admissao: TWideStringField

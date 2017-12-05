@@ -1,9 +1,9 @@
-object Form2: TForm2
+object FrmRelFuncionario: TFrmRelFuncionario
   Left = 0
   Top = 0
   Caption = 'Rel'#225't'#243'rio de Funcion'#225'rio'
   ClientHeight = 338
-  ClientWidth = 551
+  ClientWidth = 461
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,31 +16,105 @@ object Form2: TForm2
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 551
+    Width = 461
     Height = 338
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 551
+    object edtcodigode: TLabeledEdit
+      Left = 80
+      Top = 32
+      Width = 41
+      Height = 21
+      EditLabel.Width = 52
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Codigo de:'
+      LabelPosition = lpLeft
+      TabOrder = 0
+    end
+    object edtcodigoate: TLabeledEdit
+      Left = 184
+      Top = 32
+      Width = 41
+      Height = 21
+      EditLabel.Width = 56
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Codigo at'#233':'
+      LabelPosition = lpLeft
+      TabOrder = 1
+    end
+    object edtnomede: TLabeledEdit
+      Left = 72
+      Top = 72
+      Width = 121
+      Height = 21
+      EditLabel.Width = 46
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Nome de:'
+      LabelPosition = lpLeft
+      TabOrder = 2
+    end
+    object edtnomeate: TLabeledEdit
+      Left = 288
+      Top = 72
+      Width = 121
+      Height = 21
+      EditLabel.Width = 50
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Nome at'#233':'
+      LabelPosition = lpLeft
+      TabOrder = 3
+    end
+    object BitBtn1: TBitBtn
+      Left = 96
+      Top = 205
+      Width = 75
+      Height = 25
+      Caption = 'Imprimir'
+      TabOrder = 4
+      OnClick = BitBtn1Click
+    end
+    object Button1: TButton
+      Left = 232
+      Top = 205
+      Width = 75
+      Height = 25
+      Caption = 'Cancelar'
+      TabOrder = 5
+      OnClick = Button1Click
+    end
+    object RadioGroup1: TRadioGroup
+      Left = 24
+      Top = 112
+      Width = 385
+      Height = 57
+      Caption = 'RadioGroup1'
+      Columns = 4
+      Items.Strings = (
+        'Codigo'
+        'Nome'
+        'Sal'#225'rio'
+        'Data Admiss'#227'o')
+      TabOrder = 6
+    end
   end
   object ADOQueryFuncionario: TADOQuery
+    Active = True
     Connection = DM.ADOConnection1
     CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
       'select * from funcionario')
-    Left = 128
-    Top = 256
+    Left = 56
+    Top = 264
   end
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = ADOQueryFuncionario
     BCDToCurrency = False
-    Left = 256
-    Top = 256
+    Left = 168
+    Top = 264
   end
   object frxReport1: TfrxReport
     Version = '5.3.14'
@@ -51,14 +125,14 @@ object Form2: TForm2
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43073.946272766200000000
-    ReportOptions.LastChange = 43073.967655104170000000
+    ReportOptions.LastChange = 43073.967655104200000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       ''
       'begin'
       ''
       'end.')
-    Left = 392
+    Left = 272
     Top = 272
     Datasets = <
       item
@@ -82,16 +156,56 @@ object Form2: TForm2
       BottomMargin = 10.000000000000000000
       object MasterData1: TfrxMasterData
         FillType = ftBrush
-        Height = 98.267780000000000000
+        Height = 60.472480000000000000
         Top = 260.787570000000000000
         Width = 1046.929810000000000000
         DataSet = frxDBDataset1
         DataSetName = 'frxDBDataset1'
         RowCount = 0
+        object Memo21: TfrxMemoView
+          Left = 3.779530000000000000
+          Top = 41.574830000000000000
+          Width = 1039.370750000000000000
+          Height = 18.897650000000000000
+          Highlight.Font.Charset = DEFAULT_CHARSET
+          Highlight.Font.Color = clRed
+          Highlight.Font.Height = -13
+          Highlight.Font.Name = 'Arial'
+          Highlight.Font.Style = []
+          Highlight.Condition = 'Value = 0'
+          Highlight.FillType = ftBrush
+          Highlight.Fill.BackColor = clSilver
+        end
+        object Shape2: TfrxShapeView
+          Left = 3.779530000000000000
+          Top = 22.677180000000000000
+          Width = 1039.370750000000000000
+          Height = 18.897650000000000000
+        end
+        object Memo19: TfrxMemoView
+          Left = 3.779530000000000000
+          Top = 3.779530000000000000
+          Width = 1039.370750000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Highlight.Font.Charset = DEFAULT_CHARSET
+          Highlight.Font.Color = clRed
+          Highlight.Font.Height = -13
+          Highlight.Font.Name = 'Arial'
+          Highlight.Font.Style = []
+          Highlight.Condition = '<line> mod 1 = 0'
+          Highlight.FillType = ftBrush
+          Highlight.Fill.BackColor = clSilver
+          ParentFont = False
+        end
         object frxDBDataset1id: TfrxMemoView
           Left = 3.779530000000000000
           Top = 3.779530000000000000
-          Width = 49.133890000000000000
+          Width = 30.236240000000000000
           Height = 18.897650000000000000
           DataField = 'id'
           DataSet = frxDBDataset1
@@ -100,9 +214,9 @@ object Form2: TForm2
             '[frxDBDataset1."id"]')
         end
         object frxDBDataset1nome: TfrxMemoView
-          Left = 56.692950000000000000
+          Left = 37.795300000000000000
           Top = 3.779530000000000000
-          Width = 143.622140000000000000
+          Width = 128.504020000000000000
           Height = 18.897650000000000000
           DataField = 'nome'
           DataSet = frxDBDataset1
@@ -111,9 +225,9 @@ object Form2: TForm2
             '[frxDBDataset1."nome"]')
         end
         object frxDBDataset1cpf: TfrxMemoView
-          Left = 200.315090000000000000
+          Left = 166.299320000000000000
           Top = 3.779530000000000000
-          Width = 98.267780000000000000
+          Width = 105.826840000000000000
           Height = 18.897650000000000000
           DataField = 'cpf'
           DataSet = frxDBDataset1
@@ -122,20 +236,21 @@ object Form2: TForm2
             '[frxDBDataset1."cpf"]')
         end
         object frxDBDataset1data_nascimento: TfrxMemoView
-          Left = 306.141930000000000000
+          Left = 272.126160000000000000
           Top = 3.779530000000000000
-          Width = 79.370130000000000000
+          Width = 94.488250000000000000
           Height = 18.897650000000000000
-          DataField = 'data_nascimento'
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset1'
+          DisplayFormat.FormatStr = 'mmmm dd, yyyy'
+          DisplayFormat.Kind = fkDateTime
           Memo.UTF8W = (
             '[frxDBDataset1."data_nascimento"]')
         end
         object frxDBDataset1endereco: TfrxMemoView
-          Left = 393.071120000000000000
+          Left = 366.614410000000000000
           Top = 3.779530000000000000
-          Width = 166.299320000000000000
+          Width = 124.724490000000000000
           Height = 18.897650000000000000
           DataField = 'endereco'
           DataSet = frxDBDataset1
@@ -144,7 +259,7 @@ object Form2: TForm2
             '[frxDBDataset1."endereco"]')
         end
         object frxDBDataset1bairro: TfrxMemoView
-          Left = 563.149970000000000000
+          Left = 491.338900000000000000
           Top = 3.779530000000000000
           Width = 120.944960000000000000
           Height = 18.897650000000000000
@@ -155,9 +270,9 @@ object Form2: TForm2
             '[frxDBDataset1."bairro"]')
         end
         object frxDBDataset1cidade: TfrxMemoView
-          Left = 687.874460000000000000
+          Left = 612.283860000000000000
           Top = 3.779530000000000000
-          Width = 117.165430000000000000
+          Width = 98.267780000000000000
           Height = 18.897650000000000000
           DataField = 'cidade'
           DataSet = frxDBDataset1
@@ -166,9 +281,9 @@ object Form2: TForm2
             '[frxDBDataset1."cidade"]')
         end
         object frxDBDataset1cep: TfrxMemoView
-          Left = 808.819420000000000000
+          Left = 710.551640000000000000
           Top = 3.779530000000000000
-          Width = 86.929190000000000000
+          Width = 75.590600000000000000
           Height = 18.897650000000000000
           DataField = 'cep'
           DataSet = frxDBDataset1
@@ -177,9 +292,9 @@ object Form2: TForm2
             '[frxDBDataset1."cep"]')
         end
         object frxDBDataset1estado: TfrxMemoView
-          Left = 895.748610000000000000
+          Left = 786.142240000000000000
           Top = 3.779530000000000000
-          Width = 49.133890000000000000
+          Width = 37.795300000000000000
           Height = 18.897650000000000000
           DataField = 'estado'
           DataSet = frxDBDataset1
@@ -188,8 +303,8 @@ object Form2: TForm2
             '[frxDBDataset1."estado"]')
         end
         object frxDBDataset1celular: TfrxMemoView
-          Left = 3.779530000000000000
-          Top = 22.677180000000000000
+          Left = 835.276130000000000000
+          Top = 3.779530000000000000
           Width = 105.826840000000000000
           Height = 18.897650000000000000
           DataField = 'celular'
@@ -199,32 +314,48 @@ object Form2: TForm2
             '[frxDBDataset1."celular"]')
         end
         object frxDBDataset1salario: TfrxMemoView
-          Left = 124.724490000000000000
-          Top = 22.677180000000000000
-          Width = 49.133890000000000000
+          Left = 944.882500000000000000
+          Top = 3.779530000000000000
+          Width = 102.047310000000000000
           Height = 18.897650000000000000
-          DataField = 'salario'
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset1'
+          DisplayFormat.FormatStr = '%2.2m'
+          DisplayFormat.Kind = fkNumeric
           Memo.UTF8W = (
             '[frxDBDataset1."salario"]')
         end
-        object frxDBDataset1data_admissao: TfrxMemoView
-          Left = 185.196970000000000000
+        object Memo17: TfrxMemoView
+          Left = 3.779530000000000000
           Top = 22.677180000000000000
-          Width = 79.370130000000000000
+          Width = 124.724490000000000000
           Height = 18.897650000000000000
-          DataField = 'data_admissao'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Data_Admiss'#227'o')
+          ParentFont = False
+        end
+        object frxDBDataset1data_admissao: TfrxMemoView
+          Left = 3.779530000000000000
+          Top = 41.574830000000000000
+          Width = 272.126160000000000000
+          Height = 18.897650000000000000
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset1'
+          DisplayFormat.FormatStr = 'mmmm dd, yyyy'
+          DisplayFormat.Kind = fkDateTime
           Memo.UTF8W = (
             '[frxDBDataset1."data_admissao"]')
         end
       end
       object PageFooter1: TfrxPageFooter
         FillType = ftBrush
-        Height = 49.133890000000000000
-        Top = 419.527830000000000000
+        Height = 26.456710000000000000
+        Top = 381.732530000000000000
         Width = 1046.929810000000000000
         object Memo1: TfrxMemoView
           Left = 816.378480000000000000
@@ -2372,7 +2503,7 @@ object Form2: TForm2
         end
         object Memo18: TfrxMemoView
           Left = 468.661720000000000000
-          Top = 68.031540000000000000
+          Top = 75.590600000000000000
           Width = 226.771800000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2391,6 +2522,34 @@ object Form2: TForm2
         Height = 22.677180000000000000
         Top = 177.637910000000000000
         Width = 1046.929810000000000000
+        object Memo16: TfrxMemoView
+          Left = 952.441560000000000000
+          Top = 3.779530000000000000
+          Width = 60.472480000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Sal'#225'rio')
+          ParentFont = False
+        end
+        object Memo15: TfrxMemoView
+          Left = 842.835190000000000000
+          Top = 3.779530000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Celular')
+          ParentFont = False
+        end
         object Memo4: TfrxMemoView
           Left = 3.779530000000000000
           Top = 3.779530000000000000
@@ -2406,7 +2565,7 @@ object Form2: TForm2
           ParentFont = False
         end
         object Memo5: TfrxMemoView
-          Left = 52.913420000000000000
+          Left = 41.574830000000000000
           Top = 3.779530000000000000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
@@ -2420,7 +2579,7 @@ object Form2: TForm2
           ParentFont = False
         end
         object Memo6: TfrxMemoView
-          Left = 200.315090000000000000
+          Left = 166.299320000000000000
           Top = 3.779530000000000000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
@@ -2434,7 +2593,7 @@ object Form2: TForm2
           ParentFont = False
         end
         object Memo7: TfrxMemoView
-          Left = 306.141930000000000000
+          Left = 272.126160000000000000
           Top = 3.779530000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
@@ -2448,9 +2607,9 @@ object Form2: TForm2
           ParentFont = False
         end
         object Memo8: TfrxMemoView
-          Left = 393.071120000000000000
+          Left = 351.496290000000000000
           Top = 3.779530000000000000
-          Width = 166.299320000000000000
+          Width = 120.944960000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2462,7 +2621,7 @@ object Form2: TForm2
           ParentFont = False
         end
         object Memo9: TfrxMemoView
-          Left = 563.149970000000000000
+          Left = 487.559370000000000000
           Top = 3.779530000000000000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
@@ -2476,8 +2635,9 @@ object Form2: TForm2
           ParentFont = False
         end
         object Memo10: TfrxMemoView
-          Left = 687.874460000000000000
-          Width = 94.488250000000000000
+          Left = 612.283860000000000000
+          Top = 3.779530000000000000
+          Width = 71.811070000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2489,8 +2649,9 @@ object Form2: TForm2
           ParentFont = False
         end
         object Memo11: TfrxMemoView
-          Left = 808.819420000000000000
-          Width = 94.488250000000000000
+          Left = 710.551640000000000000
+          Top = 3.779530000000000000
+          Width = 68.031540000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -2500,6 +2661,26 @@ object Form2: TForm2
           Memo.UTF8W = (
             'Cep')
           ParentFont = False
+        end
+        object Memo20: TfrxMemoView
+          Left = 786.142240000000000000
+          Top = 3.779530000000000000
+          Width = 49.133890000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Estado')
+          ParentFont = False
+        end
+        object Shape1: TfrxShapeView
+          Left = 3.779530000000000000
+          Top = 3.779530000000000000
+          Width = 1039.370750000000000000
+          Height = 18.897650000000000000
         end
       end
     end
