@@ -72,6 +72,9 @@ type
     ADODSVendavalor: TBCDField;
     ADODSVendadata: TWideStringField;
     ADODSVendaforma_pagamento: TStringField;
+    ADODSVendaCliente: TStringField;
+    ADODSVendaModelo: TStringField;
+    ADODSVendaFuncionario: TStringField;
     ADODSFuncionarioid: TAutoIncField;
     ADODSFuncionarionome: TStringField;
     ADODSFuncionariocpf: TStringField;
@@ -106,7 +109,7 @@ procedure TDM.ADODSCarroexproprietario_idValidate(Sender: TField);
 begin
   if not FrmCadCarro.ADOQueryCliente.Locate('ID', ADODSCarroexproprietario_id.AsString, []) then
   begin
-    MessageDlg('Cliente n„o encontrado', mtError, [mbOK], 0);
+    MessageDlg('Cliente n√£o encontrado', mtError, [mbOK], 0);
     Abort;
   end;
 

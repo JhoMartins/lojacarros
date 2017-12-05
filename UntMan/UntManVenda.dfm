@@ -1,17 +1,76 @@
 inherited FrmManVenda: TFrmManVenda
   Caption = 'Manuten'#231#227'o no Cadastro de Venda'
+  ClientWidth = 1327
+  ExplicitWidth = 1333
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
+    Width = 1327
     inherited Label1: TLabel
+      Left = 462
       Width = 364
       Caption = 'Manuten'#231#227'o no Cadastro de Venda'
+      ExplicitLeft = 462
       ExplicitWidth = 364
     end
   end
+  inherited ToolBar1: TToolBar
+    Width = 1327
+  end
+  inherited Panel2: TPanel
+    Width = 1327
+  end
+  inherited DBGrid1: TDBGrid
+    Width = 1327
+    DataSource = DM.DSVenda
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Cliente'
+        Width = 284
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Modelo'
+        Width = 245
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'valor'
+        Width = 105
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'data'
+        Title.Caption = 'Data'
+        Width = 75
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'forma_pagamento'
+        Width = 269
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Funcionario'
+        Width = 262
+        Visible = True
+      end>
+  end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C01010700200064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700200068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -950,7 +1009,7 @@ inherited FrmManVenda: TFrmManVenda
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C01010700140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1889,7 +1948,7 @@ inherited FrmManVenda: TFrmManVenda
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C01010700140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
