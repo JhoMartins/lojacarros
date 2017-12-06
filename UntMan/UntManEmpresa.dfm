@@ -1,11 +1,12 @@
 inherited FrmManEmpresa: TFrmManEmpresa
   Caption = 'Manuten'#231#227'o no Cadastro de Empresa'
-  ClientWidth = 1065
-  ExplicitWidth = 1071
+  ClientWidth = 1083
+  ExplicitWidth = 1089
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 1065
+    Width = 1083
+    ExplicitWidth = 1065
     inherited Label1: TLabel
       Left = 310
       Width = 390
@@ -15,17 +16,28 @@ inherited FrmManEmpresa: TFrmManEmpresa
     end
   end
   inherited ToolBar1: TToolBar
-    Width = 1065
+    Width = 1083
+    ExplicitWidth = 1065
   end
   inherited Panel2: TPanel
-    Width = 1065
+    Width = 1083
+    ExplicitWidth = 1065
     inherited Edit1: TEdit
-      Width = 1004
-      ExplicitWidth = 1004
+      Width = 849
+      ExplicitWidth = 849
+    end
+    inherited ComboBox1: TComboBox
+      Text = 'Nome_Fantasia'
+      Items.Strings = (
+        'Nome_Fantasia'
+        'CNPJ'
+        'Cidade'
+        'Bairro'
+        'Telefone')
     end
   end
   inherited DBGrid1: TDBGrid
-    Width = 1065
+    Width = 1083
     DataSource = DM.DSEmpresa
     Columns = <
       item
@@ -70,7 +82,7 @@ inherited FrmManEmpresa: TFrmManEmpresa
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C01010700200058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070020005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1009,7 +1021,7 @@ inherited FrmManEmpresa: TFrmManEmpresa
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C01010700140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1948,7 +1960,7 @@ inherited FrmManEmpresa: TFrmManEmpresa
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C0101070014004C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140050001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

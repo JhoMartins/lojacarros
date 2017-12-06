@@ -16,32 +16,9 @@ object FrmManBase: TFrmManBase
   OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 862
-    Height = 49
-    Align = alTop
-    Color = clBlack
-    ParentBackground = False
-    TabOrder = 0
-    object Label1: TLabel
-      Left = 230
-      Top = 8
-      Width = 299
-      Height = 25
-      Caption = 'Manuten'#231#227'o no Cadastro de '
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clYellow
-      Font.Height = -21
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-  end
   object ToolBar1: TToolBar
     Left = 0
-    Top = 49
+    Top = 0
     Width = 862
     Height = 48
     BorderWidth = 1
@@ -54,7 +31,8 @@ object FrmManBase: TFrmManBase
     Images = ImageList1
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 1
+    TabOrder = 0
+    ExplicitTop = 49
     object btn_inserir: TToolButton
       Left = 0
       Top = 0
@@ -104,34 +82,44 @@ object FrmManBase: TFrmManBase
   end
   object Panel2: TPanel
     Left = 0
-    Top = 97
+    Top = 48
     Width = 862
     Height = 40
     Align = alTop
-    TabOrder = 2
+    TabOrder = 1
+    ExplicitTop = 97
     object Label2: TLabel
       Left = 11
       Top = 6
-      Width = 28
+      Width = 51
       Height = 13
-      Caption = 'Busca'
+      Caption = 'Buscar Por'
     end
     object Edit1: TEdit
-      Left = 45
+      Left = 216
       Top = 6
-      Width = 796
+      Width = 625
       Height = 21
       TabOrder = 0
+      OnKeyPress = Edit1KeyPress
+    end
+    object ComboBox1: TComboBox
+      Left = 65
+      Top = 6
+      Width = 145
+      Height = 21
+      TabOrder = 1
+      Text = 'ComboBox1'
     end
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Top = 137
+    Top = 88
     Width = 862
-    Height = 456
+    Height = 505
     Align = alClient
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
-    TabOrder = 3
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -144,7 +132,7 @@ object FrmManBase: TFrmManBase
     Left = 328
     Top = 384
     Bitmap = {
-      494C01010700200058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700200060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1087,7 +1075,7 @@ object FrmManBase: TFrmManBase
     Left = 424
     Top = 384
     Bitmap = {
-      494C01010700140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -2030,7 +2018,7 @@ object FrmManBase: TFrmManBase
     Left = 520
     Top = 392
     Bitmap = {
-      494C0101070014004C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140054001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
