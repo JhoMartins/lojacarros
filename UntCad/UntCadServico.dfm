@@ -1769,6 +1769,19 @@ inherited FrmCadServico: TFrmCadServico
       'select id, nome, valor_unit from peca order by nome')
     Left = 80
     Top = 336
+    object ADOQueryPecaid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQueryPecanome: TStringField
+      FieldName = 'nome'
+      Size = 50
+    end
+    object ADOQueryPecavalor_unit: TBCDField
+      FieldName = 'valor_unit'
+      Precision = 18
+      Size = 2
+    end
   end
   object DSPeca: TDataSource
     DataSet = ADOQueryPeca

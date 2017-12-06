@@ -392,6 +392,7 @@ object DM: TDM
     end
     object ADODSServico_Pecaspeca_id: TIntegerField
       FieldName = 'peca_id'
+      OnValidate = ADODSServico_Pecaspeca_idValidate
     end
     object ADODSServico_Pecasqtde: TIntegerField
       FieldName = 'qtde'

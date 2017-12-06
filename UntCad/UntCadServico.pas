@@ -45,6 +45,9 @@ type
     Bbt_confirmar: TBitBtn;
     Bbt_cancelar: TBitBtn;
     DBGrid1: TDBGrid;
+    ADOQueryPecaid: TAutoIncField;
+    ADOQueryPecanome: TStringField;
+    ADOQueryPecavalor_unit: TBCDField;
     procedure FormActivate(Sender: TObject);
     procedure Bbt_inserirClick(Sender: TObject);
     procedure Bbt_excluirClick(Sender: TObject);

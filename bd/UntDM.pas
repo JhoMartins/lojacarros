@@ -95,6 +95,7 @@ type
     ADODSServico_Pecasvalor_unit: TBCDField;
     ADODSServico_PecasNomePeca: TStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
+    procedure ADODSServico_Pecaspeca_idValidate(Sender: TField);
   private
     { Private declarations }
   public
@@ -120,6 +121,21 @@ begin
     Abort;
   end;
 
+end;
+
+procedure TDM.ADODSServico_Pecaspeca_idValidate(Sender: TField);
+begin
+  if not FrmCadServico.ADOQueryPeca.Locate('ID', ADODSServico_Pecaspeca_id.AsString, []) then
+  begin
+    MessageDlg('Peça não encontrada', mtError, [mbOK], 0);
+    Abort;
+  end
+  else
+  begin
+    ADODSServico_Pecasvalor_unit.AsFloat:= FrmCadServico.ADOQueryPecavalor_unit.AsFloat;
+    ADODSServico_Pecasqtde.AsInteger:= 1;
+    ADODSServico_Pecasvalor_total.AsFloat:= FrmCadServico.ADOQueryPecavalor_unit.AsFloat;
+  end;
 end;
 
 end.
