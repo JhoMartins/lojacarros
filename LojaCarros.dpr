@@ -54,7 +54,6 @@ begin
   Application.CreateForm(TFrmCadPeca, FrmCadPeca);
   Application.CreateForm(TFrmRelEmpresa, FrmRelEmpresa);
   Application.CreateForm(TFrmRelPecas, FrmRelPecas);
-  Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TFrmRelvenda, FrmRelvenda);
   Application.Run;
 end.
