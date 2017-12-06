@@ -57,18 +57,6 @@ type
     ADODSPecanome: TStringField;
     ADODSPecadescricao: TStringField;
     ADODSPecavalor_unit: TBCDField;
-    ADODSFuncionarioid: TAutoIncField;
-    ADODSFuncionarionome: TStringField;
-    ADODSFuncionariocpf: TStringField;
-    ADODSFuncionariodata_nascimento: TWideStringField;
-    ADODSFuncionarioendereco: TStringField;
-    ADODSFuncionariobairro: TStringField;
-    ADODSFuncionariocidade: TStringField;
-    ADODSFuncionariocep: TStringField;
-    ADODSFuncionarioestado: TStringField;
-    ADODSFuncionariocelular: TStringField;
-    ADODSFuncionariosalario: TBCDField;
-    ADODSFuncionariodata_admissao: TWideStringField;
     ADODSCarroid: TAutoIncField;
     ADODSCarromodelo: TStringField;
     ADODSCarromarca: TStringField;
@@ -87,6 +75,18 @@ type
     ADODSVendaCliente: TStringField;
     ADODSVendaModelo: TStringField;
     ADODSVendaFuncionario: TStringField;
+    ADODSFuncionarioid: TAutoIncField;
+    ADODSFuncionarionome: TStringField;
+    ADODSFuncionariocpf: TStringField;
+    ADODSFuncionariodata_nascimento: TWideStringField;
+    ADODSFuncionarioendereco: TStringField;
+    ADODSFuncionariobairro: TStringField;
+    ADODSFuncionariocidade: TStringField;
+    ADODSFuncionariocep: TStringField;
+    ADODSFuncionarioestado: TStringField;
+    ADODSFuncionariocelular: TStringField;
+    ADODSFuncionariosalario: TBCDField;
+    ADODSFuncionariodata_admissao: TWideStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }
@@ -109,7 +109,7 @@ procedure TDM.ADODSCarroexproprietario_idValidate(Sender: TField);
 begin
   if not FrmCadCarro.ADOQueryCliente.Locate('ID', ADODSCarroexproprietario_id.AsString, []) then
   begin
-    MessageDlg('Cliente n„o encontrado', mtError, [mbOK], 0);
+    MessageDlg('Cliente n√£o encontrado', mtError, [mbOK], 0);
     Abort;
   end;
 
