@@ -30,15 +30,6 @@ type
     DSVenda: TDataSource;
     ADODSServico: TADODataSet;
     DSServico: TDataSource;
-    ADODSServicoid: TAutoIncField;
-    ADODSServicodescricao: TStringField;
-    ADODSServicodata_inicio: TWideStringField;
-    ADODSServicodata_fim: TWideStringField;
-    ADODSServicostatus: TStringField;
-    ADODSServicocarro_id: TIntegerField;
-    ADODSServicoempresa_id: TIntegerField;
-    ADODSServicofinalizado_em: TWideStringField;
-    ADODSServicovalor: TBCDField;
     ADODSClienteid: TAutoIncField;
     ADODSClientenome: TStringField;
     ADODSClientecpf: TStringField;
@@ -87,6 +78,14 @@ type
     ADODSVendaCliente: TStringField;
     ADODSVendaModelo: TStringField;
     ADODSVendaFuncionario: TStringField;
+    ADODSServicoid: TAutoIncField;
+    ADODSServicodescricao: TStringField;
+    ADODSServicodata_inicio: TWideStringField;
+    ADODSServicodata_fim: TWideStringField;
+    ADODSServicostatus: TStringField;
+    ADODSServicocarro_id: TIntegerField;
+    ADODSServicoempresa_id: TIntegerField;
+    ADODSServicovalor: TBCDField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }

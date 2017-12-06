@@ -9,7 +9,7 @@ inherited FrmCadServico: TFrmCadServico
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 594
-    ExplicitWidth = 949
+    ExplicitWidth = 594
     inherited Label1: TLabel
       Left = 112
       Width = 375
@@ -20,14 +20,13 @@ inherited FrmCadServico: TFrmCadServico
   end
   inherited ToolBar1: TToolBar
     Width = 594
-    ExplicitWidth = 949
+    ExplicitWidth = 594
   end
   inherited PnlFicha: TPanel
     Width = 594
     Height = 328
-    ExplicitTop = 103
     ExplicitWidth = 594
-    ExplicitHeight = 371
+    ExplicitHeight = 328
     object Label2: TLabel [0]
       Left = 16
       Top = 16
@@ -63,37 +62,25 @@ inherited FrmCadServico: TFrmCadServico
       Height = 13
       Caption = 'Data Inicio'
     end
-    object Label7: TLabel [5]
+    object Status: TLabel [5]
       Left = 160
-      Top = 124
-      Width = 42
-      Height = 13
-      Caption = 'Data Fim'
-    end
-    object Status: TLabel [6]
-      Left = 456
       Top = 124
       Width = 31
       Height = 13
       Caption = 'Status'
     end
-    object Label8: TLabel [7]
+    object Label8: TLabel [6]
       Left = 16
       Top = 176
       Width = 46
       Height = 13
       Caption = 'Descri'#231#227'o'
     end
-    object Label9: TLabel [8]
-      Left = 312
-      Top = 124
-      Width = 24
-      Height = 13
-      Caption = 'Valor'
-    end
     inherited StatusBar1: TStatusBar
       Top = 308
       Width = 592
+      ExplicitTop = 308
+      ExplicitWidth = 592
     end
     object DBEdit1: TDBEdit
       Left = 16
@@ -146,26 +133,17 @@ inherited FrmCadServico: TFrmCadServico
       DataSource = DM.DSServico
       TabOrder = 5
     end
-    object DBEdit4: TDBEdit
-      Left = 160
-      Top = 143
-      Width = 121
-      Height = 21
-      DataField = 'data_fim'
-      DataSource = DM.DSServico
-      TabOrder = 6
-    end
     object DBEdit5: TDBEdit
       Left = 16
       Top = 195
       Width = 569
-      Height = 70
+      Height = 21
       DataField = 'descricao'
       DataSource = DM.DSServico
-      TabOrder = 9
+      TabOrder = 7
     end
     object DBComboBox1: TDBComboBox
-      Left = 456
+      Left = 160
       Top = 143
       Width = 129
       Height = 21
@@ -174,23 +152,14 @@ inherited FrmCadServico: TFrmCadServico
       Items.Strings = (
         'Solicitado'
         'Finalizado')
-      TabOrder = 8
-    end
-    object DBEdit6: TDBEdit
-      Left = 312
-      Top = 143
-      Width = 121
-      Height = 21
-      DataField = 'valor'
-      DataSource = DM.DSServico
-      TabOrder = 7
+      TabOrder = 6
     end
   end
   inherited ImageList1: TImageList
-    Left = 256
-    Top = 352
+    Left = 264
+    Top = 336
     Bitmap = {
-      494C01010300200068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030020006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -663,10 +632,10 @@ inherited FrmCadServico: TFrmCadServico
       000000000000}
   end
   inherited ImageList2: TImageList
-    Left = 384
-    Top = 352
+    Left = 400
+    Top = 336
     Bitmap = {
-      494C0101030014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1139,10 +1108,10 @@ inherited FrmCadServico: TFrmCadServico
       000000000000}
   end
   inherited ImageList3: TImageList
-    Left = 320
-    Top = 352
+    Left = 336
+    Top = 336
     Bitmap = {
-      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

@@ -312,7 +312,6 @@ object DM: TDM
     end
     object ADODSServicodata_fim: TWideStringField
       FieldName = 'data_fim'
-      FixedChar = True
       Size = 10
     end
     object ADODSServicostatus: TStringField
@@ -324,10 +323,6 @@ object DM: TDM
     end
     object ADODSServicoempresa_id: TIntegerField
       FieldName = 'empresa_id'
-    end
-    object ADODSServicofinalizado_em: TWideStringField
-      FieldName = 'finalizado_em'
-      Size = 10
     end
     object ADODSServicovalor: TBCDField
       FieldName = 'valor'

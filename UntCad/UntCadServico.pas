@@ -19,9 +19,7 @@ type
     Label5: TLabel;
     DBLookupComboBox2: TDBLookupComboBox;
     Label6: TLabel;
-    Label7: TLabel;
     DBEdit3: TDBEdit;
-    DBEdit4: TDBEdit;
     Status: TLabel;
     Label8: TLabel;
     ADOQueryCarro: TADOQuery;
@@ -29,8 +27,6 @@ type
     ADOQueryEmpresa: TADOQuery;
     DsEmpresa: TDataSource;
     DBEdit5: TDBEdit;
-    Label9: TLabel;
-    DBEdit6: TDBEdit;
     DBComboBox1: TDBComboBox;
     procedure FormActivate(Sender: TObject);
     procedure btn_salvarClick(Sender: TObject);
