@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UntCadBase, Vcl.DBCtrls, Vcl.StdCtrls,
   Vcl.Mask, System.ImageList, Vcl.ImgList, Vcl.ComCtrls, Vcl.ToolWin,
-  Vcl.ExtCtrls, UntDM, Data.DB, Data.Win.ADODB, Vcl.Buttons;
+  Vcl.ExtCtrls, UntDM, Data.DB, Data.Win.ADODB, Vcl.Buttons, Vcl.Grids,
+  Vcl.DBGrids;
 
 type
   TFrmCadServico = class(TFrmCadBase)
@@ -43,6 +44,7 @@ type
     Bbt_excluir: TBitBtn;
     Bbt_confirmar: TBitBtn;
     Bbt_cancelar: TBitBtn;
+    DBGrid1: TDBGrid;
     procedure FormActivate(Sender: TObject);
     procedure Bbt_inserirClick(Sender: TObject);
     procedure Bbt_excluirClick(Sender: TObject);

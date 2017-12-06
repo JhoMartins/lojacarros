@@ -406,5 +406,15 @@ object DM: TDM
       Precision = 18
       Size = 2
     end
+    object ADODSServico_PecasNomePeca: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NomePeca'
+      LookupDataSet = FrmCadServico.ADOQueryPeca
+      LookupKeyFields = 'id'
+      LookupResultField = 'nome'
+      KeyFields = 'peca_id'
+      Size = 50
+      Lookup = True
+    end
   end
 end

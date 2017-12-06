@@ -1,10 +1,10 @@
 inherited FrmCadServico: TFrmCadServico
   Caption = 'Manuten'#231#227'o no Cadastro de Servi'#231'o'
-  ClientHeight = 535
+  ClientHeight = 623
   ClientWidth = 601
   OnActivate = FormActivate
   ExplicitWidth = 607
-  ExplicitHeight = 564
+  ExplicitHeight = 652
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
@@ -24,7 +24,7 @@ inherited FrmCadServico: TFrmCadServico
   end
   inherited PnlFicha: TPanel
     Width = 601
-    Height = 438
+    Height = 526
     ExplicitWidth = 601
     ExplicitHeight = 438
     object Label2: TLabel [0]
@@ -77,7 +77,7 @@ inherited FrmCadServico: TFrmCadServico
       Caption = 'Empresa_ID'
     end
     inherited StatusBar1: TStatusBar
-      Top = 418
+      Top = 506
       Width = 599
       ExplicitTop = 418
       ExplicitWidth = 599
@@ -158,7 +158,7 @@ inherited FrmCadServico: TFrmCadServico
       Left = 16
       Top = 222
       Width = 569
-      Height = 171
+      Height = 243
       Caption = 'Pe'#231'as do Servi'#231'o'
       TabOrder = 8
       object PnlPecas: TPanel
@@ -188,6 +188,45 @@ inherited FrmCadServico: TFrmCadServico
           Height = 13
           Caption = 'Label10'
         end
+      end
+      object DBGrid1: TDBGrid
+        Left = 2
+        Top = 113
+        Width = 565
+        Height = 128
+        Align = alBottom
+        DataSource = DM.DSServico_Pecas
+        TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'peca_id'
+            Title.Caption = 'Pe'#231'a ID'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NomePeca'
+            Title.Caption = 'Nome'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'qtde'
+            Title.Caption = 'Qtde.'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'valor_unit'
+            Title.Caption = 'Valor Unit.'
+            Visible = True
+          end>
       end
     end
     object DBEdit4: TDBEdit
@@ -270,7 +309,7 @@ inherited FrmCadServico: TFrmCadServico
     Left = 376
     Top = 504
     Bitmap = {
-      494C01010300200074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200078001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -746,7 +785,7 @@ inherited FrmCadServico: TFrmCadServico
     Left = 456
     Top = 480
     Bitmap = {
-      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1222,7 +1261,7 @@ inherited FrmCadServico: TFrmCadServico
     Left = 512
     Top = 488
     Bitmap = {
-      494C01010300140074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140078001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

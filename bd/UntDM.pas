@@ -93,6 +93,7 @@ type
     ADODSServico_Pecasqtde: TIntegerField;
     ADODSServico_Pecasvalor_total: TBCDField;
     ADODSServico_Pecasvalor_unit: TBCDField;
+    ADODSServico_PecasNomePeca: TStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }
@@ -107,7 +108,7 @@ implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
-uses UntCadCarro;
+uses UntCadCarro, UntCadServico;
 
 {$R *.dfm}
 
