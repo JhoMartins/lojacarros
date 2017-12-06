@@ -24,7 +24,8 @@ uses
   UntCadPeca in 'UntCad\UntCadPeca.pas' {FrmCadPeca},
   UntRelEmpresa in 'Relatórios\UntRelEmpresa.pas' {FrmRelEmpresa},
   UntRelPecas in 'Relatórios\UntRelPecas.pas' {FrmRelPecas},
-  UntRelFuncionário in 'Relatórios\UntRelFuncionário.pas' {Form2};
+  UntRelFuncionário in 'Relatórios\UntRelFuncionário.pas' {Form2},
+  UntRelVenda in 'Relatórios\UntRelVenda.pas' {FrmRelvenda};
 
 {$R *.res}
 
@@ -54,5 +55,6 @@ begin
   Application.CreateForm(TFrmRelEmpresa, FrmRelEmpresa);
   Application.CreateForm(TFrmRelPecas, FrmRelPecas);
   Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TFrmRelvenda, FrmRelvenda);
   Application.Run;
 end.

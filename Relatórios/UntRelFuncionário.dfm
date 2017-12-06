@@ -3,7 +3,7 @@ object FrmRelFuncionario: TFrmRelFuncionario
   Top = 0
   Caption = 'Rel'#225't'#243'rio de Funcion'#225'rio'
   ClientHeight = 338
-  ClientWidth = 461
+  ClientWidth = 437
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,11 +16,11 @@ object FrmRelFuncionario: TFrmRelFuncionario
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 461
+    Width = 437
     Height = 338
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 551
+    ExplicitWidth = 461
     object edtcodigode: TLabeledEdit
       Left = 80
       Top = 32

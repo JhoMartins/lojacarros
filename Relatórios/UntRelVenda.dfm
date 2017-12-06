@@ -20,10 +20,6 @@ object FrmRelvenda: TFrmRelvenda
     Height = 396
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 56
-    ExplicitTop = 48
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object edtcodigode: TLabeledEdit
       Left = 64
       Top = 24
@@ -131,7 +127,7 @@ object FrmRelvenda: TFrmRelvenda
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43074.921013981500000000
-    ReportOptions.LastChange = 43074.933659930550000000
+    ReportOptions.LastChange = 43074.933659930600000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       ''
