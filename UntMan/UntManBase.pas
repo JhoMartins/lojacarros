@@ -26,12 +26,14 @@ type
     Label2: TLabel;
     Edit1: TEdit;
     DBGrid1: TDBGrid;
+    ComboBox1: TComboBox;
     procedure btn_sairClick(Sender: TObject);
     constructor Create(DataSet: TADODataSet; Form: TFrmCadBase); virtual;
     procedure btn_inserirClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btn_alterarClick(Sender: TObject);
     procedure btn_excluirClick(Sender: TObject);
+    procedure Edit1KeyPress(Sender: TObject; var Key: Char);
 
   private
    FForm: TFrmCadBase;
@@ -95,6 +97,11 @@ constructor TFrmManBase.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   FDataSet := DataSet;
   FForm:= Form;
+end;
+
+procedure TFrmManBase.Edit1KeyPress(Sender: TObject; var Key: Char);
+begin
+    FDataSet.Locate(ComboBox1.Text, Edit1.Text, [loCaseInsensitive, loPartialKey]);
 end;
 
 procedure TFrmManBase.FormActivate(Sender: TObject);

@@ -26,7 +26,7 @@ object FrmManBase: TFrmManBase
     ParentBackground = False
     TabOrder = 0
     object Label1: TLabel
-      Left = 230
+      Left = 262
       Top = 8
       Width = 299
       Height = 25
@@ -112,16 +112,25 @@ object FrmManBase: TFrmManBase
     object Label2: TLabel
       Left = 11
       Top = 6
-      Width = 28
+      Width = 51
       Height = 13
-      Caption = 'Busca'
+      Caption = 'Buscar Por'
     end
     object Edit1: TEdit
-      Left = 45
+      Left = 216
       Top = 6
-      Width = 796
+      Width = 625
       Height = 21
       TabOrder = 0
+      OnKeyPress = Edit1KeyPress
+    end
+    object ComboBox1: TComboBox
+      Left = 65
+      Top = 6
+      Width = 145
+      Height = 21
+      TabOrder = 1
+      Text = 'ComboBox1'
     end
   end
   object DBGrid1: TDBGrid
@@ -130,7 +139,7 @@ object FrmManBase: TFrmManBase
     Width = 862
     Height = 456
     Align = alClient
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -144,7 +153,7 @@ object FrmManBase: TFrmManBase
     Left = 328
     Top = 384
     Bitmap = {
-      494C01010700200058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070020005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1087,7 +1096,7 @@ object FrmManBase: TFrmManBase
     Left = 424
     Top = 384
     Bitmap = {
-      494C01010700140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -2030,7 +2039,7 @@ object FrmManBase: TFrmManBase
     Left = 520
     Top = 392
     Bitmap = {
-      494C0101070014004C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140050001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
