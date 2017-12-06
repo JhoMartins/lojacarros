@@ -46,7 +46,11 @@ begin
   with ADOQueryVenda.SQL do
   begin
     Clear;
-    Add('select V.*, C.nome as Cliente, Car.modelo as Modelo, F.nome as Funcionario from Venda V inner join Cliente C on V.cliente_id = C.id inner join Carro Car on V.carro_id = Car.id inner join Funcionario F on V.funcionario_id = F.id ');
+    Add('SELECT        Venda.id, Carro.modelo, Cliente.nome as Cliente,' +
+    ' Funcionario.nome AS Vendedor, Venda.valor, Venda.data, Venda.forma_pagamento FROM Venda' +
+    ' INNER JOIN Carro ON Venda.carro_id = Carro.id ' +
+    ' INNER JOIN Cliente ON Venda.cliente_id = Cliente.id ' +
+    ' INNER JOIN Funcionario ON Venda.funcionario_id = Funcionario.id ');
 
     if EdtCodigoDe.Text <> '' then
     try

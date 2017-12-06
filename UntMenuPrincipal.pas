@@ -33,6 +33,7 @@ type
     Peças: TAction;
     Action2: TAction;
     Action3: TAction;
+    Action4: TAction;
     procedure Button1Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -52,6 +53,7 @@ type
     procedure PeçasExecute(Sender: TObject);
     procedure Action2Execute(Sender: TObject);
     procedure Action3Execute(Sender: TObject);
+    procedure Action4Execute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -81,6 +83,11 @@ end;
 procedure TForm1.Action3Execute(Sender: TObject);
 begin
 frmrelvenda.showmodal;
+end;
+
+procedure TForm1.Action4Execute(Sender: TObject);
+begin
+frmrelfuncionario.showmodal;
 end;
 
 procedure TForm1.btn_servicoExecute(Sender: TObject);

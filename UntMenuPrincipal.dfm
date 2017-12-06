@@ -145,26 +145,6 @@
                 ImageIndex = 10
               end>
             Caption = '&Manuten'#231#227'o'
-          end
-          item
-            Items = <
-              item
-                Action = Action1
-                Caption = '&Clientes'
-              end
-              item
-                Action = Empresas
-                Caption = '&Empresas'
-              end
-              item
-                Action = Action2
-                Caption = '&Pe'#231'as'
-              end
-              item
-                Action = Action3
-                Caption = '&Venda'
-              end>
-            Caption = '&Rel'#225't'#243'rios'
           end>
         ActionBar = ActionMainMenuBar1
       end
@@ -305,6 +285,11 @@
       Caption = 'Venda'
       OnExecute = Action3Execute
     end
+    object Action4: TAction
+      Category = 'Rel'#225't'#243'rios'
+      Caption = 'Funcion'#225'rio'
+      OnExecute = Action4Execute
+    end
   end
   object ImageList1: TImageList
     Height = 24
@@ -312,7 +297,7 @@
     Left = 32
     Top = 168
     Bitmap = {
-      494C01010B003000680018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010B0030006C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000060000000480000000100200000000000006C
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
