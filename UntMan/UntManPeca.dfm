@@ -1,21 +1,24 @@
 inherited FrmManPeca: TFrmManPeca
-  Caption = 'FrmManPeca'
-  ClientWidth = 698
-  ExplicitWidth = 704
+  Caption = 'Cadastro de Pe'#231'a'
+  ClientWidth = 726
+  ExplicitWidth = 732
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 698
+    Width = 726
+    ExplicitWidth = 698
     inherited Label1: TLabel
       Left = 182
       ExplicitLeft = 182
     end
   end
   inherited ToolBar1: TToolBar
-    Width = 698
+    Width = 726
+    ExplicitWidth = 698
   end
   inherited Panel2: TPanel
-    Width = 698
+    Width = 726
+    ExplicitWidth = 698
     inherited Edit1: TEdit
       Left = 21
       Top = 110
@@ -24,16 +27,24 @@ inherited FrmManPeca: TFrmManPeca
       ExplicitTop = 110
       ExplicitWidth = 692
     end
+    inherited ComboBox1: TComboBox
+      TabOrder = 2
+      Text = 'Nome'
+      Items.Strings = (
+        'Nome'
+        'Descricao'
+        'Valor_Unit')
+    end
     object Edit2: TEdit
-      Left = 45
+      Left = 216
       Top = 6
-      Width = 644
+      Width = 481
       Height = 21
       TabOrder = 1
     end
   end
   inherited DBGrid1: TDBGrid
-    Width = 698
+    Width = 726
     DataSource = DM.DSPeca
     Columns = <
       item
@@ -65,7 +76,7 @@ inherited FrmManPeca: TFrmManPeca
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C01010700200060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700200064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1004,7 +1015,7 @@ inherited FrmManPeca: TFrmManPeca
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C01010700140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1943,7 +1954,7 @@ inherited FrmManPeca: TFrmManPeca
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C01010700140054001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
