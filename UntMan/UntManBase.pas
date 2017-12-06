@@ -10,8 +10,6 @@ uses
 
 type
   TFrmManBase = class(TForm)
-    Panel1: TPanel;
-    Label1: TLabel;
     ToolBar1: TToolBar;
     btn_inserir: TToolButton;
     btn_alterar: TToolButton;
