@@ -2,7 +2,7 @@ object FrmRelvenda: TFrmRelvenda
   Left = 0
   Top = 0
   Caption = 'Relat'#243'rio Venda'
-  ClientHeight = 308
+  ClientHeight = 396
   ClientWidth = 508
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,13 +17,88 @@ object FrmRelvenda: TFrmRelvenda
     Left = 0
     Top = 0
     Width = 508
-    Height = 308
+    Height = 396
     Align = alClient
     TabOrder = 0
     ExplicitLeft = 56
     ExplicitTop = 48
     ExplicitWidth = 185
     ExplicitHeight = 41
+    object edtcodigode: TLabeledEdit
+      Left = 64
+      Top = 24
+      Width = 57
+      Height = 21
+      EditLabel.Width = 52
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Codigo de:'
+      LabelPosition = lpLeft
+      TabOrder = 0
+    end
+    object edtcodigoate: TLabeledEdit
+      Left = 192
+      Top = 24
+      Width = 57
+      Height = 21
+      EditLabel.Width = 56
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Codigo at'#233':'
+      LabelPosition = lpLeft
+      TabOrder = 1
+    end
+    object edtnomede: TLabeledEdit
+      Left = 88
+      Top = 72
+      Width = 121
+      Height = 21
+      EditLabel.Width = 74
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Funcion'#225'rio de:'
+      LabelPosition = lpLeft
+      TabOrder = 2
+    end
+    object edtnomeate: TLabeledEdit
+      Left = 312
+      Top = 72
+      Width = 121
+      Height = 21
+      EditLabel.Width = 78
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Funcion'#225'rio at'#233':'
+      LabelPosition = lpLeft
+      TabOrder = 3
+    end
+    object RadioGroup1: TRadioGroup
+      Left = 8
+      Top = 112
+      Width = 425
+      Height = 73
+      Caption = 'Ordena'#231#227'o'
+      Columns = 3
+      Items.Strings = (
+        'Codigo'
+        'Valor '
+        'Data')
+      TabOrder = 4
+    end
+    object BitBtn1: TBitBtn
+      Left = 96
+      Top = 232
+      Width = 75
+      Height = 25
+      Caption = 'Imprimir'
+      TabOrder = 5
+      OnClick = BitBtn1Click
+    end
+    object BitBtn2: TBitBtn
+      Left = 224
+      Top = 232
+      Width = 75
+      Height = 25
+      Caption = 'Cancelar'
+      TabOrder = 6
+      OnClick = BitBtn2Click
+    end
   end
   object ADOQueryVenda: TADOQuery
     Active = True
@@ -36,16 +111,16 @@ object FrmRelvenda: TFrmRelvenda
         'uncionario from Venda V inner join Cliente C on V.cliente_id = C' +
         '.id inner join Carro Car on V.carro_id = Car.id inner join Funci' +
         'onario F on V.funcionario_id = F.id')
-    Left = 72
-    Top = 224
+    Left = 56
+    Top = 312
   end
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = ADOQueryVenda
     BCDToCurrency = False
-    Left = 184
-    Top = 232
+    Left = 176
+    Top = 312
   end
   object frxReport1: TfrxReport
     Version = '5.3.14'
@@ -64,7 +139,7 @@ object FrmRelvenda: TFrmRelvenda
       ''
       'end.')
     Left = 312
-    Top = 240
+    Top = 304
     Datasets = <
       item
         DataSet = frxDBDataset1
