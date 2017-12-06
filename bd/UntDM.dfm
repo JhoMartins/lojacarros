@@ -365,10 +365,17 @@ object DM: TDM
     Left = 224
     Top = 424
   end
+  object DSServico_Pecas: TDataSource
+    DataSet = ADODSServico_Pecas
+    Left = 416
+    Top = 328
+  end
   object ADODSServico_Pecas: TADODataSet
     Connection = ADOConnection1
+    CursorType = ctStatic
     CommandText = 'select * from Servico_Pecas where servico_id = :id'
-    DataSource = DSVenda
+    DataSource = DSServico
+    MasterFields = 'id'
     Parameters = <
       item
         Name = 'id'
@@ -380,10 +387,24 @@ object DM: TDM
       end>
     Left = 320
     Top = 328
-  end
-  object DSPecas: TDataSource
-    DataSet = ADODSServico_Pecas
-    Left = 416
-    Top = 328
+    object ADODSServico_Pecasservico_id: TIntegerField
+      FieldName = 'servico_id'
+    end
+    object ADODSServico_Pecaspeca_id: TIntegerField
+      FieldName = 'peca_id'
+    end
+    object ADODSServico_Pecasqtde: TIntegerField
+      FieldName = 'qtde'
+    end
+    object ADODSServico_Pecasvalor_total: TBCDField
+      FieldName = 'valor_total'
+      Precision = 18
+      Size = 2
+    end
+    object ADODSServico_Pecasvalor_unit: TBCDField
+      FieldName = 'valor_unit'
+      Precision = 18
+      Size = 2
+    end
   end
 end

@@ -74,8 +74,7 @@ type
     ADODSServicocarro_id: TIntegerField;
     ADODSServicoempresa_id: TIntegerField;
     ADODSServicovalor: TBCDField;
-    ADODSServico_Pecas: TADODataSet;
-    DSPecas: TDataSource;
+    DSServico_Pecas: TDataSource;
     ADODSFuncionarioid: TAutoIncField;
     ADODSFuncionarionome: TStringField;
     ADODSFuncionariocpf: TStringField;
@@ -88,6 +87,12 @@ type
     ADODSFuncionariocelular: TStringField;
     ADODSFuncionariosalario: TBCDField;
     ADODSFuncionariodata_admissao: TWideStringField;
+    ADODSServico_Pecas: TADODataSet;
+    ADODSServico_Pecasservico_id: TIntegerField;
+    ADODSServico_Pecaspeca_id: TIntegerField;
+    ADODSServico_Pecasqtde: TIntegerField;
+    ADODSServico_Pecasvalor_total: TBCDField;
+    ADODSServico_Pecasvalor_unit: TBCDField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }

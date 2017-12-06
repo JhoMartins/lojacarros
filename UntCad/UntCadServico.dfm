@@ -9,7 +9,7 @@ inherited FrmCadServico: TFrmCadServico
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 601
-    ExplicitWidth = 594
+    ExplicitWidth = 601
     inherited Label1: TLabel
       Left = 112
       Width = 375
@@ -20,13 +20,13 @@ inherited FrmCadServico: TFrmCadServico
   end
   inherited ToolBar1: TToolBar
     Width = 601
-    ExplicitWidth = 594
+    ExplicitWidth = 601
   end
   inherited PnlFicha: TPanel
     Width = 601
     Height = 438
-    ExplicitWidth = 594
-    ExplicitHeight = 328
+    ExplicitWidth = 601
+    ExplicitHeight = 438
     object Label2: TLabel [0]
       Left = 16
       Top = 16
@@ -34,53 +34,53 @@ inherited FrmCadServico: TFrmCadServico
       Height = 13
       Caption = 'Carro_ID'
     end
-    object Label3: TLabel [1]
-      Left = 16
-      Top = 70
-      Width = 58
-      Height = 13
-      Caption = 'Empresa_ID'
-    end
-    object Label4: TLabel [2]
+    object Label4: TLabel [1]
       Left = 112
       Top = 16
       Width = 34
       Height = 13
       Caption = 'Modelo'
     end
-    object Label5: TLabel [3]
+    object Label5: TLabel [2]
       Left = 112
       Top = 70
       Width = 27
       Height = 13
       Caption = 'Nome'
     end
-    object Label6: TLabel [4]
+    object Label6: TLabel [3]
       Left = 16
       Top = 124
       Width = 51
       Height = 13
       Caption = 'Data Inicio'
     end
-    object Status: TLabel [5]
+    object Status: TLabel [4]
       Left = 160
       Top = 124
       Width = 31
       Height = 13
       Caption = 'Status'
     end
-    object Label8: TLabel [6]
+    object Label8: TLabel [5]
       Left = 16
-      Top = 176
+      Top = 65
       Width = 46
       Height = 13
       Caption = 'Descri'#231#227'o'
     end
+    object Label3: TLabel [6]
+      Left = 16
+      Top = 65
+      Width = 58
+      Height = 13
+      Caption = 'Empresa_ID'
+    end
     inherited StatusBar1: TStatusBar
       Top = 418
       Width = 599
-      ExplicitTop = 308
-      ExplicitWidth = 592
+      ExplicitTop = 418
+      ExplicitWidth = 599
     end
     object DBEdit1: TDBEdit
       Left = 16
@@ -165,7 +165,7 @@ inherited FrmCadServico: TFrmCadServico
         Left = 16
         Top = 24
         Width = 537
-        Height = 78
+        Height = 49
         TabOrder = 0
         object Label7: TLabel
           Left = 15
@@ -174,6 +174,20 @@ inherited FrmCadServico: TFrmCadServico
           Height = 13
           Caption = 'Label7'
         end
+        object Label9: TLabel
+          Left = 319
+          Top = 4
+          Width = 31
+          Height = 13
+          Caption = 'Label9'
+        end
+        object Label10: TLabel
+          Left = 407
+          Top = 4
+          Width = 37
+          Height = 13
+          Caption = 'Label10'
+        end
       end
     end
     object DBEdit4: TDBEdit
@@ -181,6 +195,8 @@ inherited FrmCadServico: TFrmCadServico
       Top = 269
       Width = 82
       Height = 21
+      DataField = 'peca_id'
+      DataSource = DM.DSServico_Pecas
       TabOrder = 9
     end
     object DBLookupComboBox3: TDBLookupComboBox
@@ -188,14 +204,69 @@ inherited FrmCadServico: TFrmCadServico
       Top = 269
       Width = 193
       Height = 21
+      DataField = 'peca_id'
+      DataSource = DM.DSServico_Pecas
+      KeyField = 'id'
+      ListField = 'nome'
+      ListSource = DSPeca
       TabOrder = 10
     end
   end
+  object DBEdit6: TDBEdit [3]
+    Left = 351
+    Top = 366
+    Width = 82
+    Height = 21
+    DataField = 'valor_unit'
+    DataSource = DM.DSServico_Pecas
+    TabOrder = 3
+  end
+  object DBEdit7: TDBEdit [4]
+    Left = 439
+    Top = 366
+    Width = 82
+    Height = 21
+    DataField = 'qtde'
+    DataSource = DM.DSServico_Pecas
+    TabOrder = 4
+  end
+  object Bbt_inserir: TBitBtn [5]
+    Left = 192
+    Top = 398
+    Width = 75
+    Height = 25
+    Caption = 'Bbt_inserir'
+    TabOrder = 5
+  end
+  object Bbt_excluir: TBitBtn [6]
+    Left = 273
+    Top = 398
+    Width = 75
+    Height = 25
+    Caption = 'Bbt_excluir'
+    TabOrder = 6
+  end
+  object Bbt_confirmar: TBitBtn [7]
+    Left = 376
+    Top = 398
+    Width = 75
+    Height = 25
+    Caption = 'Bbt_confirmar'
+    TabOrder = 7
+  end
+  object Bbt_cancelar: TBitBtn [8]
+    Left = 457
+    Top = 398
+    Width = 75
+    Height = 25
+    Caption = 'Bbt_cancelar'
+    TabOrder = 8
+  end
   inherited ImageList1: TImageList
-    Left = 408
-    Top = 432
+    Left = 376
+    Top = 504
     Bitmap = {
-      494C01010300200070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -668,10 +739,10 @@ inherited FrmCadServico: TFrmCadServico
       000000000000}
   end
   inherited ImageList2: TImageList
-    Left = 464
-    Top = 432
+    Left = 456
+    Top = 480
     Bitmap = {
-      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1145,9 +1216,9 @@ inherited FrmCadServico: TFrmCadServico
   end
   inherited ImageList3: TImageList
     Left = 512
-    Top = 448
+    Top = 488
     Bitmap = {
-      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1646,5 +1717,19 @@ inherited FrmCadServico: TFrmCadServico
     DataSet = ADOQueryEmpresa
     Left = 120
     Top = 161
+  end
+  object ADOQueryPeca: TADOQuery
+    Connection = DM.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select id, nome, valor_unit from peca order by nome')
+    Left = 80
+    Top = 336
+  end
+  object DSPeca: TDataSource
+    DataSet = ADOQueryPeca
+    Left = 144
+    Top = 336
   end
 end

@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, UntCadBase, Vcl.DBCtrls, Vcl.StdCtrls,
   Vcl.Mask, System.ImageList, Vcl.ImgList, Vcl.ComCtrls, Vcl.ToolWin,
-  Vcl.ExtCtrls, UntDM, Data.DB, Data.Win.ADODB;
+  Vcl.ExtCtrls, UntDM, Data.DB, Data.Win.ADODB, Vcl.Buttons;
 
 type
   TFrmCadServico = class(TFrmCadBase)
@@ -33,6 +33,16 @@ type
     Label7: TLabel;
     DBEdit4: TDBEdit;
     DBLookupComboBox3: TDBLookupComboBox;
+    DBEdit6: TDBEdit;
+    Label9: TLabel;
+    Label10: TLabel;
+    DBEdit7: TDBEdit;
+    ADOQueryPeca: TADOQuery;
+    DSPeca: TDataSource;
+    Bbt_inserir: TBitBtn;
+    Bbt_excluir: TBitBtn;
+    Bbt_confirmar: TBitBtn;
+    Bbt_cancelar: TBitBtn;
     procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
