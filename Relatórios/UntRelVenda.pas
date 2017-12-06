@@ -1,26 +1,26 @@
-unit UntRelFuncionário;
+unit UntRelVenda;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.ExtCtrls,
-  frxClass, frxDBSet, Vcl.StdCtrls, Vcl.Buttons;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, frxClass, frxDBSet, Data.DB,
+  Data.Win.ADODB, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons;
 
 type
-  TFrmRelFuncionario = class(TForm)
+  TFrmRelvenda = class(TForm)
     Panel1: TPanel;
-    ADOQueryFuncionario: TADOQuery;
+    ADOQueryVenda: TADOQuery;
     frxDBDataset1: TfrxDBDataset;
     frxReport1: TfrxReport;
     edtcodigode: TLabeledEdit;
     edtcodigoate: TLabeledEdit;
     edtnomede: TLabeledEdit;
     edtnomeate: TLabeledEdit;
-    BitBtn1: TBitBtn;
-    Button1: TButton;
     RadioGroup1: TRadioGroup;
-    procedure Button1Click(Sender: TObject);
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    procedure BitBtn2Click(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
@@ -29,7 +29,7 @@ type
   end;
 
 var
-  FrmRelFuncionario: TFrmRelFuncionario;
+  FrmRelvenda: TFrmRelvenda;
 
 implementation
 
@@ -37,21 +37,21 @@ implementation
 
 uses UntDM;
 
-procedure TFrmRelFuncionario.BitBtn1Click(Sender: TObject);
+procedure TFrmRelvenda.BitBtn1Click(Sender: TObject);
 var StrLiga: String;
 begin
   StrLiga:= 'where ';
 
-  ADOQueryFuncionario.Close;
-  with ADOQueryFuncionario.SQL do
+  ADOQueryVenda.Close;
+  with ADOQueryVenda.SQL do
   begin
     Clear;
-    Add('select * from Funcionario ');
+    Add('select V.*, C.nome as Cliente, Car.modelo as Modelo, F.nome as Funcionario from Venda V inner join Cliente C on V.cliente_id = C.id inner join Carro Car on V.carro_id = Car.id inner join Funcionario F on V.funcionario_id = F.id ');
 
     if EdtCodigoDe.Text <> '' then
     try
       StrToInt(EdtCodigoDe.Text);
-      Add(StrLiga + 'ID >= '+ EdtCodigoDe .Text);
+      Add(StrLiga + 'id >= '+ EdtCodigoDe .Text);
       StrLiga:= 'and ';
     except
       on EConvertError do;
@@ -60,13 +60,13 @@ begin
     if EdtCodigoAte.Text <> '' then
     try
       StrToInt(EdtCodigoAte.Text);
-      Add(StrLiga + 'ID <= '+ EdtCodigoAte.Text);
+      Add(StrLiga + 'id <= '+ EdtCodigoAte.Text);
     except
       on EConvertError do;
     end;
     if EdtNomede.Text <> '' then
     try
-      Add(StrLiga + 'nome >= '''+ EdtNomeDe.Text + '''');
+      Add(StrLiga + 'f.nome >= '''+ EdtNomeDe.Text + '''');
       strliga:= ' and ';
     except
       on EConvertError do;
@@ -74,25 +74,24 @@ begin
 
      if EdtNomeate.Text <> '' then
     try
-      Add(StrLiga + 'nome <= '''+ EdtNomeate.Text + 'zzz''');
+      Add(StrLiga + 'f.nome <= '''+ EdtNomeate.Text + 'zzz''');
       Strliga:= ' and ';
     except
       on EConvertError do;
     end;
 
     case RadioGroup1.ItemIndex of
-    0: add(' order by ID ');
-    1: add(' order by nome ');
-    2: add(' order by salario desc ');
-    3: add(' order by data_admissao ');
+    0: add(' order by id ');
+    1: add(' order by valor ');
+    2: add(' order by data ')
     end;
   end;
-  ADOQueryFuncionario.Open;
+  ADOQueryVenda.Open;
   frxReport1.ShowReport();
 end;
 
 
-procedure TFrmRelFuncionario.Button1Click(Sender: TObject);
+procedure TFrmRelvenda.BitBtn2Click(Sender: TObject);
 begin
 close;
 end;

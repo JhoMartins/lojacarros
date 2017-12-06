@@ -20,7 +20,6 @@ object FrmRelEmpresa: TFrmRelEmpresa
     Height = 412
     Align = alClient
     TabOrder = 0
-    ExplicitHeight = 293
     object edtnomede: TLabeledEdit
       Left = 80
       Top = 64
@@ -103,7 +102,6 @@ object FrmRelEmpresa: TFrmRelEmpresa
     end
   end
   object ADOQueryEmpresa: TADOQuery
-    Active = True
     Connection = DM.ADOConnection1
     CursorType = ctStatic
     Parameters = <>

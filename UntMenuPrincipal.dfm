@@ -159,6 +159,10 @@
               item
                 Action = Action2
                 Caption = '&Pe'#231'as'
+              end
+              item
+                Action = Action3
+                Caption = '&Venda'
               end>
             Caption = '&Rel'#225't'#243'rios'
           end>
@@ -295,6 +299,11 @@
       Category = 'Rel'#225't'#243'rios'
       Caption = 'Pe'#231'as'
       OnExecute = Action2Execute
+    end
+    object Action3: TAction
+      Category = 'Rel'#225't'#243'rios'
+      Caption = 'Venda'
+      OnExecute = Action3Execute
     end
   end
   object ImageList1: TImageList
