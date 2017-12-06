@@ -86,6 +86,8 @@ type
     ADODSServicocarro_id: TIntegerField;
     ADODSServicoempresa_id: TIntegerField;
     ADODSServicovalor: TBCDField;
+    ADODSServico_Pecas: TADODataSet;
+    DSPecas: TDataSource;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
   private
     { Private declarations }

@@ -365,4 +365,25 @@ object DM: TDM
     Left = 224
     Top = 424
   end
+  object ADODSServico_Pecas: TADODataSet
+    Connection = ADOConnection1
+    CommandText = 'select * from Servico_Pecas where servico_id = :id'
+    DataSource = DSVenda
+    Parameters = <
+      item
+        Name = 'id'
+        Attributes = [paSigned]
+        DataType = ftInteger
+        Precision = 10
+        Size = 4
+        Value = Null
+      end>
+    Left = 320
+    Top = 328
+  end
+  object DSPecas: TDataSource
+    DataSet = ADODSServico_Pecas
+    Left = 416
+    Top = 328
+  end
 end

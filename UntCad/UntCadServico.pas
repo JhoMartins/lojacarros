@@ -29,7 +29,6 @@ type
     DBEdit5: TDBEdit;
     DBComboBox1: TDBComboBox;
     procedure FormActivate(Sender: TObject);
-    procedure btn_salvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,14 +41,6 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TFrmCadServico.btn_salvarClick(Sender: TObject);
-begin
-  if DBComboBox1.ItemIndex = 2 then
-    DM.ADODSServicofinalizado_em.AsDateTime := Date;
-  inherited;
-
-end;
 
 procedure TFrmCadServico.FormActivate(Sender: TObject);
 begin
