@@ -237,6 +237,7 @@ inherited FrmCadServico: TFrmCadServico
     Height = 25
     Caption = 'Bbt_inserir'
     TabOrder = 5
+    OnClick = Bbt_inserirClick
   end
   object Bbt_excluir: TBitBtn [6]
     Left = 273
@@ -245,6 +246,7 @@ inherited FrmCadServico: TFrmCadServico
     Height = 25
     Caption = 'Bbt_excluir'
     TabOrder = 6
+    OnClick = Bbt_excluirClick
   end
   object Bbt_confirmar: TBitBtn [7]
     Left = 376
@@ -253,6 +255,7 @@ inherited FrmCadServico: TFrmCadServico
     Height = 25
     Caption = 'Bbt_confirmar'
     TabOrder = 7
+    OnClick = Bbt_confirmarClick
   end
   object Bbt_cancelar: TBitBtn [8]
     Left = 457
@@ -261,6 +264,7 @@ inherited FrmCadServico: TFrmCadServico
     Height = 25
     Caption = 'Bbt_cancelar'
     TabOrder = 8
+    OnClick = Bbt_cancelarClick
   end
   inherited ImageList1: TImageList
     Left = 376
