@@ -46,12 +46,12 @@ begin
   with ADOQueryVenda.SQL do
   begin
     Clear;
-    Add('select * from Venda ');
+    Add('select V.*, C.nome as Cliente, Car.modelo as Modelo, F.nome as Funcionario from Venda V inner join Cliente C on V.cliente_id = C.id inner join Carro Car on V.carro_id = Car.id inner join Funcionario F on V.funcionario_id = F.id ');
 
     if EdtCodigoDe.Text <> '' then
     try
       StrToInt(EdtCodigoDe.Text);
-      Add(StrLiga + 'ID >= '+ EdtCodigoDe .Text);
+      Add(StrLiga + 'id >= '+ EdtCodigoDe .Text);
       StrLiga:= 'and ';
     except
       on EConvertError do;
@@ -60,7 +60,7 @@ begin
     if EdtCodigoAte.Text <> '' then
     try
       StrToInt(EdtCodigoAte.Text);
-      Add(StrLiga + 'ID <= '+ EdtCodigoAte.Text);
+      Add(StrLiga + 'id <= '+ EdtCodigoAte.Text);
     except
       on EConvertError do;
     end;
@@ -81,7 +81,7 @@ begin
     end;
 
     case RadioGroup1.ItemIndex of
-    0: add(' order by ID ');
+    0: add(' order by id ');
     1: add(' order by valor ');
     2: add(' order by data ')
     end;
