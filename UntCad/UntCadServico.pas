@@ -28,6 +28,11 @@ type
     DsEmpresa: TDataSource;
     DBEdit5: TDBEdit;
     DBComboBox1: TDBComboBox;
+    GroupBox1: TGroupBox;
+    PnlPecas: TPanel;
+    Label7: TLabel;
+    DBEdit4: TDBEdit;
+    DBLookupComboBox3: TDBLookupComboBox;
     procedure FormActivate(Sender: TObject);
   private
     { Private declarations }

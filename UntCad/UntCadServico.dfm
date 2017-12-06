@@ -1,14 +1,14 @@
 inherited FrmCadServico: TFrmCadServico
   Caption = 'Manuten'#231#227'o no Cadastro de Servi'#231'o'
-  ClientHeight = 425
-  ClientWidth = 594
+  ClientHeight = 535
+  ClientWidth = 601
   OnActivate = FormActivate
-  ExplicitWidth = 600
-  ExplicitHeight = 454
+  ExplicitWidth = 607
+  ExplicitHeight = 564
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 594
+    Width = 601
     ExplicitWidth = 594
     inherited Label1: TLabel
       Left = 112
@@ -19,12 +19,12 @@ inherited FrmCadServico: TFrmCadServico
     end
   end
   inherited ToolBar1: TToolBar
-    Width = 594
+    Width = 601
     ExplicitWidth = 594
   end
   inherited PnlFicha: TPanel
-    Width = 594
-    Height = 328
+    Width = 601
+    Height = 438
     ExplicitWidth = 594
     ExplicitHeight = 328
     object Label2: TLabel [0]
@@ -77,8 +77,8 @@ inherited FrmCadServico: TFrmCadServico
       Caption = 'Descri'#231#227'o'
     end
     inherited StatusBar1: TStatusBar
-      Top = 308
-      Width = 592
+      Top = 418
+      Width = 599
       ExplicitTop = 308
       ExplicitWidth = 592
     end
@@ -154,12 +154,48 @@ inherited FrmCadServico: TFrmCadServico
         'Finalizado')
       TabOrder = 6
     end
+    object GroupBox1: TGroupBox
+      Left = 16
+      Top = 222
+      Width = 569
+      Height = 171
+      Caption = 'Pe'#231'as do Servi'#231'o'
+      TabOrder = 8
+      object PnlPecas: TPanel
+        Left = 16
+        Top = 24
+        Width = 537
+        Height = 78
+        TabOrder = 0
+        object Label7: TLabel
+          Left = 15
+          Top = 4
+          Width = 31
+          Height = 13
+          Caption = 'Label7'
+        end
+      end
+    end
+    object DBEdit4: TDBEdit
+      Left = 47
+      Top = 269
+      Width = 82
+      Height = 21
+      TabOrder = 9
+    end
+    object DBLookupComboBox3: TDBLookupComboBox
+      Left = 144
+      Top = 269
+      Width = 193
+      Height = 21
+      TabOrder = 10
+    end
   end
   inherited ImageList1: TImageList
-    Left = 264
-    Top = 336
+    Left = 408
+    Top = 432
     Bitmap = {
-      494C0101030020006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -632,10 +668,10 @@ inherited FrmCadServico: TFrmCadServico
       000000000000}
   end
   inherited ImageList2: TImageList
-    Left = 400
-    Top = 336
+    Left = 464
+    Top = 432
     Bitmap = {
-      494C01010300140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1108,10 +1144,10 @@ inherited FrmCadServico: TFrmCadServico
       000000000000}
   end
   inherited ImageList3: TImageList
-    Left = 336
-    Top = 336
+    Left = 512
+    Top = 448
     Bitmap = {
-      494C0101030014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
