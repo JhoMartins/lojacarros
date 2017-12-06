@@ -20,7 +20,6 @@ object FrmRelFuncionario: TFrmRelFuncionario
     Height = 338
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 461
     object edtcodigode: TLabeledEdit
       Left = 80
       Top = 32
@@ -99,7 +98,6 @@ object FrmRelFuncionario: TFrmRelFuncionario
     end
   end
   object ADOQueryFuncionario: TADOQuery
-    Active = True
     Connection = DM.ADOConnection1
     CursorType = ctStatic
     Parameters = <>

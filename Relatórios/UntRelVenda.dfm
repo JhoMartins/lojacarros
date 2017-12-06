@@ -103,10 +103,19 @@ object FrmRelvenda: TFrmRelvenda
     Parameters = <>
     SQL.Strings = (
       
-        'select V.*, C.nome as Cliente, Car.modelo as Modelo, F.nome as F' +
-        'uncionario from Venda V inner join Cliente C on V.cliente_id = C' +
-        '.id inner join Carro Car on V.carro_id = Car.id inner join Funci' +
-        'onario F on V.funcionario_id = F.id')
+        'SELECT        Venda.id, Carro.modelo, Cliente.nome as Cliente, F' +
+        'uncionario.nome AS Vendedor, Venda.valor, Venda.data, Venda.form' +
+        'a_pagamento'
+      'FROM            Venda INNER JOIN'
+      
+        '                         Carro ON Venda.carro_id = Carro.id INNE' +
+        'R JOIN'
+      
+        '                         Cliente ON Venda.cliente_id = Cliente.i' +
+        'd INNER JOIN'
+      
+        '                         Funcionario ON Venda.funcionario_id = F' +
+        'uncionario.id')
     Left = 56
     Top = 312
   end
@@ -201,96 +210,71 @@ object FrmRelvenda: TFrmRelvenda
             '[frxDBDataset1."id"]')
           ParentFont = False
         end
-        object frxDBDataset1carro_id: TfrxMemoView
-          Left = 37.795300000000000000
-          Width = 56.692950000000000000
+        object frxDBDataset1modelo: TfrxMemoView
+          Left = 52.913420000000000000
+          Width = 158.740260000000000000
           Height = 18.897650000000000000
-          DataField = 'carro_id'
+          DataField = 'modelo'
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset1'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          HAlign = haCenter
           Memo.UTF8W = (
-            '[frxDBDataset1."carro_id"]')
-          ParentFont = False
+            '[frxDBDataset1."modelo"]')
         end
-        object frxDBDataset1cliente_id: TfrxMemoView
-          Left = 105.826840000000000000
-          Width = 49.133890000000000000
+        object frxDBDataset1Cliente: TfrxMemoView
+          Left = 215.433210000000000000
+          Width = 328.819110000000000000
           Height = 18.897650000000000000
-          DataField = 'cliente_id'
+          DataField = 'Cliente'
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset1'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          HAlign = haCenter
           Memo.UTF8W = (
-            '[frxDBDataset1."cliente_id"]')
-          ParentFont = False
+            '[frxDBDataset1."Cliente"]')
         end
-        object frxDBDataset1funcionario_id: TfrxMemoView
-          Left = 181.417440000000000000
-          Width = 52.913420000000000000
+        object frxDBDataset1Vendedor: TfrxMemoView
+          Left = 370.393940000000000000
+          Width = 170.078850000000000000
           Height = 18.897650000000000000
-          DataField = 'funcionario_id'
+          DataField = 'Vendedor'
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset1'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          HAlign = haCenter
           Memo.UTF8W = (
-            '[frxDBDataset1."funcionario_id"]')
-          ParentFont = False
+            '[frxDBDataset1."Vendedor"]')
         end
         object frxDBDataset1valor: TfrxMemoView
-          Left = 257.008040000000000000
-          Width = 79.370130000000000000
+          Left = 544.252320000000000000
+          Width = 151.181200000000000000
           Height = 18.897650000000000000
+          DataField = 'valor'
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset1'
-          DisplayFormat.FormatStr = '%2.2m'
-          DisplayFormat.Kind = fkNumeric
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = []
-          HAlign = haCenter
           Memo.UTF8W = (
             '[frxDBDataset1."valor"]')
           ParentFont = False
         end
         object frxDBDataset1data: TfrxMemoView
-          Left = 325.039580000000000000
-          Width = 158.740260000000000000
+          Left = 699.213050000000000000
+          Width = 143.622140000000000000
           Height = 18.897650000000000000
+          DataField = 'data'
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset1'
-          DisplayFormat.FormatStr = 'dd mmm yyyy'
-          DisplayFormat.Kind = fkDateTime
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = []
-          HAlign = haCenter
           Memo.UTF8W = (
             '[frxDBDataset1."data"]')
           ParentFont = False
         end
         object frxDBDataset1forma_pagamento: TfrxMemoView
-          Left = 487.559370000000000000
-          Width = 113.385900000000000000
+          Left = 846.614720000000000000
+          Width = 400.630180000000000000
           Height = 18.897650000000000000
           DataField = 'forma_pagamento'
           DataSet = frxDBDataset1
@@ -300,60 +284,8 @@ object FrmRelvenda: TFrmRelvenda
           Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = []
-          HAlign = haCenter
           Memo.UTF8W = (
             '[frxDBDataset1."forma_pagamento"]')
-          ParentFont = False
-        end
-        object frxDBDataset1Cliente: TfrxMemoView
-          Left = 593.386210000000000000
-          Width = 177.637910000000000000
-          Height = 18.897650000000000000
-          DataField = 'Cliente'
-          DataSet = frxDBDataset1
-          DataSetName = 'frxDBDataset1'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          HAlign = haCenter
-          Memo.UTF8W = (
-            '[frxDBDataset1."Cliente"]')
-          ParentFont = False
-        end
-        object frxDBDataset1Modelo: TfrxMemoView
-          Left = 782.362710000000000000
-          Width = 90.708720000000000000
-          Height = 18.897650000000000000
-          DataField = 'Modelo'
-          DataSet = frxDBDataset1
-          DataSetName = 'frxDBDataset1'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          HAlign = haCenter
-          Memo.UTF8W = (
-            '[frxDBDataset1."Modelo"]')
-          ParentFont = False
-        end
-        object frxDBDataset1Funcionario: TfrxMemoView
-          Left = 873.071430000000000000
-          Width = 170.078850000000000000
-          Height = 18.897650000000000000
-          DataField = 'Funcionario'
-          DataSet = frxDBDataset1
-          DataSetName = 'frxDBDataset1'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = []
-          HAlign = haCenter
-          Memo.UTF8W = (
-            '[frxDBDataset1."Funcionario"]')
           ParentFont = False
         end
       end
@@ -410,92 +342,21 @@ object FrmRelvenda: TFrmRelvenda
           ParentFont = False
         end
         object Memo4: TfrxMemoView
-          Left = 34.015770000000000000
-          Width = 71.811070000000000000
+          Left = 56.692950000000000000
+          Width = 90.708720000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
-          HAlign = haCenter
           Memo.UTF8W = (
-            'Carro_id')
-          ParentFont = False
-        end
-        object Memo5: TfrxMemoView
-          Left = 113.385900000000000000
-          Width = 68.031540000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          HAlign = haCenter
-          Memo.UTF8W = (
-            'Cliente_id')
+            'Carro')
           ParentFont = False
         end
         object Memo6: TfrxMemoView
-          Left = 188.976500000000000000
+          Left = 215.433210000000000000
           Width = 68.031540000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          HAlign = haCenter
-          Memo.UTF8W = (
-            'Func_id')
-          ParentFont = False
-        end
-        object Memo7: TfrxMemoView
-          Left = 264.567100000000000000
-          Width = 71.811070000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          HAlign = haCenter
-          Memo.UTF8W = (
-            'Valor')
-          ParentFont = False
-        end
-        object Memo8: TfrxMemoView
-          Left = 340.157700000000000000
-          Width = 94.488250000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          HAlign = haCenter
-          Memo.UTF8W = (
-            'Data')
-          ParentFont = False
-        end
-        object Memo9: TfrxMemoView
-          Left = 491.338900000000000000
-          Width = 128.504020000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          HAlign = haCenter
-          Memo.UTF8W = (
-            'Forma_Pagamento')
-          ParentFont = False
-        end
-        object Memo11: TfrxMemoView
-          Left = 634.961040000000000000
-          Width = 94.488250000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
@@ -507,8 +368,21 @@ object FrmRelvenda: TFrmRelvenda
             'Cliente')
           ParentFont = False
         end
-        object Memo15: TfrxMemoView
-          Left = 782.362710000000000000
+        object Memo9: TfrxMemoView
+          Left = 370.393940000000000000
+          Width = 128.504020000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Vendedor')
+          ParentFont = False
+        end
+        object Memo11: TfrxMemoView
+          Left = 540.472790000000000000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -516,13 +390,25 @@ object FrmRelvenda: TFrmRelvenda
           Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
-          HAlign = haCenter
           Memo.UTF8W = (
-            'Modelo')
+            'Valor')
+          ParentFont = False
+        end
+        object Memo15: TfrxMemoView
+          Left = 699.213050000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Data')
           ParentFont = False
         end
         object Memo16: TfrxMemoView
-          Left = 891.969080000000000000
+          Left = 846.614720000000000000
           Width = 151.181200000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -530,9 +416,8 @@ object FrmRelvenda: TFrmRelvenda
           Font.Height = -13
           Font.Name = 'Arial'
           Font.Style = [fsBold]
-          HAlign = haCenter
           Memo.UTF8W = (
-            'Funcion'#225'rio')
+            'Forma de Pagamento')
           ParentFont = False
         end
       end

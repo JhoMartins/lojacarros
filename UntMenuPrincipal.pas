@@ -33,6 +33,8 @@ type
     Peças: TAction;
     Action2: TAction;
     Action3: TAction;
+    Action4: TAction;
+    Action5: TAction;
     procedure Button1Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -52,6 +54,8 @@ type
     procedure PeçasExecute(Sender: TObject);
     procedure Action2Execute(Sender: TObject);
     procedure Action3Execute(Sender: TObject);
+    procedure Action4Execute(Sender: TObject);
+    procedure Action5Execute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,7 +70,8 @@ implementation
 {$R *.dfm}
 
 uses UntManEmpresa, UntManCliente, UntCadEmpresa, UntCadServico, UntRelClientes,
-  UntRelEmpresa, UntManBase, UntCadBase, UntRelPecas, UntRelVenda;
+  UntRelEmpresa, UntManBase, UntCadBase, UntRelPecas, UntRelVenda,
+  UntRelFuncionário, UntRelCarros;
 
 procedure TForm1.Action1Execute(Sender: TObject);
 begin
@@ -81,6 +86,16 @@ end;
 procedure TForm1.Action3Execute(Sender: TObject);
 begin
 frmrelvenda.showmodal;
+end;
+
+procedure TForm1.Action4Execute(Sender: TObject);
+begin
+frmrelfuncionario.showmodal;
+end;
+
+procedure TForm1.Action5Execute(Sender: TObject);
+begin
+frmrelCarro.showmodal;
 end;
 
 procedure TForm1.btn_servicoExecute(Sender: TObject);

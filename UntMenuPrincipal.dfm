@@ -163,6 +163,14 @@
               item
                 Action = Action3
                 Caption = '&Venda'
+              end
+              item
+                Action = Action4
+                Caption = '&Funcion'#225'rio'
+              end
+              item
+                Action = Action5
+                Caption = 'C&arro'
               end>
             Caption = '&Rel'#225't'#243'rios'
           end>
@@ -305,6 +313,16 @@
       Caption = 'Venda'
       OnExecute = Action3Execute
     end
+    object Action4: TAction
+      Category = 'Rel'#225't'#243'rios'
+      Caption = 'Funcion'#225'rio'
+      OnExecute = Action4Execute
+    end
+    object Action5: TAction
+      Category = 'Rel'#225't'#243'rios'
+      Caption = 'Carro'
+      OnExecute = Action5Execute
+    end
   end
   object ImageList1: TImageList
     Height = 24
@@ -312,7 +330,7 @@
     Left = 32
     Top = 168
     Bitmap = {
-      494C01010B003000680018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010B0030006C0018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000060000000480000000100200000000000006C
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
