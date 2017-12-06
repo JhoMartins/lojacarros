@@ -373,6 +373,8 @@ object DM: TDM
   object ADODSServico_Pecas: TADODataSet
     Connection = ADOConnection1
     CursorType = ctStatic
+    AfterPost = ADODSServico_PecasAfterPost
+    AfterDelete = ADODSServico_PecasAfterDelete
     CommandText = 'select * from Servico_Pecas where servico_id = :id'
     DataSource = DSServico
     MasterFields = 'id'

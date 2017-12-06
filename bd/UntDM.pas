@@ -96,6 +96,8 @@ type
     ADODSServico_PecasNomePeca: TStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
     procedure ADODSServico_Pecaspeca_idValidate(Sender: TField);
+    procedure ADODSServico_PecasAfterPost(DataSet: TDataSet);
+    procedure ADODSServico_PecasAfterDelete(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -121,6 +123,70 @@ begin
     Abort;
   end;
 
+end;
+
+procedure TDM.ADODSServico_PecasAfterDelete(DataSet: TDataSet);
+var Bmk: TBookmark;
+    ValTot: Double;
+begin
+  with ADODSServico_Pecas do
+  begin
+    Bmk:= GetBookmark;
+    DisableControls;
+    try
+      ValTot:= 0.0;
+      First;
+      while not Eof do
+      begin
+        ValTot:= + ADODSServico_Pecasvalor_total.AsFloat;
+        Next;
+      end;
+    finally
+    EnableControls;
+    if Bmk <> nil then
+    begin
+      GotoBookmark(Bmk);
+      FreeBookmark(Bmk);
+    end;
+    end;
+
+    if not (ADODSServico.State in [dsInsert, dsEdit]) then
+      ADODSServico.Edit;
+
+      ADODSServicovalor.AsFloat:= ValTot;
+  end;
+end;
+
+procedure TDM.ADODSServico_PecasAfterPost(DataSet: TDataSet);
+var Bmk: TBookmark;
+    ValTot: Double;
+begin
+  with ADODSServico_Pecas do
+  begin
+    Bmk:= GetBookmark;
+    DisableControls;
+    try
+      ValTot:= 0.0;
+      First;
+      while not Eof do
+      begin
+        ValTot:= + ADODSServico_Pecasvalor_total.AsFloat;
+        Next;
+      end;
+    finally
+    EnableControls;
+    if Bmk <> nil then
+    begin
+      GotoBookmark(Bmk);
+      FreeBookmark(Bmk);
+    end;
+    end;
+
+    if not (ADODSServico.State in [dsInsert, dsEdit]) then
+      ADODSServico.Edit;
+
+      ADODSServicovalor.AsFloat:= ValTot;
+  end;
 end;
 
 procedure TDM.ADODSServico_Pecaspeca_idValidate(Sender: TField);
