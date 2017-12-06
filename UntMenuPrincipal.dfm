@@ -145,6 +145,34 @@
                 ImageIndex = 10
               end>
             Caption = '&Manuten'#231#227'o'
+          end
+          item
+            Items = <
+              item
+                Action = Action1
+                Caption = '&Clientes'
+              end
+              item
+                Action = Empresas
+                Caption = '&Empresas'
+              end
+              item
+                Action = Action2
+                Caption = '&Pe'#231'as'
+              end
+              item
+                Action = Action3
+                Caption = '&Venda'
+              end
+              item
+                Action = Action4
+                Caption = '&Funcion'#225'rio'
+              end
+              item
+                Action = Action5
+                Caption = 'C&arro'
+              end>
+            Caption = '&Rel'#225't'#243'rios'
           end>
         ActionBar = ActionMainMenuBar1
       end
@@ -289,6 +317,11 @@
       Category = 'Rel'#225't'#243'rios'
       Caption = 'Funcion'#225'rio'
       OnExecute = Action4Execute
+    end
+    object Action5: TAction
+      Category = 'Rel'#225't'#243'rios'
+      Caption = 'Carro'
+      OnExecute = Action5Execute
     end
   end
   object ImageList1: TImageList

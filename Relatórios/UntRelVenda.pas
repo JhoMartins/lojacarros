@@ -55,7 +55,7 @@ begin
     if EdtCodigoDe.Text <> '' then
     try
       StrToInt(EdtCodigoDe.Text);
-      Add(StrLiga + 'id >= '+ EdtCodigoDe .Text);
+      Add(StrLiga + 'Venda.id >= '+ EdtCodigoDe .Text);
       StrLiga:= 'and ';
     except
       on EConvertError do;
@@ -64,7 +64,7 @@ begin
     if EdtCodigoAte.Text <> '' then
     try
       StrToInt(EdtCodigoAte.Text);
-      Add(StrLiga + 'id <= '+ EdtCodigoAte.Text);
+      Add(StrLiga + 'Venda.id <= '+ EdtCodigoAte.Text);
     except
       on EConvertError do;
     end;
