@@ -66,14 +66,6 @@ type
     ADODSVendaCliente: TStringField;
     ADODSVendaModelo: TStringField;
     ADODSVendaFuncionario: TStringField;
-    ADODSServicoid: TAutoIncField;
-    ADODSServicodescricao: TStringField;
-    ADODSServicodata_inicio: TWideStringField;
-    ADODSServicodata_fim: TWideStringField;
-    ADODSServicostatus: TStringField;
-    ADODSServicocarro_id: TIntegerField;
-    ADODSServicoempresa_id: TIntegerField;
-    ADODSServicovalor: TBCDField;
     DSServico_Pecas: TDataSource;
     ADODSFuncionarioid: TAutoIncField;
     ADODSFuncionarionome: TStringField;
@@ -94,10 +86,21 @@ type
     ADODSServico_Pecasvalor_total: TBCDField;
     ADODSServico_Pecasvalor_unit: TBCDField;
     ADODSServico_PecasNomePeca: TStringField;
+    ADODSServicoid: TAutoIncField;
+    ADODSServicodescricao: TStringField;
+    ADODSServicodata_inicio: TWideStringField;
+    ADODSServicodata_fim: TWideStringField;
+    ADODSServicostatus: TStringField;
+    ADODSServicocarro_id: TIntegerField;
+    ADODSServicoempresa_id: TIntegerField;
+    ADODSServicovalor: TBCDField;
+    ADODSServiconome_fantasia: TStringField;
+    ADODSServicomodelo: TStringField;
     procedure ADODSCarroexproprietario_idValidate(Sender: TField);
     procedure ADODSServico_Pecaspeca_idValidate(Sender: TField);
     procedure ADODSServico_PecasAfterPost(DataSet: TDataSet);
     procedure ADODSServico_PecasAfterDelete(DataSet: TDataSet);
+    procedure ADODSServico_PecasNewRecord(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -186,7 +189,13 @@ begin
       ADODSServico.Edit;
 
       ADODSServicovalor.AsFloat:= ValTot;
+      ADODSServico.Post;
   end;
+end;
+
+procedure TDM.ADODSServico_PecasNewRecord(DataSet: TDataSet);
+begin
+  ADODSServico_Pecasservico_id.AsInteger:= ADODSServicoid.AsInteger;
 end;
 
 procedure TDM.ADODSServico_Pecaspeca_idValidate(Sender: TField);

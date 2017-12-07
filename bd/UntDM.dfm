@@ -294,7 +294,10 @@ object DM: TDM
   object ADODSServico: TADODataSet
     Connection = ADOConnection1
     CursorType = ctStatic
-    CommandText = 'select * from Servico'
+    CommandText = 
+      'select S.*, E.nome_fantasia, C.modelo from Servico S inner join ' +
+      'Carro C on S.carro_id = C.id inner join Empresa E on S.empresa_i' +
+      'd = E.id;'
     Parameters = <>
     Left = 128
     Top = 376
@@ -328,6 +331,14 @@ object DM: TDM
       FieldName = 'valor'
       Precision = 18
       Size = 2
+    end
+    object ADODSServiconome_fantasia: TStringField
+      FieldName = 'nome_fantasia'
+      Size = 50
+    end
+    object ADODSServicomodelo: TStringField
+      FieldName = 'modelo'
+      Size = 50
     end
   end
   object DSServico: TDataSource
@@ -375,6 +386,7 @@ object DM: TDM
     CursorType = ctStatic
     AfterPost = ADODSServico_PecasAfterPost
     AfterDelete = ADODSServico_PecasAfterDelete
+    OnNewRecord = ADODSServico_PecasNewRecord
     CommandText = 'select * from Servico_Pecas where servico_id = :id'
     DataSource = DSServico
     MasterFields = 'id'

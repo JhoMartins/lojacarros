@@ -53,6 +53,8 @@ type
     procedure Bbt_excluirClick(Sender: TObject);
     procedure Bbt_confirmarClick(Sender: TObject);
     procedure Bbt_cancelarClick(Sender: TObject);
+    procedure DBEdit7Exit(Sender: TObject);
+    procedure btn_salvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -118,6 +120,24 @@ begin
   DM.ADODSServico_Pecas.Insert;
 end;
 
+procedure TFrmCadServico.btn_salvarClick(Sender: TObject);
+begin
+  inherited;
+  PnlFicha.Enabled:= True;
+  Bbt_inserir.Enabled:= True;
+end;
+
+procedure TFrmCadServico.DBEdit7Exit(Sender: TObject);
+begin
+  if DM.ADODSServico_Pecasqtde.AsInteger < 1 then
+  begin
+    ShowMessage('A quantidade deve ser maior que 1');
+    DBEdit7.SetFocus;
+  end
+  else
+    DM.ADODSServico_Pecasvalor_total.AsFloat:= DM.ADODSServico_Pecasvalor_unit.AsFloat *  DM.ADODSServico_Pecasqtde.AsInteger;
+end;
+
 procedure TFrmCadServico.FormActivate(Sender: TObject);
 begin
   ADOQueryCarro.Close;
@@ -125,6 +145,21 @@ begin
 
   ADOQueryEmpresa.Close;
   ADOQueryEmpresa.Open;
+
+  ADOQueryPeca.Close;
+  ADOQueryPeca.Open;
+
+  DM.ADODSServico_Pecas.Close;
+  DM.ADODSServico_Pecas.Open;
+
+  if DM.ADODSServico.State in [dsInsert] then
+    Bbt_inserir.Enabled:= False
+  else
+    Bbt_inserir.Enabled:= True;
+  Bbt_cancelar.Enabled:= False;
+  Bbt_confirmar.Enabled:= False;
+  Bbt_excluir.Enabled:= False;
+  PnlPecas.Enabled:= False;
 end;
 
 end.
