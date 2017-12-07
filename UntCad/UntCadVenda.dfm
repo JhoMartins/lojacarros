@@ -7,27 +7,16 @@ inherited FrmCadVenda: TFrmCadVenda
   ExplicitHeight = 386
   PixelsPerInch = 96
   TextHeight = 13
-  inherited Panel1: TPanel
-    Width = 591
-    ExplicitWidth = 727
-    inherited Label1: TLabel
-      Left = 112
-      Width = 364
-      Caption = 'Manuten'#231#227'o no Cadastro de Venda'
-      ExplicitLeft = 112
-      ExplicitWidth = 364
-    end
-  end
   inherited ToolBar1: TToolBar
     Width = 591
-    ExplicitWidth = 727
+    ExplicitWidth = 591
   end
   inherited PnlFicha: TPanel
     Width = 591
-    Height = 260
-    ExplicitTop = 103
+    Height = 309
+    ExplicitTop = 48
     ExplicitWidth = 591
-    ExplicitHeight = 369
+    ExplicitHeight = 309
     object Label2: TLabel [0]
       Left = 16
       Top = 24
@@ -85,10 +74,10 @@ inherited FrmCadVenda: TFrmCadVenda
       Caption = 'Nome'
     end
     inherited StatusBar1: TStatusBar
-      Top = 240
+      Top = 289
       Width = 589
-      ExplicitTop = 326
-      ExplicitWidth = 725
+      ExplicitTop = 289
+      ExplicitWidth = 589
     end
     object DBEdit2: TDBEdit
       Left = 16
@@ -182,7 +171,7 @@ inherited FrmCadVenda: TFrmCadVenda
     Left = 384
     Top = 272
     Bitmap = {
-      494C0101030020006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -658,7 +647,7 @@ inherited FrmCadVenda: TFrmCadVenda
     Left = 512
     Top = 272
     Bitmap = {
-      494C01010300140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1134,7 +1123,7 @@ inherited FrmCadVenda: TFrmCadVenda
     Left = 464
     Top = 272
     Bitmap = {
-      494C0101030014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

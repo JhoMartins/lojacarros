@@ -6,24 +6,16 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
   ExplicitHeight = 489
   PixelsPerInch = 96
   TextHeight = 13
-  inherited Panel1: TPanel
-    Width = 562
-    inherited Label1: TLabel
-      Left = 68
-      Width = 421
-      Caption = 'Manuten'#231#227'o no Cadastro de Funcionario'
-      ExplicitLeft = 68
-      ExplicitWidth = 421
-    end
-  end
   inherited ToolBar1: TToolBar
     Width = 562
+    ExplicitWidth = 562
   end
   inherited PnlFicha: TPanel
     Width = 562
-    Height = 363
-    ExplicitLeft = -8
-    ExplicitTop = 113
+    Height = 412
+    ExplicitTop = 48
+    ExplicitWidth = 562
+    ExplicitHeight = 412
     object Label2: TLabel [0]
       Left = 20
       Top = 6
@@ -102,8 +94,10 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
       Caption = 'Data Admiss'#227'o'
     end
     inherited StatusBar1: TStatusBar
-      Top = 343
+      Top = 392
       Width = 560
+      ExplicitTop = 392
+      ExplicitWidth = 560
     end
     object DBEdit1: TDBEdit
       Left = 20
@@ -242,7 +236,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
     Left = 176
     Top = 432
     Bitmap = {
-      494C01010300200070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -718,7 +712,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
     Left = 288
     Top = 432
     Bitmap = {
-      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1194,7 +1188,7 @@ inherited FrmCadFuncionario: TFrmCadFuncionario
     Left = 232
     Top = 432
     Bitmap = {
-      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

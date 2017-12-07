@@ -16,32 +16,9 @@ object FrmCadBase: TFrmCadBase
   Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 949
-    Height = 49
-    Align = alTop
-    Color = clBlack
-    ParentBackground = False
-    TabOrder = 0
-    object Label1: TLabel
-      Left = 246
-      Top = 8
-      Width = 293
-      Height = 25
-      Caption = 'Manuten'#231#227'o no Cadastro de'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clYellow
-      Font.Height = -21
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-  end
   object ToolBar1: TToolBar
     Left = 0
-    Top = 49
+    Top = 0
     Width = 949
     Height = 48
     BorderWidth = 1
@@ -54,7 +31,8 @@ object FrmCadBase: TFrmCadBase
     Images = ImageList1
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 1
+    TabOrder = 0
+    ExplicitTop = 49
     object btn_salvar: TToolButton
       Left = 0
       Top = 0
@@ -90,20 +68,23 @@ object FrmCadBase: TFrmCadBase
   end
   object PnlFicha: TPanel
     Left = 0
-    Top = 97
+    Top = 48
     Width = 949
-    Height = 567
+    Height = 616
     Align = alClient
-    TabOrder = 2
+    TabOrder = 1
+    ExplicitTop = 97
+    ExplicitHeight = 567
     object StatusBar1: TStatusBar
       Left = 1
-      Top = 547
+      Top = 596
       Width = 947
       Height = 19
       Panels = <
         item
           Width = 50
         end>
+      ExplicitTop = 547
     end
   end
   object ImageList1: TImageList
@@ -112,7 +93,7 @@ object FrmCadBase: TFrmCadBase
     Left = 328
     Top = 384
     Bitmap = {
-      494C01010300200064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -590,7 +571,7 @@ object FrmCadBase: TFrmCadBase
     Left = 520
     Top = 392
     Bitmap = {
-      494C01010300140058001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1068,7 +1049,7 @@ object FrmCadBase: TFrmCadBase
     Left = 424
     Top = 384
     Bitmap = {
-      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

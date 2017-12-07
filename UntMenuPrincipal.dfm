@@ -1,10 +1,10 @@
 ﻿object Form1: TForm1
   Left = 0
   Top = 0
-  Align = alClient
+  BorderStyle = bsSingle
   Caption = 'JS AUTOS'
-  ClientHeight = 582
-  ClientWidth = 519
+  ClientHeight = 592
+  ClientWidth = 529
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,7 +14,6 @@
   OldCreateOrder = False
   Position = poScreenCenter
   ShowHint = True
-  WindowState = wsMaximized
   OnActivate = FormActivate
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
@@ -2101,7 +2100,7 @@
   object ActionMainMenuBar1: TActionMainMenuBar
     Left = 0
     Top = 0
-    Width = 519
+    Width = 529
     Height = 25
     UseSystemFont = False
     ActionManager = ActionManager1
@@ -2117,11 +2116,12 @@
     Font.Name = 'Segoe UI'
     Font.Style = []
     Spacing = 0
+    ExplicitWidth = 519
   end
   object ActionToolBar1: TActionToolBar
     Left = 0
     Top = 25
-    Width = 519
+    Width = 529
     Height = 42
     ActionManager = ActionManager1
     Caption = 'ActionToolBar1'
@@ -2137,11 +2137,12 @@
     Font.Style = []
     ParentFont = False
     Spacing = 0
+    ExplicitWidth = 519
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 563
-    Width = 519
+    Top = 573
+    Width = 529
     Height = 19
     Panels = <
       item
@@ -2156,6 +2157,8 @@
       item
         Width = 50
       end>
+    ExplicitTop = 563
+    ExplicitWidth = 519
   end
   object ActionManager1: TActionManager
     ActionBars = <
