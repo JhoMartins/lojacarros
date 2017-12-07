@@ -90,7 +90,7 @@ type
     ADODSServicodescricao: TStringField;
     ADODSServicodata_inicio: TWideStringField;
     ADODSServicodata_fim: TWideStringField;
-    ADODSServicostatus_: TStringField;
+    ADODSServicostatus: TStringField;
     ADODSServicocarro_id: TIntegerField;
     ADODSServicoempresa_id: TIntegerField;
     ADODSServicovalor: TBCDField;

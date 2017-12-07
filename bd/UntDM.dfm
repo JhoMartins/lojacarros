@@ -317,8 +317,8 @@ object DM: TDM
       FieldName = 'data_fim'
       Size = 10
     end
-    object ADODSServicostatus_: TStringField
-      FieldName = 'status_'
+    object ADODSServicostatus: TStringField
+      FieldName = 'status'
       Size = 50
     end
     object ADODSServicocarro_id: TIntegerField

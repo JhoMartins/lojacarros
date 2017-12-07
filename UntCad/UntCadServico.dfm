@@ -7,24 +7,13 @@ inherited FrmCadServico: TFrmCadServico
   ExplicitHeight = 652
   PixelsPerInch = 96
   TextHeight = 13
-  inherited Panel1: TPanel
-    Width = 695
-    ExplicitWidth = 695
-    inherited Label1: TLabel
-      Left = 144
-      Width = 375
-      Caption = 'Manuten'#231#227'o no Cadastro de Servi'#231'o'
-      ExplicitLeft = 144
-      ExplicitWidth = 375
-    end
-  end
   inherited ToolBar1: TToolBar
     Width = 695
     ExplicitWidth = 695
   end
   inherited PnlFicha: TPanel
     Width = 695
-    Height = 526
+    Height = 575
     ExplicitWidth = 695
     ExplicitHeight = 526
     object Label2: TLabel [0]
@@ -77,7 +66,7 @@ inherited FrmCadServico: TFrmCadServico
       Caption = 'Empresa_ID'
     end
     inherited StatusBar1: TStatusBar
-      Top = 506
+      Top = 555
       Width = 693
       ExplicitTop = 506
       ExplicitWidth = 693
@@ -279,7 +268,7 @@ inherited FrmCadServico: TFrmCadServico
       end
     end
   end
-  object Bbt_inserir: TBitBtn [3]
+  object Bbt_inserir: TBitBtn [2]
     Left = 302
     Top = 417
     Width = 83
@@ -299,10 +288,10 @@ inherited FrmCadServico: TFrmCadServico
       B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
       3BB33773333773333773B333333B3333333B7333333733333337}
     NumGlyphs = 2
-    TabOrder = 3
+    TabOrder = 2
     OnClick = Bbt_inserirClick
   end
-  object Bbt_excluir: TBitBtn [4]
+  object Bbt_excluir: TBitBtn [3]
     Left = 398
     Top = 417
     Width = 75
@@ -322,10 +311,10 @@ inherited FrmCadServico: TFrmCadServico
       0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
       3333333337FFF7F3333333333000003333333333377777333333}
     NumGlyphs = 2
-    TabOrder = 4
+    TabOrder = 3
     OnClick = Bbt_excluirClick
   end
-  object Bbt_confirmar: TBitBtn [5]
+  object Bbt_confirmar: TBitBtn [4]
     Left = 493
     Top = 417
     Width = 75
@@ -348,7 +337,7 @@ inherited FrmCadServico: TFrmCadServico
     TabOrder = 5
     OnClick = Bbt_confirmarClick
   end
-  object Bbt_cancelar: TBitBtn [6]
+  object Bbt_cancelar: TBitBtn [5]
     Left = 590
     Top = 417
     Width = 75
@@ -368,14 +357,14 @@ inherited FrmCadServico: TFrmCadServico
       B0557777FF577777F7F500000E055550805577777F7555575755500000555555
       05555777775555557F5555000555555505555577755555557555}
     NumGlyphs = 2
-    TabOrder = 6
+    TabOrder = 4
     OnClick = Bbt_cancelarClick
   end
   inherited ImageList1: TImageList
     Left = 376
     Top = 504
     Bitmap = {
-      494C0101030020007C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200080001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -851,7 +840,7 @@ inherited FrmCadServico: TFrmCadServico
     Left = 456
     Top = 480
     Bitmap = {
-      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1327,7 +1316,7 @@ inherited FrmCadServico: TFrmCadServico
     Left = 512
     Top = 488
     Bitmap = {
-      494C0101030014007C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140080001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

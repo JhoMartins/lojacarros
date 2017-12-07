@@ -1,19 +1,5 @@
-create database LojaCarros
-
+Create database LojaCarros
 use LojaCarros
-
-Create table Carro(
-	id int identity (1,1) primary key not null,
-	modelo varchar(50) NOT NULL,
-	marca varchar(50) NOT NULL,
-	data_compra date NOT NULL,
-	valor_compra date NOT NULL,
-	exproprietario_id int NOT NULL,
-	cor varchar(50) NOT NULL,
-        status varchar(20), 
-	foreign key (exproprietario_id) references Cliente(id), 
-	)
-
 create table Cliente(
 	id int IDENTITY(1,1) primary key NOT NULL,
 	nome varchar(50) NOT NULL,
@@ -27,6 +13,17 @@ create table Cliente(
 	profissao varchar(50) NOT NULL,
 	renda_mensal decimal(18, 2) NOT NULL,
 	celular varchar(15) NOT NULL
+	)
+Create table Carro(
+	id int identity (1,1) primary key not null,
+	modelo varchar(50) NOT NULL,
+	marca varchar(50) NOT NULL,
+	data_compra date NOT NULL,
+	valor_compra date NOT NULL,
+	exproprietario_id int NOT NULL,
+	cor varchar(50) NOT NULL,
+        status varchar(20), 
+	foreign key (exproprietario_id) references Cliente(id), 
 	)
 
 create table Empresa(
@@ -57,6 +54,14 @@ CREATE TABLE Funcionario(
 	data_admissao date NOT NULL,
 	)
 
+
+
+CREATE TABLE Peca(
+	id int identity(1,1) primary key NOT NULL,
+	nome varchar(50) NOT NULL,
+	descricao varchar(50) NOT NULL,
+	valor_unit decimal(18,2) NOT NULL,
+	)
 CREATE TABLE Servico(
 	id int IDENTITY(1,1) primary key NOT NULL,
 	descricao varchar(50) NOT NULL,
@@ -70,20 +75,14 @@ CREATE TABLE Servico(
 	foreign key (empresa_id) references Empresa(id),
 	)
 
-CREATE TABLE Peca(
-	id int identity(1,1) primary key NOT NULL,
-	nome varchar(50) NOT NULL,
-	descricao varchar(50) NOT NULL,
-	valor_unit decimal(18,2) NOT NULL,
-	)
-
 CREATE TABLE Servico_Pecas(
-	servico_id int primary key NOT NULL,
-	peca_id int primary key NOT NULL,
+	servico_id int  NOT NULL,
+	peca_id int  NOT NULL,
 	qtde int NOT NULL,
 	valor_total decimal(18,2)NULL,
 	foreign key (servico_id) references Servico(id),
-	foreign key (peca_id) references Pecas(id),
+	foreign key (peca_id) references Peca(id),
+	CONSTRAINT PK_ServicoPeca PRIMARY KEY CLUSTERED (Servico_id, Peca_id)
 	)
 
 CREATE TABLE Venda(
