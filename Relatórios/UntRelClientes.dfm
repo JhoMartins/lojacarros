@@ -44,7 +44,7 @@ object FrmRelClientes: TFrmRelClientes
       Top = 224
       Width = 75
       Height = 25
-      Caption = 'Sair'
+      Caption = 'Cancelar'
       TabOrder = 2
       OnClick = BitBtn2Click
     end

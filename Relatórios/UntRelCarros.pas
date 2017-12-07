@@ -54,7 +54,7 @@ begin
     if EdtCodigoDe.Text <> '' then
     try
       StrToInt(EdtCodigoDe.Text);
-      Add(StrLiga + 'carri.id >= '+ EdtCodigoDe .Text);
+      Add(StrLiga + 'carro.id >= '+ EdtCodigoDe .Text);
       StrLiga:= 'and ';
     except
       on EConvertError do;

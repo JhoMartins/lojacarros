@@ -2,8 +2,8 @@ object FrmRelCarro: TFrmRelCarro
   Left = 0
   Top = 0
   Caption = 'Relat'#243'rio Carro'
-  ClientHeight = 303
-  ClientWidth = 400
+  ClientHeight = 427
+  ClientWidth = 434
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,7 +11,6 @@ object FrmRelCarro: TFrmRelCarro
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel

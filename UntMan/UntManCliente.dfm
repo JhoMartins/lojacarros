@@ -2,11 +2,16 @@ inherited FrmManCliente: TFrmManCliente
   Caption = 'Manuten'#231#227'o no Cadastro de Cliente'
   ClientWidth = 1135
   ExplicitWidth = 1141
+  ExplicitHeight = 622
   PixelsPerInch = 96
   TextHeight = 13
   inherited ToolBar1: TToolBar
     Width = 1135
+    ExplicitTop = 0
     ExplicitWidth = 1135
+    inherited ToolButton5: TToolButton
+      OnClick = ToolButton5Click
+    end
   end
   inherited Panel2: TPanel
     Width = 1135
@@ -46,7 +51,6 @@ inherited FrmManCliente: TFrmManCliente
         Expanded = False
         FieldName = 'nome'
         Title.Caption = 'Nome'
-        Width = 64
         Visible = True
       end
       item
@@ -67,20 +71,18 @@ inherited FrmManCliente: TFrmManCliente
         Expanded = False
         FieldName = 'renda_mensal'
         Title.Caption = 'Sal'#225'rio'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'celular'
         Title.Caption = 'Celular'
-        Width = 64
         Visible = True
       end>
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C01010700200070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700200074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1019,7 +1021,7 @@ inherited FrmManCliente: TFrmManCliente
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C01010700140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1958,7 +1960,7 @@ inherited FrmManCliente: TFrmManCliente
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C01010700140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

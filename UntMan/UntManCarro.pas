@@ -11,6 +11,7 @@ uses
 type
   TFrmManCarro = class(TFrmManBase)
   constructor Create(DataSet: TADODataSet; Form: TFrmCadBase); override;
+    procedure ToolButton5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,12 +25,20 @@ implementation
 
 {$R *.dfm}
 
+uses UntRelCarros;
+
 { TFrmManCarro }
 
 constructor TFrmManCarro.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   inherited;
   SQL:= 'SELECT * FROM Carro ORDER BY modelo';
+end;
+
+procedure TFrmManCarro.ToolButton5Click(Sender: TObject);
+begin
+  inherited;
+frmrelcarro.showmodal;
 end;
 
 end.

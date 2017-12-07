@@ -87,7 +87,7 @@ object FrmRelFuncionario: TFrmRelFuncionario
       Top = 112
       Width = 385
       Height = 57
-      Caption = 'RadioGroup1'
+      Caption = 'Ordena'#231#227'o'
       Columns = 4
       Items.Strings = (
         'Codigo'
