@@ -102,9 +102,58 @@ object FrmRelFuncionario: TFrmRelFuncionario
     CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
-      'select * from funcionario')
+      'select  *  from funcionario')
     Left = 56
     Top = 264
+    object ADOQueryFuncionarioid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQueryFuncionarionome: TStringField
+      FieldName = 'nome'
+      Size = 50
+    end
+    object ADOQueryFuncionariocpf: TStringField
+      FieldName = 'cpf'
+      Size = 15
+    end
+    object ADOQueryFuncionariodata_nascimento: TWideStringField
+      FieldName = 'data_nascimento'
+      Size = 10
+    end
+    object ADOQueryFuncionarioendereco: TStringField
+      FieldName = 'endereco'
+      Size = 50
+    end
+    object ADOQueryFuncionariobairro: TStringField
+      FieldName = 'bairro'
+      Size = 50
+    end
+    object ADOQueryFuncionariocidade: TStringField
+      FieldName = 'cidade'
+      Size = 50
+    end
+    object ADOQueryFuncionariocep: TStringField
+      FieldName = 'cep'
+      Size = 13
+    end
+    object ADOQueryFuncionarioestado: TStringField
+      FieldName = 'estado'
+      Size = 2
+    end
+    object ADOQueryFuncionariocelular: TStringField
+      FieldName = 'celular'
+      Size = 15
+    end
+    object ADOQueryFuncionariosalario: TBCDField
+      FieldName = 'salario'
+      Precision = 18
+      Size = 2
+    end
+    object ADOQueryFuncionariodata_admissao: TWideStringField
+      FieldName = 'data_admissao'
+      Size = 10
+    end
   end
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset1'

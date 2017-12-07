@@ -131,6 +131,7 @@ begin
   inherited;
   PnlFicha.Enabled:= True;
   Bbt_inserir.Enabled:= True;
+    inherited;
 end;
 
 procedure TFrmCadServico.DBEdit3Enter(Sender: TObject);

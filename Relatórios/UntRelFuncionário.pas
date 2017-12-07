@@ -20,6 +20,18 @@ type
     BitBtn1: TBitBtn;
     Button1: TButton;
     RadioGroup1: TRadioGroup;
+    ADOQueryFuncionarioid: TAutoIncField;
+    ADOQueryFuncionarionome: TStringField;
+    ADOQueryFuncionariocpf: TStringField;
+    ADOQueryFuncionariodata_nascimento: TWideStringField;
+    ADOQueryFuncionarioendereco: TStringField;
+    ADOQueryFuncionariobairro: TStringField;
+    ADOQueryFuncionariocidade: TStringField;
+    ADOQueryFuncionariocep: TStringField;
+    ADOQueryFuncionarioestado: TStringField;
+    ADOQueryFuncionariocelular: TStringField;
+    ADOQueryFuncionariosalario: TBCDField;
+    ADOQueryFuncionariodata_admissao: TWideStringField;
     procedure Button1Click(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
   private
@@ -35,13 +47,12 @@ implementation
 
 {$R *.dfm}
 
-uses UntDM;
+uses UntDM, UntManFuncionario;
 
 procedure TFrmRelFuncionario.BitBtn1Click(Sender: TObject);
 var StrLiga: String;
 begin
   StrLiga:= 'where ';
-
   ADOQueryFuncionario.Close;
   with ADOQueryFuncionario.SQL do
   begin

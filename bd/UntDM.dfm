@@ -3,6 +3,7 @@ object DM: TDM
   Height = 500
   Width = 490
   object ADOConnection1: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
       'fo=False;Initial Catalog=LojaCarros;Data Source=DEIVID-PC;Use Pr' +
@@ -146,7 +147,7 @@ object DM: TDM
     end
     object ADODSFuncionariocpf: TStringField
       FieldName = 'cpf'
-      Size = 13
+      Size = 15
     end
     object ADODSFuncionariodata_nascimento: TWideStringField
       FieldName = 'data_nascimento'
@@ -170,11 +171,11 @@ object DM: TDM
     end
     object ADODSFuncionarioestado: TStringField
       FieldName = 'estado'
-      Size = 50
+      Size = 2
     end
     object ADODSFuncionariocelular: TStringField
       FieldName = 'celular'
-      Size = 13
+      Size = 15
     end
     object ADODSFuncionariosalario: TBCDField
       FieldName = 'salario'
@@ -215,9 +216,10 @@ object DM: TDM
       FieldName = 'data_compra'
       Size = 10
     end
-    object ADODSCarrovalor_compra: TWideStringField
+    object ADODSCarrovalor_compra: TBCDField
       FieldName = 'valor_compra'
-      Size = 10
+      Precision = 18
+      Size = 2
     end
     object ADODSCarroexproprietario_id: TIntegerField
       FieldName = 'exproprietario_id'
@@ -331,6 +333,11 @@ object DM: TDM
       Precision = 18
       Size = 2
     end
+    object ADODSServicovalor_unit: TBCDField
+      FieldName = 'valor_unit'
+      Precision = 18
+      Size = 2
+    end
     object ADODSServiconome_fantasia: TStringField
       FieldName = 'nome_fantasia'
       Size = 50
@@ -405,7 +412,6 @@ object DM: TDM
     end
     object ADODSServico_Pecaspeca_id: TIntegerField
       FieldName = 'peca_id'
-      OnValidate = ADODSServico_Pecaspeca_idValidate
     end
     object ADODSServico_Pecasqtde: TIntegerField
       FieldName = 'qtde'
@@ -419,16 +425,6 @@ object DM: TDM
       FieldName = 'valor_unit'
       Precision = 18
       Size = 2
-    end
-    object ADODSServico_PecasNomePeca: TStringField
-      FieldKind = fkLookup
-      FieldName = 'NomePeca'
-      LookupDataSet = FrmCadServico.ADOQueryPeca
-      LookupKeyFields = 'id'
-      LookupResultField = 'nome'
-      KeyFields = 'peca_id'
-      Size = 50
-      Lookup = True
     end
   end
 end
