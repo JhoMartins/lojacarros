@@ -3,7 +3,6 @@ object DM: TDM
   Height = 500
   Width = 490
   object ADOConnection1: TADOConnection
-    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
       'fo=False;Initial Catalog=LojaCarros;Data Source=DESKTOP-TL1GQGV\' +

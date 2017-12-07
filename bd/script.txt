@@ -19,7 +19,7 @@ Create table Carro(
 	modelo varchar(50) NOT NULL,
 	marca varchar(50) NOT NULL,
 	data_compra date NOT NULL,
-	valor_compra date NOT NULL,
+	valor_compra decimal(18, 2) NOT NULL,
 	exproprietario_id int NOT NULL,
 	cor varchar(50) NOT NULL,
         status varchar(20), 
@@ -80,6 +80,7 @@ CREATE TABLE Servico_Pecas(
 	peca_id int  NOT NULL,
 	qtde int NOT NULL,
 	valor_total decimal(18,2)NULL,
+        valor_unit decimal(18,2)NOT NULL,
 	foreign key (servico_id) references Servico(id),
 	foreign key (peca_id) references Peca(id),
 	CONSTRAINT PK_ServicoPeca PRIMARY KEY CLUSTERED (Servico_id, Peca_id)

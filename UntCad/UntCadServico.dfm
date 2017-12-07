@@ -9,13 +9,15 @@ inherited FrmCadServico: TFrmCadServico
   TextHeight = 13
   inherited ToolBar1: TToolBar
     Width = 695
+    ExplicitTop = 0
     ExplicitWidth = 695
   end
   inherited PnlFicha: TPanel
     Width = 695
     Height = 575
+    ExplicitTop = 48
     ExplicitWidth = 695
-    ExplicitHeight = 526
+    ExplicitHeight = 575
     object Label2: TLabel [0]
       Left = 16
       Top = 16
@@ -68,7 +70,7 @@ inherited FrmCadServico: TFrmCadServico
     inherited StatusBar1: TStatusBar
       Top = 555
       Width = 693
-      ExplicitTop = 506
+      ExplicitTop = 555
       ExplicitWidth = 693
     end
     object DBEdit1: TDBEdit
@@ -269,8 +271,8 @@ inherited FrmCadServico: TFrmCadServico
     end
   end
   object Bbt_inserir: TBitBtn [2]
-    Left = 302
-    Top = 417
+    Left = 339
+    Top = 365
     Width = 83
     Height = 32
     Caption = 'Inserir'
@@ -292,8 +294,8 @@ inherited FrmCadServico: TFrmCadServico
     OnClick = Bbt_inserirClick
   end
   object Bbt_excluir: TBitBtn [3]
-    Left = 398
-    Top = 417
+    Left = 428
+    Top = 365
     Width = 75
     Height = 32
     Caption = 'Excluir'
@@ -315,8 +317,8 @@ inherited FrmCadServico: TFrmCadServico
     OnClick = Bbt_excluirClick
   end
   object Bbt_confirmar: TBitBtn [4]
-    Left = 493
-    Top = 417
+    Left = 509
+    Top = 365
     Width = 75
     Height = 32
     Caption = 'Confirmar'
@@ -339,7 +341,7 @@ inherited FrmCadServico: TFrmCadServico
   end
   object Bbt_cancelar: TBitBtn [5]
     Left = 590
-    Top = 417
+    Top = 365
     Width = 75
     Height = 32
     Caption = 'Cancelar'

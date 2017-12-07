@@ -1,18 +1,26 @@
 inherited FrmManServico: TFrmManServico
   Caption = 'Manuen'#231#227'o no cadastro de Servi'#231'o'
-  ClientWidth = 1066
-  ExplicitWidth = 1072
+  ClientWidth = 1209
+  ExplicitWidth = 1215
   PixelsPerInch = 96
   TextHeight = 13
   inherited ToolBar1: TToolBar
-    Width = 1066
+    Width = 1209
     ExplicitTop = 0
+    ExplicitWidth = 1066
   end
   inherited Panel2: TPanel
-    Width = 1066
+    Width = 1209
+    ExplicitWidth = 1066
+    inherited ComboBox1: TComboBox
+      Text = 'Descricao'
+      Items.Strings = (
+        'Descricao'
+        'Valor')
+    end
   end
   inherited DBGrid1: TDBGrid
-    Width = 1066
+    Width = 1209
     DataSource = DM.DSServico
     Columns = <
       item
@@ -51,12 +59,27 @@ inherited FrmManServico: TFrmManServico
         Expanded = False
         FieldName = 'valor'
         Title.Caption = 'Valor'
+        Width = 64
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'data_inicio'
+        Title.Caption = 'Inicio'
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'data_fim'
+        Title.Caption = 'Fim'
+        Width = 70
         Visible = True
       end>
   end
   inherited ImageList1: TImageList
     Bitmap = {
-      494C01010700200068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070020006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -995,7 +1018,7 @@ inherited FrmManServico: TFrmManServico
   end
   inherited ImageList3: TImageList
     Bitmap = {
-      494C01010700140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101070014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1934,7 +1957,7 @@ inherited FrmManServico: TFrmManServico
   end
   inherited ImageList2: TImageList
     Bitmap = {
-      494C0101070014005C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010700140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000003C00000001002000000000008070
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
