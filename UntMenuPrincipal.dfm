@@ -2307,24 +2307,28 @@
       Caption = 'Cliente'
       Hint = 'Cadastrar Cliente'
       ImageIndex = 0
+      OnExecute = cad_clienteExecute
     end
     object cad_carro: TAction
       Category = 'Cadastro'
       Caption = 'Carro'
       Hint = 'Cadastrar Carro'
       ImageIndex = 1
+      OnExecute = cad_carroExecute
     end
     object cad_empresa: TAction
       Category = 'Cadastro'
       Caption = 'Empresa'
       Hint = 'Cadastrar Empresa'
       ImageIndex = 2
+      OnExecute = cad_empresaExecute
     end
     object cad_funcionario: TAction
       Category = 'Cadastro'
       Caption = 'Funcionario'
       Hint = 'Cadastrar Funcionario'
       ImageIndex = 3
+      OnExecute = cad_funcionarioExecute
     end
     object man_cliente: TAction
       Category = 'Manuten'#231#227'o'
