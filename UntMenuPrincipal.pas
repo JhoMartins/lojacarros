@@ -36,6 +36,7 @@ type
     Action4: TAction;
     Action5: TAction;
     Image1: TImage;
+    Serviço_Peças: TAction;
     procedure Button1Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -62,6 +63,7 @@ type
     procedure cad_carroExecute(Sender: TObject);
     procedure cad_empresaExecute(Sender: TObject);
     procedure cad_funcionarioExecute(Sender: TObject);
+    procedure Serviço_PeçasExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -77,7 +79,7 @@ implementation
 
 uses UntManEmpresa, UntManCliente, UntCadEmpresa, UntCadServico, UntRelClientes,
   UntRelEmpresa, UntManBase, UntRelPecas, UntRelVenda,
-  UntRelFuncionário, UntRelCarros;
+  UntRelFuncionário, UntRelCarros, UntServicosPeca;
 
 procedure TForm1.abrirFormCadastro(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
@@ -236,6 +238,11 @@ var Frm: TFrmManPeca;
 begin
   Frm:= FrmManPeca.Create(DM.ADODSPeca, FrmCadPeca);
   Frm.ShowModal;
+end;
+
+procedure TForm1.Serviço_PeçasExecute(Sender: TObject);
+begin
+frmRelServicopecas.showmodal;
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
