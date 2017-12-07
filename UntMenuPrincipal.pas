@@ -8,7 +8,7 @@ uses
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, System.Actions,
   Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.PlatformDefaultStyleActnCtrls,
   Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro, UntCadVenda, UntManVenda, UntManServico,
-  UntManPeca, UntCadPeca;
+  UntManPeca, UntCadPeca, Vcl.Imaging.pngimage;
 
 type
   TForm1 = class(TForm)
@@ -35,6 +35,7 @@ type
     Action3: TAction;
     Action4: TAction;
     Action5: TAction;
+    Image1: TImage;
     procedure Button1Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
