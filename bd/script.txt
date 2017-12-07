@@ -1,0 +1,107 @@
+Create table Carro(
+	id int identity (1,1) primary key not null,
+	modelo varchar(50) NOT NULL,
+	marca varchar(50) NOT NULL,
+	data_compra date NOT NULL,
+	valor_compra date NOT NULL,
+	exproprietario_id int NOT NULL,
+	cor varchar(50) NOT NULL,
+        status varchar(20), 
+	foreign key (exproprietario_id) references Cliente(id), 
+	)
+
+create table Cliente(
+	id int IDENTITY(1,1) primary key NOT NULL,
+	nome varchar(50) NOT NULL,
+	cpf varchar(15) NOT NULL,
+	data_nascimento date NOT NULL,
+	endereco varchar(50) NOT NULL,
+	bairro varchar(50) NOT NULL,
+	cidade varchar(50) NOT NULL,
+	estado varchar(2) NOT NULL,
+	cep varchar(15) NOT NULL,
+	profissao varchar(50) NOT NULL,
+	renda_mensal decimal(18, 2) NOT NULL,
+	celular varchar(15) NOT NULL
+	)
+
+create table Empresa(
+	id int IDENTITY(1,1) primary key NOT NULL,
+	razao_social varchar(50) NOT NULL,
+	nome_fantasia varchar(50) NOT NULL,
+	cnpj varchar(50) NOT NULL,
+	endereco varchar(50) NOT NULL,
+	bairro varchar(50) NOT NULL,
+	cidade varchar(50) NOT NULL,
+	estado varchar(2) NOT NULL,
+	cep varchar(15) NOT NULL,
+	telefone varchar(15) NOT NULL,
+	)
+
+CREATE TABLE Funcionario(
+	id int IDENTITY(1,1) primary key NOT NULL,
+	nome varchar (50) NOT NULL,
+	cpf varchar(15) NOT NULL,
+	data_nascimento date NOT NULL,
+	endereco varchar(50) NOT NULL,
+	bairro varchar(50) NOT NULL,
+	cidade varchar(50) NOT NULL,
+	cep varchar(13) NOT NULL,
+	estado varchar(2) NOT NULL,
+	celular varchar(15) NOT NULL,
+	salario decimal(18, 2) NOT NULL,
+	data_admissao date NOT NULL,
+	)
+
+CREATE TABLE Servico(
+	id int IDENTITY(1,1) primary key NOT NULL,
+	descricao varchar(50) NOT NULL,
+	data_inicio date NOT NULL,
+	data_fim date,
+	status_ varchar(50) NOT NULL,
+	carro_id int NOT NULL,
+	empresa_id int NOT NULL,
+	valor decimal(18, 2),
+	foreign key (carro_id) references Carro(id),
+	foreign key (empresa_id) references Empresa(id),
+	)
+
+CREATE TABLE Peca(
+	id int identity(1,1) primary key NOT NULL,
+	nome varchar(50) NOT NULL,
+	descricao varchar(50) NOT NULL,
+	valor_unit decimal(18,2) NOT NULL,
+	)
+
+CREATE TABLE Servico_Pecas(
+	servico_id int primary key NOT NULL,
+	peca_id int primary key NOT NULL,
+	qtde int NOT NULL,
+	valor_total decimal(18,2)NULL,
+	foreign key (servico_id) references Servico(id),
+	foreign key (peca_id) references Pecas(id),
+	)
+
+CREATE TABLE Venda(
+        
+        id int identity(1,1) primary key NOT NULL,
+
+        carro_id int NOT NULL,
+        
+        cliente_id int NOT NULL,
+
+        funcionario_id int NOT NULL,
+
+        valor decimal(18,2) NOT NULL,
+
+        data datetime NOT NULL,
+
+        forma_pagamento varchar(50),
+
+        foreign key (carro_id) references Carro(id),
+
+        foreign key (funcionario_id) references Funcionario(id),
+
+        foreign key (cliente_id) references Venda(id)
+        
+        )
