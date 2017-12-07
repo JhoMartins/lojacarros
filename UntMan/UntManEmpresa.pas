@@ -11,6 +11,7 @@ uses
 type
   TFrmManEmpresa = class(TFrmManBase)
   constructor Create(DataSet: TADODataSet; Form: TFrmCadBase); override;
+    procedure ToolButton5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,12 +25,20 @@ implementation
 
 {$R *.dfm}
 
+uses UntRelEmpresa;
+
 { TFrmManEmpresa }
 
 constructor TFrmManEmpresa.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   inherited;
   SQL:= 'SELECT * FROM Empresa ORDER BY nome_fantasia';
+end;
+
+procedure TFrmManEmpresa.ToolButton5Click(Sender: TObject);
+begin
+  inherited;
+frmrelempresa.showmodal;
 end;
 
 end.

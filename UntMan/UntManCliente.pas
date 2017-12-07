@@ -11,6 +11,7 @@ uses
 type
   TFrmManCliente = class(TFrmManBase)
   constructor Create(DataSet: TADODataSet; Form: TFrmCadBase); override;
+    procedure ToolButton5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,12 +25,20 @@ implementation
 
 {$R *.dfm}
 
+uses UntRelClientes;
+
 { TFrmManCliente }
 
 constructor TFrmManCliente.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   inherited;
   SQL:= 'SELECT * FROM Cliente ORDER BY nome';
+end;
+
+procedure TFrmManCliente.ToolButton5Click(Sender: TObject);
+begin
+  inherited;
+frmrelclientes.showmodal;
 end;
 
 end.

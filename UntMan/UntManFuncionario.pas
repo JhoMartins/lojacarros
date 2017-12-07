@@ -11,6 +11,7 @@ uses
 type
   TFrmManFuncionario = class(TFrmManBase)
   constructor Create(DataSet: TADODataSet; Form: TFrmCadBase); override;
+    procedure ToolButton5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,12 +25,20 @@ implementation
 
 {$R *.dfm}
 
+uses UntRelFuncionário;
+
 { TFrmManFuncionario }
 
 constructor TFrmManFuncionario.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   inherited;
   SQL:= 'SELECT * FROM Funcionario ORDER BY nome';
+end;
+
+procedure TFrmManFuncionario.ToolButton5Click(Sender: TObject);
+begin
+  inherited;
+frmrelfuncionario.showmodal;
 end;
 
 end.
