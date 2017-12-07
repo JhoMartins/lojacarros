@@ -1,9 +1,9 @@
 object FrmRelClientes: TFrmRelClientes
   Left = 0
   Top = 0
-  Caption = 'FrmRelClientes'
-  ClientHeight = 429
-  ClientWidth = 533
+  Caption = 'Relat'#243'rio Clientes'
+  ClientHeight = 299
+  ClientWidth = 401
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
