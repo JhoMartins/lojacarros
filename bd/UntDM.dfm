@@ -293,7 +293,10 @@ object DM: TDM
   object ADODSServico: TADODataSet
     Connection = ADOConnection1
     CursorType = ctStatic
-    CommandText = 'select * from Servico'
+    CommandText = 
+      'select S.*, E.nome_fantasia, C.modelo from Servico S inner join ' +
+      'Carro C on S.carro_id = C.id inner join Empresa E on S.empresa_i' +
+      'd = E.id;'
     Parameters = <>
     Left = 128
     Top = 376
@@ -327,6 +330,14 @@ object DM: TDM
       FieldName = 'valor'
       Precision = 18
       Size = 2
+    end
+    object ADODSServiconome_fantasia: TStringField
+      FieldName = 'nome_fantasia'
+      Size = 50
+    end
+    object ADODSServicomodelo: TStringField
+      FieldName = 'modelo'
+      Size = 50
     end
   end
   object DSServico: TDataSource
@@ -364,10 +375,20 @@ object DM: TDM
     Left = 224
     Top = 424
   end
+  object DSServico_Pecas: TDataSource
+    DataSet = ADODSServico_Pecas
+    Left = 416
+    Top = 328
+  end
   object ADODSServico_Pecas: TADODataSet
     Connection = ADOConnection1
+    CursorType = ctStatic
+    AfterPost = ADODSServico_PecasAfterPost
+    AfterDelete = ADODSServico_PecasAfterDelete
+    OnNewRecord = ADODSServico_PecasNewRecord
     CommandText = 'select * from Servico_Pecas where servico_id = :id'
-    DataSource = DSVenda
+    DataSource = DSServico
+    MasterFields = 'id'
     Parameters = <
       item
         Name = 'id'
@@ -379,10 +400,35 @@ object DM: TDM
       end>
     Left = 320
     Top = 328
-  end
-  object DSPecas: TDataSource
-    DataSet = ADODSServico_Pecas
-    Left = 416
-    Top = 328
+    object ADODSServico_Pecasservico_id: TIntegerField
+      FieldName = 'servico_id'
+    end
+    object ADODSServico_Pecaspeca_id: TIntegerField
+      FieldName = 'peca_id'
+      OnValidate = ADODSServico_Pecaspeca_idValidate
+    end
+    object ADODSServico_Pecasqtde: TIntegerField
+      FieldName = 'qtde'
+    end
+    object ADODSServico_Pecasvalor_total: TBCDField
+      FieldName = 'valor_total'
+      Precision = 18
+      Size = 2
+    end
+    object ADODSServico_Pecasvalor_unit: TBCDField
+      FieldName = 'valor_unit'
+      Precision = 18
+      Size = 2
+    end
+    object ADODSServico_PecasNomePeca: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NomePeca'
+      LookupDataSet = FrmCadServico.ADOQueryPeca
+      LookupKeyFields = 'id'
+      LookupResultField = 'nome'
+      KeyFields = 'peca_id'
+      Size = 50
+      Lookup = True
+    end
   end
 end

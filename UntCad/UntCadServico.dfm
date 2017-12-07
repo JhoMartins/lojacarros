@@ -1,32 +1,32 @@
 inherited FrmCadServico: TFrmCadServico
-  Caption = 'Manuten'#231#227'o no Cadastro de Servi'#231'o'
-  ClientHeight = 425
-  ClientWidth = 594
+  Caption = 'Cadastro de Servi'#231'o'
+  ClientHeight = 623
+  ClientWidth = 695
   OnActivate = FormActivate
-  ExplicitWidth = 600
-  ExplicitHeight = 454
+  ExplicitWidth = 701
+  ExplicitHeight = 652
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 594
-    ExplicitWidth = 594
+    Width = 695
+    ExplicitWidth = 695
     inherited Label1: TLabel
-      Left = 112
+      Left = 144
       Width = 375
       Caption = 'Manuten'#231#227'o no Cadastro de Servi'#231'o'
-      ExplicitLeft = 112
+      ExplicitLeft = 144
       ExplicitWidth = 375
     end
   end
   inherited ToolBar1: TToolBar
-    Width = 594
-    ExplicitWidth = 594
+    Width = 695
+    ExplicitWidth = 695
   end
   inherited PnlFicha: TPanel
-    Width = 594
-    Height = 328
-    ExplicitWidth = 594
-    ExplicitHeight = 328
+    Width = 695
+    Height = 526
+    ExplicitWidth = 695
+    ExplicitHeight = 526
     object Label2: TLabel [0]
       Left = 16
       Top = 16
@@ -34,53 +34,53 @@ inherited FrmCadServico: TFrmCadServico
       Height = 13
       Caption = 'Carro_ID'
     end
-    object Label3: TLabel [1]
-      Left = 16
-      Top = 70
-      Width = 58
-      Height = 13
-      Caption = 'Empresa_ID'
-    end
-    object Label4: TLabel [2]
+    object Label4: TLabel [1]
       Left = 112
       Top = 16
       Width = 34
       Height = 13
       Caption = 'Modelo'
     end
-    object Label5: TLabel [3]
+    object Label5: TLabel [2]
       Left = 112
       Top = 70
       Width = 27
       Height = 13
       Caption = 'Nome'
     end
-    object Label6: TLabel [4]
+    object Label6: TLabel [3]
       Left = 16
       Top = 124
       Width = 51
       Height = 13
       Caption = 'Data Inicio'
     end
-    object Status: TLabel [5]
+    object Status: TLabel [4]
       Left = 160
       Top = 124
       Width = 31
       Height = 13
       Caption = 'Status'
     end
-    object Label8: TLabel [6]
-      Left = 16
+    object Label8: TLabel [5]
+      Left = 18
       Top = 176
       Width = 46
       Height = 13
       Caption = 'Descri'#231#227'o'
     end
+    object Label3: TLabel [6]
+      Left = 16
+      Top = 70
+      Width = 58
+      Height = 13
+      Caption = 'Empresa_ID'
+    end
     inherited StatusBar1: TStatusBar
-      Top = 308
-      Width = 592
-      ExplicitTop = 308
-      ExplicitWidth = 592
+      Top = 506
+      Width = 693
+      ExplicitTop = 506
+      ExplicitWidth = 693
     end
     object DBEdit1: TDBEdit
       Left = 16
@@ -94,7 +94,7 @@ inherited FrmCadServico: TFrmCadServico
     object DBLookupComboBox1: TDBLookupComboBox
       Left = 112
       Top = 35
-      Width = 473
+      Width = 569
       Height = 21
       DataField = 'carro_id'
       DataSource = DM.DSServico
@@ -115,7 +115,7 @@ inherited FrmCadServico: TFrmCadServico
     object DBLookupComboBox2: TDBLookupComboBox
       Left = 112
       Top = 89
-      Width = 473
+      Width = 569
       Height = 21
       DataField = 'empresa_id'
       DataSource = DM.DSServico
@@ -136,7 +136,7 @@ inherited FrmCadServico: TFrmCadServico
     object DBEdit5: TDBEdit
       Left = 16
       Top = 195
-      Width = 569
+      Width = 665
       Height = 21
       DataField = 'descricao'
       DataSource = DM.DSServico
@@ -154,12 +154,227 @@ inherited FrmCadServico: TFrmCadServico
         'Finalizado')
       TabOrder = 6
     end
+    object GroupBox1: TGroupBox
+      Left = 16
+      Top = 238
+      Width = 665
+      Height = 262
+      Caption = 'Pe'#231'as do Servi'#231'o'
+      TabOrder = 8
+      object PnlPecas: TPanel
+        Left = 16
+        Top = 24
+        Width = 633
+        Height = 49
+        TabOrder = 0
+        object Label7: TLabel
+          Left = 15
+          Top = 4
+          Width = 23
+          Height = 13
+          Caption = 'Pe'#231'a'
+        end
+        object Label9: TLabel
+          Left = 415
+          Top = 4
+          Width = 50
+          Height = 13
+          Caption = 'Valor Unit.'
+        end
+        object Label10: TLabel
+          Left = 503
+          Top = 4
+          Width = 24
+          Height = 13
+          Caption = 'Qtde'
+        end
+        object DBEdit4: TDBEdit
+          Left = 15
+          Top = 23
+          Width = 82
+          Height = 21
+          DataField = 'peca_id'
+          DataSource = DM.DSServico_Pecas
+          TabOrder = 0
+        end
+        object DBEdit6: TDBEdit
+          Left = 415
+          Top = 23
+          Width = 82
+          Height = 21
+          DataField = 'valor_unit'
+          DataSource = DM.DSServico_Pecas
+          TabOrder = 1
+        end
+        object DBEdit7: TDBEdit
+          Left = 503
+          Top = 23
+          Width = 82
+          Height = 21
+          DataField = 'qtde'
+          DataSource = DM.DSServico_Pecas
+          TabOrder = 2
+          OnExit = DBEdit7Exit
+        end
+        object DBLookupComboBox3: TDBLookupComboBox
+          Left = 103
+          Top = 23
+          Width = 306
+          Height = 21
+          DataField = 'peca_id'
+          DataSource = DM.DSServico_Pecas
+          KeyField = 'id'
+          ListField = 'nome'
+          ListSource = DSPeca
+          TabOrder = 3
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 2
+        Top = 132
+        Width = 661
+        Height = 128
+        Align = alBottom
+        DataSource = DM.DSServico_Pecas
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+        TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'peca_id'
+            Title.Caption = 'Pe'#231'a ID'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'NomePeca'
+            Title.Caption = 'Nome'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'qtde'
+            Title.Caption = 'Qtde.'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'valor_unit'
+            Title.Caption = 'Valor Unit.'
+            Width = 90
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'valor_total'
+            Width = 119
+            Visible = True
+          end>
+      end
+    end
+  end
+  object Bbt_inserir: TBitBtn [3]
+    Left = 302
+    Top = 417
+    Width = 83
+    Height = 32
+    Caption = 'Inserir'
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF0033333333B333
+      333B33FF33337F3333F73BB3777BB7777BB3377FFFF77FFFF77333B000000000
+      0B3333777777777777333330FFFFFFFF07333337F33333337F333330FFFFFFFF
+      07333337F33333337F333330FFFFFFFF07333337F33333337F333330FFFFFFFF
+      07333FF7F33333337FFFBBB0FFFFFFFF0BB37777F3333333777F3BB0FFFFFFFF
+      0BBB3777F3333FFF77773330FFFF000003333337F333777773333330FFFF0FF0
+      33333337F3337F37F3333330FFFF0F0B33333337F3337F77FF333330FFFF003B
+      B3333337FFFF77377FF333B000000333BB33337777777F3377FF3BB3333BB333
+      3BB33773333773333773B333333B3333333B7333333733333337}
+    NumGlyphs = 2
+    TabOrder = 3
+    OnClick = Bbt_inserirClick
+  end
+  object Bbt_excluir: TBitBtn [4]
+    Left = 398
+    Top = 417
+    Width = 75
+    Height = 32
+    Caption = 'Excluir'
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333000000000
+      3333333777777777F3333330F777777033333337F3F3F3F7F3333330F0808070
+      33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+      33333337F7F7F7F7F3333330F080707033333337F7F7F7F7F3333330F0808070
+      333333F7F7F7F7F7F3F33030F080707030333737F7F7F7F7F7333300F0808070
+      03333377F7F7F7F773333330F080707033333337F7F7F7F7F333333070707070
+      33333337F7F7F7F7FF3333000000000003333377777777777F33330F88877777
+      0333337FFFFFFFFF7F3333000000000003333377777777777333333330777033
+      3333333337FFF7F3333333333000003333333333377777333333}
+    NumGlyphs = 2
+    TabOrder = 4
+    OnClick = Bbt_excluirClick
+  end
+  object Bbt_confirmar: TBitBtn [5]
+    Left = 493
+    Top = 417
+    Width = 75
+    Height = 32
+    Caption = 'Confirmar'
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+      555555555555555555555555555555555555555555FF55555555555559055555
+      55555555577FF5555555555599905555555555557777F5555555555599905555
+      555555557777FF5555555559999905555555555777777F555555559999990555
+      5555557777777FF5555557990599905555555777757777F55555790555599055
+      55557775555777FF5555555555599905555555555557777F5555555555559905
+      555555555555777FF5555555555559905555555555555777FF55555555555579
+      05555555555555777FF5555555555557905555555555555777FF555555555555
+      5990555555555555577755555555555555555555555555555555}
+    NumGlyphs = 2
+    TabOrder = 5
+    OnClick = Bbt_confirmarClick
+  end
+  object Bbt_cancelar: TBitBtn [6]
+    Left = 590
+    Top = 417
+    Width = 75
+    Height = 32
+    Caption = 'Cancelar'
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+      55555FFFFFFF5F55FFF5777777757559995777777775755777F7555555555550
+      305555555555FF57F7F555555550055BB0555555555775F777F55555550FB000
+      005555555575577777F5555550FB0BF0F05555555755755757F555550FBFBF0F
+      B05555557F55557557F555550BFBF0FB005555557F55575577F555500FBFBFB0
+      B05555577F555557F7F5550E0BFBFB00B055557575F55577F7F550EEE0BFB0B0
+      B05557FF575F5757F7F5000EEE0BFBF0B055777FF575FFF7F7F50000EEE00000
+      B0557777FF577777F7F500000E055550805577777F7555575755500000555555
+      05555777775555557F5555000555555505555577755555557555}
+    NumGlyphs = 2
+    TabOrder = 6
+    OnClick = Bbt_cancelarClick
   end
   inherited ImageList1: TImageList
-    Left = 264
-    Top = 336
+    Left = 376
+    Top = 504
     Bitmap = {
-      494C0101030020006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030020007C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -632,10 +847,10 @@ inherited FrmCadServico: TFrmCadServico
       000000000000}
   end
   inherited ImageList2: TImageList
-    Left = 400
-    Top = 336
+    Left = 456
+    Top = 480
     Bitmap = {
-      494C01010300140060001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1108,10 +1323,10 @@ inherited FrmCadServico: TFrmCadServico
       000000000000}
   end
   inherited ImageList3: TImageList
-    Left = 336
-    Top = 336
+    Left = 512
+    Top = 488
     Bitmap = {
-      494C0101030014006C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101030014007C001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1603,12 +1818,39 @@ inherited FrmCadServico: TFrmCadServico
     Parameters = <>
     SQL.Strings = (
       'SELECT id, nome_fantasia FROM Empresa ORDER BY nome_fantasia')
-    Left = 32
+    Left = 80
     Top = 161
   end
   object DsEmpresa: TDataSource
     DataSet = ADOQueryEmpresa
     Left = 120
     Top = 161
+  end
+  object ADOQueryPeca: TADOQuery
+    Connection = DM.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select id, nome, valor_unit from peca order by nome')
+    Left = 80
+    Top = 336
+    object ADOQueryPecaid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOQueryPecanome: TStringField
+      FieldName = 'nome'
+      Size = 50
+    end
+    object ADOQueryPecavalor_unit: TBCDField
+      FieldName = 'valor_unit'
+      Precision = 18
+      Size = 2
+    end
+  end
+  object DSPeca: TDataSource
+    DataSet = ADOQueryPeca
+    Left = 144
+    Top = 336
   end
 end
