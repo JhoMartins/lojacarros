@@ -12,6 +12,7 @@ type
   TFrmManPeca = class(TFrmManBase)
     Edit2: TEdit;
   constructor Create(DataSet: TADODataSet; Form: TFrmCadBase); override;
+    procedure ToolButton5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -25,12 +26,20 @@ implementation
 
 {$R *.dfm}
 
+uses UntRelPecas;
+
 { TFrmManBase1 }
 
 constructor TFrmManPeca.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   inherited;
   SQL:= 'SELECT * FROM peca ORDER BY nome';
+end;
+
+procedure TFrmManPeca.ToolButton5Click(Sender: TObject);
+begin
+  inherited;
+FrmRelPecas.showmodal;
 end;
 
 end.

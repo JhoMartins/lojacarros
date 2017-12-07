@@ -21,6 +21,7 @@ type
     edtmarcaate: TLabeledEdit;
     RadioGroup1: TRadioGroup;
     procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -92,5 +93,10 @@ begin
   frxReport1.ShowReport();
 end;
 
+
+procedure TFrmRelCarro.BitBtn2Click(Sender: TObject);
+begin
+close;
+end;
 
 end.

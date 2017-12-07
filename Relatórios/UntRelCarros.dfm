@@ -2,8 +2,8 @@ object FrmRelCarro: TFrmRelCarro
   Left = 0
   Top = 0
   Caption = 'Relat'#243'rio Carro'
-  ClientHeight = 528
-  ClientWidth = 549
+  ClientHeight = 303
+  ClientWidth = 400
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -36,6 +36,7 @@ object FrmRelCarro: TFrmRelCarro
       Height = 25
       Caption = 'Cancelar'
       TabOrder = 1
+      OnClick = BitBtn2Click
     end
     object edtcodigode: TLabeledEdit
       Left = 80

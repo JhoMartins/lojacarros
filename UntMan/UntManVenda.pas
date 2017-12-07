@@ -12,6 +12,7 @@ type
   TFrmManVenda = class(TFrmManBase)
     constructor Create(DataSet: TADODataSet; Form: TFrmCadBase); override;
     procedure btn_inserirClick(Sender: TObject);
+    procedure ToolButton5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,6 +25,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses UntRelVenda;
 
 procedure TFrmManVenda.btn_inserirClick(Sender: TObject);
 begin
@@ -41,6 +44,12 @@ constructor TFrmManVenda.Create(DataSet: TADODataSet; Form: TFrmCadBase);
 begin
   inherited;
    SQL:= 'select V.*, C.nome as Cliente, Car.modelo as Modelo, F.nome as Funcionario from Venda V inner join Cliente C on V.cliente_id = C.id inner join Carro Car on V.carro_id = Car.id inner join Funcionario F on V.funcionario_id = F.id';
+end;
+
+procedure TFrmManVenda.ToolButton5Click(Sender: TObject);
+begin
+  inherited;
+FrmRelVenda.showmodal;
 end;
 
 end.
