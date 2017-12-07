@@ -137,6 +137,8 @@ end;
 
 procedure TDM.ADODSServicoBeforePost(DataSet: TDataSet);
 begin
+  if ADODSServicostatus.AsString = 'Finalizado' then
+    ADODSServicodata_fim.AsDateTime:= Date;
 //  ADODSCarro.Close;
 //  ADODSCarro.Open;
 //   if not (ADODSCarro.State in [dsInsert, dsEdit]) then
