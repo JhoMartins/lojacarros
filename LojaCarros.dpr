@@ -25,7 +25,8 @@ uses
   UntRelEmpresa in 'Relatórios\UntRelEmpresa.pas' {FrmRelEmpresa},
   UntRelPecas in 'Relatórios\UntRelPecas.pas' {FrmRelPecas},
   UntRelFuncionário in 'Relatórios\UntRelFuncionário.pas' {Form2},
-  UntRelVenda in 'Relatórios\UntRelVenda.pas' {FrmRelvenda};
+  UntRelVenda in 'Relatórios\UntRelVenda.pas' {FrmRelvenda},
+  UntServicosPeca in 'Relatórios\UntServicosPeca.pas' {FrmRelServicopecas};
 
 {$R *.res}
 
@@ -55,5 +56,6 @@ begin
   Application.CreateForm(TFrmRelEmpresa, FrmRelEmpresa);
   Application.CreateForm(TFrmRelPecas, FrmRelPecas);
   Application.CreateForm(TFrmRelvenda, FrmRelvenda);
+  Application.CreateForm(TFrmRelServicopecas, FrmRelServicopecas);
   Application.Run;
 end.
