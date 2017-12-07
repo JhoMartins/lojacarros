@@ -45,7 +45,6 @@ implementation
 
 procedure TFrmCadCarro.btn_salvarClick(Sender: TObject);
 begin
-  DM.ADODSCarrostatus.AsString:= 'Disponível';
   validarCampo(DBEdit1, Label2.Caption);
   validarCampo(DBEdit2, Label3.Caption);
   validarCampo(DBEdit7, Label9.Caption);

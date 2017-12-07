@@ -151,7 +151,7 @@ inherited FrmCadServico: TFrmCadServico
       DataField = 'status'
       DataSource = DM.DSServico
       Items.Strings = (
-        'Solicitado'
+        'Em andamento'
         'Finalizado')
       TabOrder = 6
     end
@@ -1805,7 +1805,7 @@ inherited FrmCadServico: TFrmCadServico
     Parameters = <>
     SQL.Strings = (
       'SELECT id, modelo FROM Carro ORDER BY modelo')
-    Left = 56
+    Left = 80
     Top = 97
   end
   object DSCarro: TDataSource

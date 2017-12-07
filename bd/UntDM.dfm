@@ -3,12 +3,13 @@ object DM: TDM
   Height = 500
   Width = 490
   object ADOConnection1: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=LojaCarros;Data Source=DEIVID-PC;Use Pr' +
-      'ocedure for Prepare=1;Auto Translate=True;Packet Size=4096;Works' +
-      'tation ID=DESKTOP-TL1GQGV;Use Encryption for Data=False;Tag with' +
-      ' column collation when possible=False'
+      'fo=False;Initial Catalog=LojaCarros;Data Source=DESKTOP-TL1GQGV\' +
+      'SQLEXPRESS;Use Procedure for Prepare=1;Auto Translate=True;Packe' +
+      't Size=4096;Workstation ID=DESKTOP-TL1GQGV;Use Encryption for Da' +
+      'ta=False;Tag with column collation when possible=False'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 184
@@ -194,6 +195,7 @@ object DM: TDM
   object ADODSCarro: TADODataSet
     Connection = ADOConnection1
     CursorType = ctStatic
+    OnNewRecord = ADODSCarroNewRecord
     CommandText = 'select * from Carro'
     Parameters = <>
     Left = 128
@@ -293,6 +295,7 @@ object DM: TDM
   object ADODSServico: TADODataSet
     Connection = ADOConnection1
     CursorType = ctStatic
+    BeforePost = ADODSServicoBeforePost
     CommandText = 
       'select S.*, E.nome_fantasia, C.modelo from Servico S inner join ' +
       'Carro C on S.carro_id = C.id inner join Empresa E on S.empresa_i' +

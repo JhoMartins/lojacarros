@@ -123,6 +123,11 @@ end;
 
 procedure TFrmCadServico.btn_salvarClick(Sender: TObject);
 begin
+  validarCampo(DBEdit1, Label2.Caption);
+  validarCampo(DBEdit2, Label3.Caption);
+  validarCampo(DBEdit3, Label6.Caption);
+  validarCombo(DBComboBox1, Status.Caption);
+  validarCampo(DBEdit5, Label8.Caption);
   inherited;
   PnlFicha.Enabled:= True;
   Bbt_inserir.Enabled:= True;
