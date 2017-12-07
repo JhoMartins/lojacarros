@@ -3,6 +3,7 @@ object DM: TDM
   Height = 500
   Width = 490
   object ADOConnection1: TADOConnection
+    Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
       'fo=False;Initial Catalog=LojaCarros;Data Source=DEIVID-PC;Use Pr' +
@@ -214,10 +215,9 @@ object DM: TDM
       FieldName = 'data_compra'
       Size = 10
     end
-    object ADODSCarrovalor_compra: TBCDField
+    object ADODSCarrovalor_compra: TWideStringField
       FieldName = 'valor_compra'
-      Precision = 18
-      Size = 2
+      Size = 10
     end
     object ADODSCarroexproprietario_id: TIntegerField
       FieldName = 'exproprietario_id'
@@ -264,9 +264,8 @@ object DM: TDM
       Precision = 18
       Size = 2
     end
-    object ADODSVendadata: TWideStringField
+    object ADODSVendadata: TDateTimeField
       FieldName = 'data'
-      Size = 10
     end
     object ADODSVendaforma_pagamento: TStringField
       FieldName = 'forma_pagamento'
@@ -316,8 +315,8 @@ object DM: TDM
       FieldName = 'data_fim'
       Size = 10
     end
-    object ADODSServicostatus: TStringField
-      FieldName = 'status'
+    object ADODSServicostatus_: TStringField
+      FieldName = 'status_'
       Size = 50
     end
     object ADODSServicocarro_id: TIntegerField
