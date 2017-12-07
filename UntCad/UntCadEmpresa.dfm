@@ -1,31 +1,20 @@
 inherited FrmCadEmpresa: TFrmCadEmpresa
   Caption = 'Cadastro de Empresa'
   ClientHeight = 417
-  ClientWidth = 450
-  ExplicitWidth = 456
+  ClientWidth = 575
+  ExplicitWidth = 581
   ExplicitHeight = 446
   PixelsPerInch = 96
   TextHeight = 13
-  inherited Panel1: TPanel
-    Width = 450
-    ExplicitWidth = 450
-    inherited Label1: TLabel
-      Left = 35
-      Width = 390
-      Caption = 'Manuten'#231#227'o no Cadastro de Empresa'
-      ExplicitLeft = 35
-      ExplicitWidth = 390
-    end
-  end
   inherited ToolBar1: TToolBar
-    Width = 450
+    Width = 575
     ExplicitWidth = 450
   end
   inherited PnlFicha: TPanel
-    Width = 450
-    Height = 320
+    Width = 575
+    Height = 369
     ExplicitWidth = 450
-    ExplicitHeight = 320
+    ExplicitHeight = 369
     object Label2: TLabel [0]
       Left = 23
       Top = 19
@@ -41,7 +30,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
       Caption = 'Nome Fantasia'
     end
     object Label4: TLabel [2]
-      Left = 287
+      Left = 415
       Top = 65
       Width = 25
       Height = 13
@@ -90,15 +79,15 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
       Caption = 'Telefone'
     end
     inherited StatusBar1: TStatusBar
-      Top = 300
-      Width = 448
-      ExplicitTop = 300
+      Top = 349
+      Width = 573
+      ExplicitTop = 349
       ExplicitWidth = 448
     end
     object DBEdit1: TDBEdit
       Left = 23
       Top = 38
-      Width = 402
+      Width = 530
       Height = 21
       DataField = 'razao_social'
       DataSource = DM.DSEmpresa
@@ -107,14 +96,14 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
     object DBEdit2: TDBEdit
       Left = 23
       Top = 84
-      Width = 234
+      Width = 378
       Height = 21
       DataField = 'nome_fantasia'
       DataSource = DM.DSEmpresa
       TabOrder = 2
     end
     object DBEdit3: TDBEdit
-      Left = 287
+      Left = 415
       Top = 84
       Width = 138
       Height = 21
@@ -126,7 +115,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
     object DBEdit4: TDBEdit
       Left = 23
       Top = 130
-      Width = 402
+      Width = 530
       Height = 21
       DataField = 'endereco'
       DataSource = DM.DSEmpresa
@@ -135,7 +124,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
     object DBEdit5: TDBEdit
       Left = 23
       Top = 176
-      Width = 402
+      Width = 530
       Height = 21
       DataField = 'bairro'
       DataSource = DM.DSEmpresa
@@ -144,7 +133,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
     object DBEdit6: TDBEdit
       Left = 23
       Top = 222
-      Width = 402
+      Width = 530
       Height = 21
       DataField = 'cidade'
       DataSource = DM.DSEmpresa
@@ -211,7 +200,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
   inherited ImageList1: TImageList
     Left = 160
     Bitmap = {
-      494C01010300200070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300200074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -687,7 +676,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
     Left = 304
     Top = 384
     Bitmap = {
-      494C01010300140064001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140068001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1162,7 +1151,7 @@ inherited FrmCadEmpresa: TFrmCadEmpresa
   inherited ImageList3: TImageList
     Left = 224
     Bitmap = {
-      494C01010300140070001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010300140074001E001E00FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000780000001E00000001002000000000004038
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

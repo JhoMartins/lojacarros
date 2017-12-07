@@ -1,3 +1,7 @@
+create database LojaCarros
+
+use LojaCarros
+
 Create table Carro(
 	id int identity (1,1) primary key not null,
 	modelo varchar(50) NOT NULL,
@@ -58,7 +62,7 @@ CREATE TABLE Servico(
 	descricao varchar(50) NOT NULL,
 	data_inicio date NOT NULL,
 	data_fim date,
-	status_ varchar(50) NOT NULL,
+	status varchar(50) NOT NULL,
 	carro_id int NOT NULL,
 	empresa_id int NOT NULL,
 	valor decimal(18, 2),

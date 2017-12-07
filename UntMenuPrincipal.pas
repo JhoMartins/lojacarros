@@ -8,7 +8,7 @@ uses
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, System.Actions,
   Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.PlatformDefaultStyleActnCtrls,
   Vcl.ComCtrls, Vcl.ExtCtrls, UntManCarro, UntCadCarro, UntCadVenda, UntManVenda, UntManServico,
-  UntManPeca, UntCadPeca, Vcl.Imaging.pngimage;
+  UntManPeca, UntCadPeca, Vcl.Imaging.pngimage, Data.Win.ADODB, UntCadBase;
 
 type
   TForm1 = class(TForm)
@@ -57,6 +57,11 @@ type
     procedure Action3Execute(Sender: TObject);
     procedure Action4Execute(Sender: TObject);
     procedure Action5Execute(Sender: TObject);
+    procedure cad_clienteExecute(Sender: TObject);
+    procedure abrirFormCadastro(DataSet: TADODataSet; Form: TFrmCadBase);
+    procedure cad_carroExecute(Sender: TObject);
+    procedure cad_empresaExecute(Sender: TObject);
+    procedure cad_funcionarioExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -71,8 +76,21 @@ implementation
 {$R *.dfm}
 
 uses UntManEmpresa, UntManCliente, UntCadEmpresa, UntCadServico, UntRelClientes,
-  UntRelEmpresa, UntManBase, UntCadBase, UntRelPecas, UntRelVenda,
+  UntRelEmpresa, UntManBase, UntRelPecas, UntRelVenda,
   UntRelFuncionário, UntRelCarros;
+
+procedure TForm1.abrirFormCadastro(DataSet: TADODataSet; Form: TFrmCadBase);
+begin
+  DataSet.Close;
+  DataSet.Open;
+  DataSet.Insert;
+  Form.Create(DataSet);
+  Form.btn_salvar.Enabled:= true;
+  Form.btn_cancelar.enabled:= true;
+  Form.btn_sair.enabled:= false;
+  Form.pnlficha.enabled:= true;
+  Form.ShowModal;
+end;
 
 procedure TForm1.Action1Execute(Sender: TObject);
 begin
@@ -132,6 +150,26 @@ var Frm: TFrmManFuncionario;
 begin
   Frm:= FrmManFuncionario.Create(DM.ADODSFuncionario, FrmCadFuncionario);
   Frm.ShowModal;
+end;
+
+procedure TForm1.cad_carroExecute(Sender: TObject);
+begin
+  abrirFormCadastro(DM.ADODSCarro, FrmCadCarro);
+end;
+
+procedure TForm1.cad_clienteExecute(Sender: TObject);
+begin
+  abrirFormCadastro(DM.ADODSCliente, FrmCadCliente);
+end;
+
+procedure TForm1.cad_empresaExecute(Sender: TObject);
+begin
+  abrirFormCadastro(DM.ADODSEmpresa, FrmCadEmpresa);
+end;
+
+procedure TForm1.cad_funcionarioExecute(Sender: TObject);
+begin
+  abrirFormCadastro(DM.ADODSFuncionario, FrmCadFuncionario);
 end;
 
 procedure TForm1.EmpresasExecute(Sender: TObject);

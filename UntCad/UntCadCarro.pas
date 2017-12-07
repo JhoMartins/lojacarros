@@ -13,7 +13,6 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label5: TLabel;
-    Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     DBEdit1: TDBEdit;
@@ -45,7 +44,6 @@ implementation
 
 procedure TFrmCadCarro.btn_salvarClick(Sender: TObject);
 begin
-  DM.ADODSCarrostatus.AsString:= 'Disponível';
   validarCampo(DBEdit1, Label2.Caption);
   validarCampo(DBEdit2, Label3.Caption);
   validarCampo(DBEdit7, Label9.Caption);

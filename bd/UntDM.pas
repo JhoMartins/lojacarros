@@ -101,6 +101,8 @@ type
     procedure ADODSServico_PecasAfterPost(DataSet: TDataSet);
     procedure ADODSServico_PecasAfterDelete(DataSet: TDataSet);
     procedure ADODSServico_PecasNewRecord(DataSet: TDataSet);
+    procedure ADODSServicoBeforePost(DataSet: TDataSet);
+    procedure ADODSCarroNewRecord(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -125,6 +127,26 @@ begin
     MessageDlg('Cliente não encontrado', mtError, [mbOK], 0);
     Abort;
   end;
+
+end;
+
+procedure TDM.ADODSCarroNewRecord(DataSet: TDataSet);
+begin
+  ADODSCarrostatus.AsString:= 'Disponível';
+end;
+
+procedure TDM.ADODSServicoBeforePost(DataSet: TDataSet);
+begin
+//  ADODSCarro.Close;
+//  ADODSCarro.Open;
+//   if not (ADODSCarro.State in [dsInsert, dsEdit]) then
+//      ADODSCarro.Edit;
+//  ADODSCarro.Locate('ID', ADODSServicocarro_id.AsString, []);
+//  if ADODSServicostatus.AsString = 'Em andamento' then
+//    ADODSCarrostatus.AsString:= 'Em manutenção'
+//  else
+//    ADODSCarrostatus.AsString:= 'Disponível';
+//   ADODSCarro.Post;
 
 end;
 
