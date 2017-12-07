@@ -55,6 +55,7 @@ type
     procedure Bbt_cancelarClick(Sender: TObject);
     procedure DBEdit7Exit(Sender: TObject);
     procedure btn_salvarClick(Sender: TObject);
+    procedure DBEdit3Enter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -125,6 +126,11 @@ begin
   inherited;
   PnlFicha.Enabled:= True;
   Bbt_inserir.Enabled:= True;
+end;
+
+procedure TFrmCadServico.DBEdit3Enter(Sender: TObject);
+begin
+  DM.ADODSServico.FieldByName('data_inicio').EditMask:= '99/99/9999;1;_';
 end;
 
 procedure TFrmCadServico.DBEdit7Exit(Sender: TObject);

@@ -2117,7 +2117,6 @@
     Font.Name = 'Segoe UI'
     Font.Style = []
     Spacing = 0
-    ExplicitWidth = 304
   end
   object ActionToolBar1: TActionToolBar
     Left = 0
@@ -2138,7 +2137,6 @@
     Font.Style = []
     ParentFont = False
     Spacing = 0
-    ExplicitWidth = 304
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -2158,8 +2156,6 @@
       item
         Width = 50
       end>
-    ExplicitTop = 403
-    ExplicitWidth = 304
   end
   object ActionManager1: TActionManager
     ActionBars = <
@@ -2415,7 +2411,7 @@
     Left = 40
     Top = 248
     Bitmap = {
-      494C01010B003000700018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010B003000740018001800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000060000000480000000100200000000000006C
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

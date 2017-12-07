@@ -132,6 +132,7 @@ inherited FrmCadServico: TFrmCadServico
       DataField = 'data_inicio'
       DataSource = DM.DSServico
       TabOrder = 5
+      OnEnter = DBEdit3Enter
     end
     object DBEdit5: TDBEdit
       Left = 16
@@ -1804,7 +1805,7 @@ inherited FrmCadServico: TFrmCadServico
     Parameters = <>
     SQL.Strings = (
       'SELECT id, modelo FROM Carro ORDER BY modelo')
-    Left = 32
+    Left = 56
     Top = 97
   end
   object DSCarro: TDataSource
